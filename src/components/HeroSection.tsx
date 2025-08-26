@@ -1,20 +1,64 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ArrowRight, Users, Leaf, Award } from "lucide-react";
-import heroImage from "@/assets/hero-dairy-farm.jpg";
+import { useEffect, useState } from "react";
+
+const heroImages = [
+  {
+    src: "/lovable-uploads/78a3afa7-0713-447d-a722-53ceea996608.png",
+    alt: "Gir cows grazing in natural pastures"
+  },
+  {
+    src: "/lovable-uploads/4a80cf41-df9b-49bf-8941-d3d98b2cdbee.png", 
+    alt: "Gir cows by pristine water source"
+  },
+  {
+    src: "/lovable-uploads/0e10d37e-8615-4391-8c76-2ff02271bd4b.png",
+    alt: "Traditional farmers with GIREJ heritage"
+  }
+];
 
 const HeroSection = () => {
+  const [api, setApi] = useState<any>();
+
+  useEffect(() => {
+    if (!api) return;
+
+    // Auto-play functionality
+    const autoplay = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+
+    return () => clearInterval(autoplay);
+  }, [api]);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Gir cows in Gujarat dairy farm"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-earth-green/80 via-earth-green/60 to-transparent"></div>
-      </div>
+      {/* Background Carousel */}
+      <Carousel 
+        setApi={setApi}
+        className="absolute inset-0 w-full h-full"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+      >
+        <CarouselContent className="h-full">
+          {heroImages.map((image, index) => (
+            <CarouselItem key={index} className="h-full">
+              <div className="relative w-full h-full">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-earth-green/80 via-earth-green/60 to-transparent"></div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
