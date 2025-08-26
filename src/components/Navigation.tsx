@@ -20,9 +20,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-earth-green">GIREJ</h1>
-            <p className="text-xs text-muted-foreground">India's First A2 Dairy</p>
+          <div className="flex-shrink-0 flex items-center">
+            <img 
+              src="/lovable-uploads/70aca71f-ca56-4c47-befe-f0fa9795cd1f.png" 
+              alt="GIREJ - A2 Cow Milk Products, Established 2014" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
