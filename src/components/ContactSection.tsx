@@ -89,7 +89,7 @@ const ContactSection = () => {
                   <Mail className="h-5 w-5 text-earth-green mt-1" />
                   <div>
                     <div className="font-medium text-foreground">Email</div>
-                    <div className="text-muted-foreground">business@girej.com</div>
+                    <div className="text-muted-foreground">krishi.naturals@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">

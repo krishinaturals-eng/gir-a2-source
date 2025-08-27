@@ -64,46 +64,63 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col justify-between">
         {/* Top Content */}
-        <div className="flex-1 flex items-start justify-center pt-20">
+        <div className="flex-1 flex items-center justify-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="animate-fade-in">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 inline-block border border-white/20">
-                <div className="flex items-center justify-center gap-2 mb-1">
+            {/* Main Content */}
+            <div className="text-center text-white space-y-6 animate-fade-in">
+              {/* Logo and Brand */}
+              <div className="mb-8">
+                <div className="inline-flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
                   <img 
                     src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
                     alt="GIREJ Logo" 
-                    className="h-20 w-auto" 
+                    className="w-12 h-12 object-contain"
                   />
-                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-girej-red">
-                    India's oldest A2 Dairy Brand
-                  </h1>
+                  <span className="text-lg font-medium text-white">Bulk A2 Cow Ghee Supplier</span>
                 </div>
+              </div>
+              
+              {/* Main Headline */}
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                India's Trusted <span className="text-golden-accent">Bulk A2</span>
+                <br />
+                <span className="text-golden-accent">Cow Ghee</span> Supplier
+              </h1>
+              
+              {/* Sub-headline */}
+              <p className="text-xl md:text-2xl font-light text-white/90 max-w-4xl mx-auto">
+                Supplying authentic Gir cow A2 ghee wholesale to food manufacturers, retail brands, Ayurvedic companies & exporters.
+              </p>
+              
+              {/* USP Points */}
+              <div className="text-lg text-white/80 max-w-5xl mx-auto leading-relaxed">
+                MOQ: 50kg bulk orders (15kg tins, 1L jars, 1000L tankers) • Export-ready: UAE, USA, UK, Singapore, Canada • Private label / OEM supply available
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Metrics */}
-        <div className="pb-4">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-base md:text-lg text-white mb-4 max-w-2xl mx-auto font-medium text-center">
-              Working directly with 4000+ Gir Cow farmers to deliver premium A2 Ghee across India
+        <div className="pb-8">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-base md:text-lg text-white/90 mb-6 max-w-4xl mx-auto font-medium text-center">
+              Looking for a reliable bulk A2 cow ghee supplier in India? At Girej, we specialize in the B2B supply of pure A2 Gir cow ghee, ethically sourced from indigenous cows in Gujarat. With state-of-the-art processing, daily lab testing, and FSSAI-certified quality.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 text-center border border-white/20">
-                <Users className="h-4 w-4 text-girej-red mb-1 mx-auto" />
-                <div className="text-sm font-bold text-white">4000+</div>
-                <div className="text-xs text-white/80">Partner Farmers</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 text-center border border-white/20">
+                <Users className="h-6 w-6 text-golden-accent mb-2 mx-auto" />
+                <div className="text-lg font-bold text-white">5,000+</div>
+                <div className="text-sm text-white/80">Farmers Empowered</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 text-center border border-white/20">
-                <Leaf className="h-4 w-4 text-girej-red mb-1 mx-auto" />
-                <div className="text-sm font-bold text-white">100%</div>
-                <div className="text-xs text-white/80">Ahimsa Sourcing</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 text-center border border-white/20">
+                <Leaf className="h-6 w-6 text-golden-accent mb-2 mx-auto" />
+                <div className="text-lg font-bold text-white">FSSAI</div>
+                <div className="text-sm text-white/80">Certified Quality</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 text-center border border-white/20">
-                <Award className="h-4 w-4 text-girej-red mb-1 mx-auto" />
-                <div className="text-sm font-bold text-white">A2 Certified</div>
-                <div className="text-xs text-white/80">Premium Quality</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 text-center border border-white/20">
+                <Award className="h-6 w-6 text-golden-accent mb-2 mx-auto" />
+                <div className="text-lg font-bold text-white">Export Ready</div>
+                <div className="text-sm text-white/80">Global Supply</div>
               </div>
             </div>
           </div>
@@ -119,15 +136,15 @@ const HeroSection = () => {
     </section>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-girej-cream py-8">
+    <div className="bg-gradient-warm py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="group bg-girej-red hover:bg-girej-dark-red text-white">
-            Request Bulk Quote
+          <Button size="lg" className="group bg-earth-green hover:bg-earth-green/90 text-white">
+            👉 Request Bulk Quote Today
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="outline" size="lg" className="border-girej-red text-girej-red hover:bg-girej-red hover:text-white">
-            Explore Supply Chain
+          <Button variant="outline" size="lg" className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white">
+            Download Wholesale Price Sheet
           </Button>
         </div>
       </div>

@@ -1,142 +1,150 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Package, Truck, Award } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Package, Shield, Award, Truck } from "lucide-react";
 
 const ProductsSection = () => {
-  const productFeatures = [
+  const productRange = [
     {
-      icon: Award,
-      title: "A2 Protein Certified",
-      description: "Laboratory tested and certified A2 beta-casein protein"
-    },
-    {
+      title: "15 KG Tin (Wholesale Focus)",
+      description: "Ideal for distributors & retailers",
       icon: Package,
-      title: "Bulk Supply Ready",
-      description: "50kg to 500kg packaging options for B2B customers"
+      color: "earth-green"
     },
     {
+      title: "500ml & 1L Jars",
+      description: "Retail-ready packaging, private label available",
+      icon: Package,
+      color: "trust-blue"
+    },
+    {
+      title: "Bulk Supply (1000L tankers)",
+      description: "For food manufacturers, export & institutional buyers",
       icon: Truck,
-      title: "Pan-India Delivery",
-      description: "Temperature-controlled logistics network"
-    },
-    {
-      icon: CheckCircle,
-      title: "Quality Assured",
-      description: "Third-party tested and certified processes"
+      color: "girej-red"
     }
   ];
 
-  const specifications = [
-    { label: "A2 Protein Content", value: "100% Pure", highlight: true },
-    { label: "Moisture Content", value: "< 0.5%", highlight: false },
-    { label: "Free Fatty Acid", value: "< 2.5%", highlight: false },
-    { label: "Shelf Life", value: "18 months", highlight: true },
-    { label: "Packaging Options", value: "50kg - 500kg", highlight: false },
-    { label: "Production Capacity", value: "500 MT/month", highlight: true }
+  const certifications = [
+    { label: "FSSAI Certified", highlight: true },
+    { label: "Lab tested daily for A2 beta-casein protein", highlight: false },
+    { label: "Hygienic Bilona method + modern pasteurization", highlight: false },
+    { label: "Organic & ISO compliance (export-ready)", highlight: true }
   ];
 
   return (
-    <section id="products" className="py-20 bg-gradient-warm">
+    <section id="products" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            Premium Products
+            Product Range
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Premium <span className="text-earth-green">A2 Ghee</span> for Bulk Supply
+            Bulk A2 Gir Cow Ghee – <span className="text-earth-green">15kg Tins, Jars & Bulk Supply</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our flagship A2 ghee is crafted from pure Gir cow milk using traditional bilona method, perfect for brands seeking premium bulk ingredients.
+            Explore Girej's wholesale range: A2 Gir cow ghee in 15kg tins, 1L jars, and bulk insulated tankers. Perfect for distributors, retailers, and food manufacturers.
           </p>
         </div>
 
-        {/* Product Overview */}
+        {/* Product Range Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {productRange.map((product, index) => {
+            const IconComponent = product.icon;
+            return (
+              <Card key={index} className="p-8 text-center hover:shadow-soft transition-all duration-300">
+                <div className={`w-16 h-16 mx-auto mb-6 bg-${product.color}/10 rounded-full flex items-center justify-center`}>
+                  <IconComponent className={`h-8 w-8 text-${product.color}`} />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-4">{product.title}</h3>
+                <p className="text-muted-foreground">{product.description}</p>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Certifications & Quality */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Product Image & Info */}
-          <Card className="p-8 shadow-elevated">
-            <div className="bg-golden-accent/10 rounded-lg p-6 mb-6 text-center">
-              <Package className="h-20 w-20 text-golden-accent mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-2">A2 Bilona Ghee</h3>
-              <p className="text-muted-foreground">Traditional churned from pure Gir cow curd</p>
+          {/* Product Image/Info */}
+          <Card className="p-8">
+            <h3 className="text-2xl font-semibold text-foreground mb-6">Premium A2 Gir Cow Ghee</h3>
+            <div className="aspect-video bg-earth-green/5 rounded-lg mb-6 flex items-center justify-center">
+              <Package className="h-16 w-16 text-earth-green/50" />
             </div>
-            
-            <div className="space-y-4">
+            <p className="text-muted-foreground mb-4">
+              Our signature A2 ghee is crafted from the milk of indigenous Gir cows, using traditional Bilona method combined with modern quality assurance.
+            </p>
+            <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-earth-green" />
-                <span className="text-foreground">100% Pure A2 Protein</span>
+                <Shield className="h-4 w-4 text-earth-green" />
+                <span className="text-sm text-foreground">100% Pure A2 Ghee</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-earth-green" />
-                <span className="text-foreground">Traditional Bilona Method</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-earth-green" />
-                <span className="text-foreground">Ahimsa Sourced Milk</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-earth-green" />
-                <span className="text-foreground">Third-Party Lab Tested</span>
+                <Award className="h-4 w-4 text-earth-green" />
+                <span className="text-sm text-foreground">Traditional Bilona Method</span>
               </div>
             </div>
           </Card>
 
-          {/* Product Specifications */}
-          <Card className="p-8 shadow-soft">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Product Specifications</h3>
+          {/* Certifications */}
+          <Card className="p-8">
+            <h3 className="text-2xl font-semibold text-foreground mb-6">Certifications & Quality</h3>
             <div className="space-y-4">
-              {specifications.map((spec, index) => (
-                <div 
-                  key={index} 
-                  className={`flex justify-between items-center p-3 rounded-lg ${
-                    spec.highlight ? 'bg-earth-green/10' : 'bg-muted/50'
-                  }`}
-                >
-                  <span className="font-medium text-foreground">{spec.label}</span>
-                  <span className={`font-semibold ${spec.highlight ? 'text-earth-green' : 'text-muted-foreground'}`}>
-                    {spec.value}
+              {certifications.map((cert, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${cert.highlight ? 'bg-earth-green' : 'bg-muted-foreground'}`}></div>
+                  <span className={`${cert.highlight ? 'text-foreground font-semibold' : 'text-muted-foreground'}`}>
+                    {cert.label}
                   </span>
                 </div>
               ))}
             </div>
-
-            <div className="mt-6 pt-6 border-t border-border">
-              <h4 className="font-semibold text-foreground mb-3">Certifications</h4>
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <Badge variant="outline">FSSAI Certified</Badge>
-                <Badge variant="outline">ISO 22000</Badge>
-                <Badge variant="outline">A2 Lab Tested</Badge>
-                <Badge variant="outline">Organic Certified</Badge>
-              </div>
+            <div className="mt-6 p-4 bg-earth-green/5 rounded-lg">
+              <p className="text-sm text-earth-green font-medium">
+                ✔ Daily lab testing ensures consistent A2 protein levels
+                <br />
+                ✔ Export-ready with organic & ISO certifications
+                <br />
+                ✔ Batch-wise traceability for complete transparency
+              </p>
             </div>
           </Card>
         </div>
 
-        {/* Product Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {productFeatures.map((feature, index) => (
-            <Card key={index} className="p-6 text-center shadow-soft hover:shadow-elevated transition-all duration-300">
-              <div className="w-12 h-12 bg-earth-green/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="h-6 w-6 text-earth-green" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
-            </Card>
-          ))}
+        {/* Bulk Supply Focus */}
+        <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
+          <h3 className="text-2xl font-semibold text-earth-green mb-4">Bulk Supply Specifications</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <div className="text-2xl font-bold text-foreground">50kg</div>
+              <div className="text-muted-foreground">Minimum Order Quantity</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-foreground">15kg</div>
+              <div className="text-muted-foreground">Standard Tin Size</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-foreground">1000L</div>
+              <div className="text-muted-foreground">Bulk Tanker Capacity</div>
+            </div>
+          </div>
         </div>
 
-        {/* Bulk Supply CTA */}
-        <div className="bg-earth-green/5 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-3xl font-bold text-foreground mb-4">Ready for Bulk Supply</h3>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Whether you need 50kg or 500kg, our flexible packaging and delivery options ensure your business gets the premium A2 ghee it deserves.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg">
-              Request Product Samples
+        {/* CTA */}
+        <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <Button 
+              size="lg" 
+              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-8 text-lg"
+            >
+              👉 Request 15kg Tin Price
             </Button>
-            <Button variant="trust" size="lg">
-              Download Product Catalog
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-8 text-lg"
+            >
+              Get Private Label Proposal
             </Button>
           </div>
         </div>
