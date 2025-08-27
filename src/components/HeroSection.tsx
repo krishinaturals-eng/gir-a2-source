@@ -6,10 +6,6 @@ import { useEffect, useState } from "react";
 
 const heroImages = [
   {
-    src: "/lovable-uploads/78a3afa7-0713-447d-a722-53ceea996608.png",
-    alt: "Gir cows grazing in natural pastures"
-  },
-  {
     src: "/lovable-uploads/4a80cf41-df9b-49bf-8941-d3d98b2cdbee.png", 
     alt: "Gir cows by pristine water source"
   }
