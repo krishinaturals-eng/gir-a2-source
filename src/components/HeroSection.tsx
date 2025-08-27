@@ -12,6 +12,10 @@ const heroImages = [
   {
     src: "/lovable-uploads/d0dd1ae6-2652-4127-9ed6-414c69907e59.png",
     alt: "Herd of Gir cows grazing in natural pastures"
+  },
+  {
+    src: "/lovable-uploads/d3977bab-523f-4396-a16e-8041fed69258.png",
+    alt: "Traditional farmers working in golden fields"
   }
 ];
 
