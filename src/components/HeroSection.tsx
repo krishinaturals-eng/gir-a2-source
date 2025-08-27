@@ -63,8 +63,8 @@ const HeroSection = () => {
         <div className="flex-1 flex items-start justify-center pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 inline-block border border-white/20">
-                <div className="flex items-center justify-center gap-4 mb-2">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 inline-block border border-white/20">
+                <div className="flex items-center justify-center gap-2 mb-1">
                   <img 
                     src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
                     alt="GIREJ Logo" 
