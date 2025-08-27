@@ -68,12 +68,8 @@ const HeroSection = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight">
-                <span className="block text-girej-red bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg inline-block">India's oldest A2 Dairy Brand</span>
+                <span className="block text-girej-red">India's oldest A2 Dairy Brand</span>
               </h1>
-              
-              <p className="text-base md:text-lg text-white mb-6 max-w-2xl mx-auto font-medium bg-girej-black/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                Working directly with 4000+ Gir Cow farmers to deliver premium A2 Ghee across India
-              </p>
             </div>
           </div>
         </div>
@@ -81,6 +77,9 @@ const HeroSection = () => {
         {/* Bottom Metrics */}
         <div className="pb-4">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-base md:text-lg text-white mb-4 max-w-2xl mx-auto font-medium text-center">
+              Working directly with 4000+ Gir Cow farmers to deliver premium A2 Ghee across India
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 text-center border border-white/20">
                 <Users className="h-4 w-4 text-girej-red mb-1 mx-auto" />
