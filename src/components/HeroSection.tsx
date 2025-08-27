@@ -66,9 +66,9 @@ const HeroSection = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 inline-block border border-white/20">
                 <div className="flex items-center justify-center gap-4 mb-2">
                   <img 
-                    src="/lovable-uploads/dc185039-5751-4cea-b260-eec22b06ed9b.png" 
+                    src="/lovable-uploads/937181d9-f23a-40d1-be93-2cc1741ffcf5.png" 
                     alt="GIREJ Logo" 
-                    className="h-12 w-auto rounded-xl bg-white/90 p-2 shadow-lg" 
+                    className="h-12 w-auto" 
                   />
                   <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-girej-red">
                     India's oldest A2 Dairy Brand
