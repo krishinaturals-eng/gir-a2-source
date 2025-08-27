@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ArrowRight, Users, Leaf, Award } from "lucide-react";
 import { useEffect, useState } from "react";
-import girejLogo from "@/assets/girej-logo.png";
 
 const heroImages = [
   {
@@ -66,7 +65,7 @@ const HeroSection = () => {
             <div className="animate-fade-in">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 inline-block border border-white/20">
                 <div className="flex items-center justify-center gap-4 mb-2">
-                  <img src={girejLogo} alt="GIREJ Logo" className="h-12 w-auto" />
+                  <img src="/lovable-uploads/8b50af87-9586-4a92-9f9b-3e6f55ec85f8.png" alt="GIREJ Logo" className="h-12 w-auto" />
                   <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-girej-red">
                     India's oldest A2 Dairy Brand
                   </h1>
