@@ -12,10 +12,6 @@ const heroImages = [
   {
     src: "/lovable-uploads/d0dd1ae6-2652-4127-9ed6-414c69907e59.png",
     alt: "Herd of Gir cows grazing in natural pastures"
-  },
-  {
-    src: "/lovable-uploads/9a58ddb3-9165-4c11-9175-022b4f10add1.png",
-    alt: "Farmer with large herd of Gir cows in open pastures"
   }
 ];
 
