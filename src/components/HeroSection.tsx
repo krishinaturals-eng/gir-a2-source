@@ -8,6 +8,14 @@ const heroImages = [
   {
     src: "/lovable-uploads/4a80cf41-df9b-49bf-8941-d3d98b2cdbee.png", 
     alt: "Gir cows by pristine water source"
+  },
+  {
+    src: "/lovable-uploads/d0dd1ae6-2652-4127-9ed6-414c69907e59.png",
+    alt: "Herd of Gir cows grazing in natural pastures"
+  },
+  {
+    src: "/lovable-uploads/2db7c7b1-ffe6-47c6-95e7-a21e5d3a4be9.png",
+    alt: "Traditional farmers working in fields"
   }
 ];
 
