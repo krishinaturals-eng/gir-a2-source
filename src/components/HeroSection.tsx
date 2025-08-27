@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ArrowRight, Users, Leaf, Award } from "lucide-react";
 import { useEffect, useState } from "react";
+import girejLogo from "@/assets/girej-logo.png";
 
 const heroImages = [
   {
@@ -12,10 +13,6 @@ const heroImages = [
   {
     src: "/lovable-uploads/4a80cf41-df9b-49bf-8941-d3d98b2cdbee.png", 
     alt: "Gir cows by pristine water source"
-  },
-  {
-    src: "/lovable-uploads/0e10d37e-8615-4391-8c76-2ff02271bd4b.png",
-    alt: "Traditional farmers with GIREJ heritage"
   }
 ];
 
@@ -67,9 +64,14 @@ const HeroSection = () => {
         <div className="flex-1 flex items-start justify-center pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
-              <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight">
-                <span className="block text-girej-red">India's oldest A2 Dairy Brand</span>
-              </h1>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 inline-block border border-white/20">
+                <div className="flex items-center justify-center gap-4 mb-2">
+                  <img src={girejLogo} alt="GIREJ Logo" className="h-12 w-auto" />
+                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-girej-red">
+                    India's oldest A2 Dairy Brand
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
         </div>
