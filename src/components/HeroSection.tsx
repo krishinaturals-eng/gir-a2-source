@@ -66,7 +66,7 @@ const HeroSection = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 inline-block border border-white/20">
                 <div className="flex items-center justify-center gap-4 mb-2">
                   <img 
-                    src="/lovable-uploads/937181d9-f23a-40d1-be93-2cc1741ffcf5.png" 
+                    src="/lovable-uploads/02dcc4d6-9903-411d-8047-96037589db7b.png" 
                     alt="GIREJ Logo" 
                     className="h-12 w-auto" 
                   />
