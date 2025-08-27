@@ -37,6 +37,9 @@ All colors MUST be HSL.
     --ring: 142 45% 25%;
 
     /* Custom GIREJ Brand Colors */
+    --girej-red: 0 60% 35%;
+    --girej-dark-red: 0 50% 25%;
+    --girej-black: 0 0% 10%;
     --earth-green: 142 45% 25%;
     --warm-cream: 45 30% 95%;
     --golden-accent: 35 60% 65%;
@@ -44,7 +47,7 @@ All colors MUST be HSL.
     --farmer-brown: 25 40% 30%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--earth-green)), hsl(142 35% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--girej-red)), hsl(var(--girej-dark-red)));
     --gradient-warm: linear-gradient(180deg, hsl(var(--warm-cream)), hsl(45 20% 92%));
     --gradient-trust: linear-gradient(135deg, hsl(var(--trust-blue)), hsl(210 60% 55%));
 

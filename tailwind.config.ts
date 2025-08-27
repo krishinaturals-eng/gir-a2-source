@@ -53,6 +53,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				// GIREJ Brand Colors
+				'girej-red': 'hsl(var(--girej-red))',
+				'girej-dark-red': 'hsl(var(--girej-dark-red))',
+				'girej-black': 'hsl(var(--girej-black))',
 				'earth-green': 'hsl(var(--earth-green))',
 				'warm-cream': 'hsl(var(--warm-cream))',
 				'golden-accent': 'hsl(var(--golden-accent))',

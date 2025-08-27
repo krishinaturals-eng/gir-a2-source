@@ -53,57 +53,63 @@ const HeroSection = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-earth-green/80 via-earth-green/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-girej-black/60 via-girej-black/40 to-transparent"></div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
 
-      {/* Content at Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-32">
-          <div className="animate-fade-in text-center">
-            <Badge variant="secondary" className="mb-4 text-sm bg-white/90 text-black">
-              🏆 India's Oldest A2 Dairy Brand - Est. 2014
-            </Badge>
-            
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-              <span className="text-white">India's First</span>
-              <span className="block text-red-800 bg-white/95 px-4 py-2 rounded-lg inline-block mt-2">India's oldest A2 Dairy Brand</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto font-medium">
-              Working directly with 4000+ Gir Cow farmers to deliver premium A2 Ghee across India
-            </p>
+      {/* Content Overlay */}
+      <div className="absolute inset-0 z-10 flex flex-col justify-between">
+        {/* Top Content */}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="animate-fade-in">
+              <Badge variant="secondary" className="mb-4 text-sm bg-white/20 backdrop-blur-sm text-white border-white/30">
+                🏆 India's Oldest A2 Dairy Brand - Est. 2014
+              </Badge>
+              
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                <span className="block text-girej-red bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg inline-block">India's oldest A2 Dairy Brand</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto font-medium bg-girej-black/20 backdrop-blur-sm px-6 py-3 rounded-lg">
+                Working directly with 4000+ Gir Cow farmers to deliver premium A2 Ghee across India
+              </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button size="lg" className="group bg-red-800 hover:bg-red-900 text-white">
-                Request Bulk Quote
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/95 text-red-800 border-red-800 hover:bg-red-800 hover:text-white">
-                Explore Supply Chain
-              </Button>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button size="lg" className="group bg-girej-red hover:bg-girej-dark-red text-white">
+                  Request Bulk Quote
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" size="lg" className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30 hover:text-white">
+                  Explore Supply Chain
+                </Button>
+              </div>
             </div>
+          </div>
+        </div>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 text-black">
-                <Users className="h-8 w-8 text-red-800 mb-2 mx-auto" />
-                <div className="text-2xl font-bold text-red-800">4000+</div>
-                <div className="text-sm text-black/80">Partner Farmers</div>
+        {/* Bottom Metrics */}
+        <div className="pb-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
+                <Users className="h-6 w-6 text-girej-red mb-2 mx-auto" />
+                <div className="text-xl font-bold text-white">4000+</div>
+                <div className="text-xs text-white/80">Partner Farmers</div>
               </div>
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 text-black">
-                <Leaf className="h-8 w-8 text-red-800 mb-2 mx-auto" />
-                <div className="text-2xl font-bold text-red-800">100%</div>
-                <div className="text-sm text-black/80">Ahimsa Sourcing</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
+                <Leaf className="h-6 w-6 text-girej-red mb-2 mx-auto" />
+                <div className="text-xl font-bold text-white">100%</div>
+                <div className="text-xs text-white/80">Ahimsa Sourcing</div>
               </div>
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 text-black">
-                <Award className="h-8 w-8 text-red-800 mb-2 mx-auto" />
-                <div className="text-2xl font-bold text-red-800">A2 Certified</div>
-                <div className="text-sm text-black/80">Premium Quality</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center border border-white/20">
+                <Award className="h-6 w-6 text-girej-red mb-2 mx-auto" />
+                <div className="text-xl font-bold text-white">A2 Certified</div>
+                <div className="text-xs text-white/80">Premium Quality</div>
               </div>
             </div>
           </div>
@@ -111,7 +117,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white animate-bounce z-20">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
         </div>
