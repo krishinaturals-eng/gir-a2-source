@@ -63,7 +63,7 @@ const HeroSection = () => {
         <div className="flex-1 flex items-start justify-center pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 inline-block border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 inline-block border border-white/20">
                 <div className="flex items-center justify-center gap-2 mb-1">
                   <img 
                     src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
@@ -86,17 +86,17 @@ const HeroSection = () => {
               Working directly with 4000+ Gir Cow farmers to deliver premium A2 Ghee across India
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 text-center border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 text-center border border-white/20">
                 <Users className="h-4 w-4 text-girej-red mb-1 mx-auto" />
                 <div className="text-sm font-bold text-white">4000+</div>
                 <div className="text-xs text-white/80">Partner Farmers</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 text-center border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 text-center border border-white/20">
                 <Leaf className="h-4 w-4 text-girej-red mb-1 mx-auto" />
                 <div className="text-sm font-bold text-white">100%</div>
                 <div className="text-xs text-white/80">Ahimsa Sourcing</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 text-center border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 text-center border border-white/20">
                 <Award className="h-4 w-4 text-girej-red mb-1 mx-auto" />
                 <div className="text-sm font-bold text-white">A2 Certified</div>
                 <div className="text-xs text-white/80">Premium Quality</div>
