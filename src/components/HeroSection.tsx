@@ -64,13 +64,9 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col justify-between">
         {/* Top Content */}
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-start justify-center pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="animate-fade-in">
-              <Badge variant="secondary" className="mb-4 text-sm bg-white/20 backdrop-blur-sm text-white border-white/30">
-                🏆 India's Oldest A2 Dairy Brand - Est. 2014
-              </Badge>
-              
               <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight">
                 <span className="block text-girej-red bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg inline-block">India's oldest A2 Dairy Brand</span>
               </h1>
