@@ -68,17 +68,28 @@ const HeroSection = () => {
               🏆 India's Oldest A2 Dairy Brand - Est. 2014
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
               <span className="text-white">India's First</span>
-              <span className="block text-red-800 bg-white/95 px-4 py-2 rounded-lg inline-block mt-2">A2 Dairy Social Enterprise</span>
+              <span className="block text-red-800 bg-white/95 px-4 py-2 rounded-lg inline-block mt-2">India's oldest A2 Dairy Brand</span>
             </h1>
             
             <p className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto font-medium">
-              Partnering with 4000+ Gir cow farmers to deliver premium A2 ghee through ethical sourcing and Ahimsa milk production
+              Working directly with 4000+ Gir Cow farmers to deliver premium A2 Ghee across India
             </p>
 
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <Button size="lg" className="group bg-red-800 hover:bg-red-900 text-white">
+                Request Bulk Quote
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="outline" size="lg" className="bg-white/95 text-red-800 border-red-800 hover:bg-red-800 hover:text-white">
+                Explore Supply Chain
+              </Button>
+            </div>
+
             {/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 text-black">
                 <Users className="h-8 w-8 text-red-800 mb-2 mx-auto" />
                 <div className="text-2xl font-bold text-red-800">4000+</div>
@@ -94,17 +105,6 @@ const HeroSection = () => {
                 <div className="text-2xl font-bold text-red-800">A2 Certified</div>
                 <div className="text-sm text-black/80">Premium Quality</div>
               </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="group bg-red-800 hover:bg-red-900 text-white">
-                Request Bulk Quote
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/95 text-red-800 border-red-800 hover:bg-red-800 hover:text-white">
-                Explore Supply Chain
-              </Button>
             </div>
           </div>
         </div>
