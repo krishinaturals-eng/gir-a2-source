@@ -22,9 +22,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img 
-              src="/lovable-uploads/02dcc4d6-9903-411d-8047-96037589db7b.png" 
+              src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
               alt="GIREJ - A2 Cow Milk Products, Established 2014" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
