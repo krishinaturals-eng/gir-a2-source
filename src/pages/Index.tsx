@@ -6,6 +6,7 @@ import BSupplySection from "@/components/BSupplySection";
 import ImpactSection from "@/components/ImpactSection";
 import MediaSection from "@/components/MediaSection";
 import ContactSection from "@/components/ContactSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -52,6 +53,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };
