@@ -11,7 +11,7 @@ const Navigation = () => {
     { name: "Products", href: "#products" },
     { name: "Bulk Supply", href: "#partnership" },
     { name: "Impact", href: "#impact" },
-    { name: "Media Coverage/Supporters", href: "#media" },
+    { name: "In Media", href: "#media" },
     { name: "Contact Us", href: "#contact" }
   ];
 
