@@ -50,7 +50,7 @@ const ProductsSection = () => {
             return (
               <Card key={index} className="p-8 text-center hover:shadow-soft transition-all duration-300">
                 {product.image ? (
-                  <div className="w-48 h-48 mx-auto mb-6 rounded-lg overflow-hidden">
+                  <div className="w-60 h-60 mx-auto mb-6 rounded-lg overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.title}
