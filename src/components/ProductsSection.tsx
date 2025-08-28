@@ -31,6 +31,14 @@ const ProductsSection = () => {
   return (
     <section id="products" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            Our range of A2 Cow Ghee products
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Ethically sourced, FSSAI-certified, and trusted by 20+ leading brands for wholesale and export.
+          </p>
+        </div>
 
         {/* Product Range Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
