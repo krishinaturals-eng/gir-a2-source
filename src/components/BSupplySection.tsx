@@ -32,7 +32,7 @@ const BSupplySection = () => {
   ];
 
   return (
-    <section id="b2b-supply" className="py-20 bg-background">
+    <section id="partnership" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
