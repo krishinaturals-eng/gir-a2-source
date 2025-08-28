@@ -80,12 +80,6 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Main Headline */}
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                India's Trusted <span className="text-golden-accent">Bulk A2</span>
-                <br />
-                <span className="text-golden-accent">Cow Ghee</span> Supplier
-              </h1>
             </div>
           </div>
         </div>
