@@ -101,7 +101,7 @@ const HeroSection = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/20">
             <div className="flex items-center justify-center space-x-2">
               <Store className="w-5 h-5 text-white" />
-              <span className="text-white font-medium text-center">Supplying 20+ brands</span>
+              <span className="text-white font-medium text-center">Supplying "20+ brands"</span>
             </div>
           </div>
         </div>
