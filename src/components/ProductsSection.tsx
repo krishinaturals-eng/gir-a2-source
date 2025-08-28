@@ -66,6 +66,31 @@ const ProductsSection = () => {
           })}
         </div>
 
+        {/* Certifications & Quality */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <Card className="p-8">
+            <h3 className="text-xl font-semibold text-foreground mb-6">Certifications & Quality</h3>
+            <div className="space-y-4">
+              {certifications.map((cert, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${cert.highlight ? 'bg-earth-green' : 'bg-muted-foreground'}`}></div>
+                  <span className={`${cert.highlight ? 'text-foreground font-semibold' : 'text-muted-foreground'}`}>
+                    {cert.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-earth-green/5 rounded-lg">
+              <p className="text-sm text-earth-green font-medium">
+                ✔ Daily lab testing ensures consistent A2 protein levels
+                <br />
+                ✔ Export-ready with organic & ISO certifications
+                <br />
+                ✔ Batch-wise traceability for complete transparency
+              </p>
+            </div>
+          </Card>
+        </div>
 
         {/* Bulk Supply Focus */}
         <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
