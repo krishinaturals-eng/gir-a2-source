@@ -66,53 +66,6 @@ const ProductsSection = () => {
           })}
         </div>
 
-        {/* Certifications & Quality */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Product Image/Info */}
-          <Card className="p-8">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Premium A2 Gir Cow Ghee</h3>
-            <div className="aspect-video bg-earth-green/5 rounded-lg mb-6 flex items-center justify-center">
-              <Package className="h-16 w-16 text-earth-green/50" />
-            </div>
-            <p className="text-muted-foreground mb-4">
-              Our signature A2 ghee is crafted from the milk of indigenous Gir cows, using traditional Bilona method combined with modern quality assurance.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <Shield className="h-4 w-4 text-earth-green" />
-                <span className="text-sm text-foreground">100% Pure A2 Ghee</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="h-4 w-4 text-earth-green" />
-                <span className="text-sm text-foreground">Traditional Bilona Method</span>
-              </div>
-            </div>
-          </Card>
-
-          {/* Certifications */}
-          <Card className="p-8">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Certifications & Quality</h3>
-            <div className="space-y-4">
-              {certifications.map((cert, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className={`w-2 h-2 rounded-full mt-2 ${cert.highlight ? 'bg-earth-green' : 'bg-muted-foreground'}`}></div>
-                  <span className={`${cert.highlight ? 'text-foreground font-semibold' : 'text-muted-foreground'}`}>
-                    {cert.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 p-4 bg-earth-green/5 rounded-lg">
-              <p className="text-sm text-earth-green font-medium">
-                ✔ Daily lab testing ensures consistent A2 protein levels
-                <br />
-                ✔ Export-ready with organic & ISO certifications
-                <br />
-                ✔ Batch-wise traceability for complete transparency
-              </p>
-            </div>
-          </Card>
-        </div>
 
         {/* Bulk Supply Focus */}
         <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
