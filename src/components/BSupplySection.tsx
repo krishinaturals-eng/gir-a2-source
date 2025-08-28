@@ -121,14 +121,14 @@ const BSupplySection = () => {
               size="lg" 
               className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-8 text-lg"
             >
-              👉 Request B2B Partnership Kit
+              👉 Request 15kg Tin Price
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
               className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-8 text-lg"
             >
-              Get Export Quote
+              Get Private Label Proposal
             </Button>
           </div>
         </div>
