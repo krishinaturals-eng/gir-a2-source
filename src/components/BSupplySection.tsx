@@ -12,7 +12,7 @@ const BSupplySection = () => {
             B2B Supply
           </Badge>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            A2 Ghee <span className="text-earth-green">B2B Supplier India</span>
+            <span className="text-earth-green">Bulk A2 Ghee Supplier India</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
             Girej is a trusted bulk A2 ghee supplier and manufacturer in India, delivering authentic Gir cow A2 ghee to buyers across India. Backed by our exclusive network of 5,000+ Gir cow farmers, we ensure consistent quantity with uncompromised quality.
