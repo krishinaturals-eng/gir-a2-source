@@ -9,12 +9,14 @@ const ProductsSection = () => {
       title: "15 KG Tin (Wholesale Focus)",
       description: "Ideal for distributors & retailers",
       icon: Package,
+      image: "/lovable-uploads/3e0fb42c-715a-49c1-adcd-60893d213855.png",
       color: "earth-green"
     },
     {
       title: "500ml & 1L Jars",
       description: "Retail-ready packaging, private label available",
       icon: Package,
+      image: "/lovable-uploads/84106b90-8bb9-4d02-a947-3940ef4c1211.png",
       color: "trust-blue"
     },
     {
@@ -53,9 +55,19 @@ const ProductsSection = () => {
             const IconComponent = product.icon;
             return (
               <Card key={index} className="p-8 text-center hover:shadow-soft transition-all duration-300">
-                <div className={`w-16 h-16 mx-auto mb-6 bg-${product.color}/10 rounded-full flex items-center justify-center`}>
-                  <IconComponent className={`h-8 w-8 text-${product.color}`} />
-                </div>
+                {product.image ? (
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className={`w-16 h-16 mx-auto mb-6 bg-${product.color}/10 rounded-full flex items-center justify-center`}>
+                    <IconComponent className={`h-8 w-8 text-${product.color}`} />
+                  </div>
+                )}
                 <h3 className="text-xl font-semibold text-foreground mb-4">{product.title}</h3>
                 <p className="text-muted-foreground">{product.description}</p>
               </Card>
