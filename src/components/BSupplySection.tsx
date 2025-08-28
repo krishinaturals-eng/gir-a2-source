@@ -4,33 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Factory, Package, Heart, Globe, Scale, Package2, TrendingUp, DollarSign } from "lucide-react";
 
 const BSupplySection = () => {
-  const clientTypes = [
-    {
-      icon: Factory,
-      title: "Food Manufacturers",
-      description: "snacks, confectionery, bakery, FMCG",
-      color: "earth-green"
-    },
-    {
-      icon: Package,
-      title: "Retail & Private Labels",
-      description: "white-label A2 ghee for premium brands",
-      color: "trust-blue"
-    },
-    {
-      icon: Heart,
-      title: "Ayurvedic & Health Products",
-      description: "certified ghee for wellness products",
-      color: "girej-red"
-    },
-    {
-      icon: Globe,
-      title: "Export Clients",
-      description: "UAE, USA, Canada, UK, Singapore",
-      color: "golden-accent"
-    }
-  ];
-
   return (
     <section id="partnership" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,22 +17,6 @@ const BSupplySection = () => {
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
             Girej is a trusted bulk A2 ghee supplier and manufacturer in India, delivering authentic Gir cow A2 ghee to buyers across India. Backed by our exclusive network of 5,000+ Gir cow farmers, we ensure consistent quantity with uncompromised quality.
           </p>
-        </div>
-
-        {/* Client Types Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {clientTypes.map((client, index) => {
-            const IconComponent = client.icon;
-            return (
-              <Card key={index} className="p-6 text-center hover:shadow-soft transition-all duration-300">
-                <div className={`w-16 h-16 mx-auto mb-4 bg-${client.color}/10 rounded-full flex items-center justify-center`}>
-                  <IconComponent className={`h-8 w-8 text-${client.color}`} />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{client.title}</h3>
-                <p className="text-sm text-muted-foreground">{client.description}</p>
-              </Card>
-            );
-          })}
         </div>
 
         {/* Bulk Order Specifications */}
