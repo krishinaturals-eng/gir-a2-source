@@ -31,7 +31,7 @@ const ProductsSection = () => {
   return (
     <section id="products" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Our range of A2 Cow Ghee products
           </h2>
@@ -47,7 +47,7 @@ const ProductsSection = () => {
             return (
               <Card key={index} className="p-8 text-center hover:shadow-soft transition-all duration-300">
                 {product.image ? (
-                  <div className="w-60 h-60 mx-auto mb-6 rounded-lg overflow-hidden">
+                  <div className="w-40 h-40 mx-auto mb-4 rounded-lg overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.title}
@@ -69,7 +69,7 @@ const ProductsSection = () => {
         {/* Bilona A2 Ghee Making Process */}
         <div className="text-center mb-16">
           <h3 className="text-2xl font-semibold text-foreground mb-8">Bilona A2 Ghee Making</h3>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-lg mx-auto">
             <img 
               src="/lovable-uploads/cb2efa0d-f93a-496f-9912-5ad39986d624.png" 
               alt="The Art of A2 Gir Cow Ghee - Traditional Bilona Process"
