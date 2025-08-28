@@ -66,6 +66,18 @@ const ProductsSection = () => {
           })}
         </div>
 
+        {/* Bilona A2 Ghee Making Process */}
+        <div className="text-center mb-16">
+          <h3 className="text-2xl font-semibold text-foreground mb-8">Bilona A2 Ghee Making</h3>
+          <div className="max-w-4xl mx-auto">
+            <img 
+              src="/lovable-uploads/cb2efa0d-f93a-496f-9912-5ad39986d624.png" 
+              alt="The Art of A2 Gir Cow Ghee - Traditional Bilona Process"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+
         {/* Certifications & Quality */}
         <div className="max-w-2xl mx-auto mb-16">
           <Card className="p-8">
