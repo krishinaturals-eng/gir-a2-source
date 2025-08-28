@@ -62,14 +62,14 @@ const HeroSection = () => {
       </Carousel>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-between">
+      <div className="absolute inset-0 z-10 flex flex-col">
         {/* Top Content */}
-        <div className="flex-1 flex items-center justify-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="pt-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
             {/* Main Content */}
-            <div className="text-center text-white space-y-6 animate-fade-in">
+            <div className="text-center text-white space-y-4 animate-fade-in">
               {/* Logo and Brand */}
-              <div className="mb-8">
+              <div className="mb-6">
                 <div className="inline-flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
                   <img 
                     src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
@@ -81,24 +81,27 @@ const HeroSection = () => {
               </div>
               
               {/* Main Headline */}
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
                 India's Trusted <span className="text-golden-accent">Bulk A2</span>
                 <br />
                 <span className="text-golden-accent">Cow Ghee</span> Supplier
               </h1>
               
               {/* Sub-headline */}
-              <p className="text-xl md:text-2xl font-light text-white/90 max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl font-light text-white/90 max-w-4xl mx-auto">
                 Supplying authentic Gir cow A2 ghee wholesale to food manufacturers, retail brands, Ayurvedic companies & exporters.
               </p>
               
               {/* USP Points */}
-              <div className="text-lg text-white/80 max-w-5xl mx-auto leading-relaxed">
+              <div className="text-base text-white/80 max-w-5xl mx-auto leading-relaxed">
                 MOQ: 50kg bulk orders (15kg tins, 1L jars, 1000L tankers) • Export-ready: UAE, USA, UK, Singapore, Canada • Private label / OEM supply available
               </div>
             </div>
           </div>
         </div>
+
+        {/* Spacer */}
+        <div className="flex-1"></div>
 
         {/* Bottom Metrics */}
         <div className="pb-8">
