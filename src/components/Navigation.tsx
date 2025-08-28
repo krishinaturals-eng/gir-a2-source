@@ -7,12 +7,11 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Our Impact", href: "#impact" },
+    { name: "About Us", href: "#about" },
     { name: "Products", href: "#products" },
-    { name: "Supply Chain", href: "#supply-chain" },
-    { name: "Partnership", href: "#partnership" },
-    { name: "Quality", href: "#quality" }
+    { name: "Bulk Supply", href: "#partnership" },
+    { name: "Impact", href: "#impact" },
+    { name: "Contact Us", href: "#contact" }
   ];
 
   return (
