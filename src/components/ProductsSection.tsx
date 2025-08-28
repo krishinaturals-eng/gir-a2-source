@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Package, Shield, Award, Truck } from "lucide-react";
+import { Package, Shield, Award, Truck, CheckCircle, FlaskConical, Microscope, Factory } from "lucide-react";
 
 const ProductsSection = () => {
   const productRange = [
@@ -22,10 +22,10 @@ const ProductsSection = () => {
   ];
 
   const certifications = [
-    { label: "FSSAI Certified", highlight: true },
-    { label: "Lab tested daily for A2 beta-casein protein", highlight: false },
-    { label: "Hygienic Bilona method + modern pasteurization", highlight: false },
-    { label: "Organic & ISO compliance (export-ready)", highlight: true }
+    { label: "FSSAI Certified", icon: CheckCircle, highlight: true },
+    { label: "Lab tested for pure A2 cow ghee", icon: FlaskConical, highlight: false },
+    { label: "Lab tested for A2 ghee quality and purity", icon: Microscope, highlight: false },
+    { label: "Hygienic Bilona method + modern pasteurization", icon: Factory, highlight: false }
   ];
 
   return (
@@ -79,27 +79,35 @@ const ProductsSection = () => {
         </div>
 
         {/* Certifications & Quality */}
-        <div className="max-w-2xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           <Card className="p-8">
             <h3 className="text-xl font-semibold text-foreground mb-6">Certifications & Quality</h3>
-            <div className="space-y-4">
-              {certifications.map((cert, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className={`w-2 h-2 rounded-full mt-2 ${cert.highlight ? 'bg-earth-green' : 'bg-muted-foreground'}`}></div>
-                  <span className={`${cert.highlight ? 'text-foreground font-semibold' : 'text-muted-foreground'}`}>
-                    {cert.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 p-4 bg-earth-green/5 rounded-lg">
-              <p className="text-sm text-earth-green font-medium">
-                ✔ Daily lab testing ensures consistent A2 protein levels
-                <br />
-                ✔ Export-ready with organic & ISO certifications
-                <br />
-                ✔ Batch-wise traceability for complete transparency
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Certifications List */}
+              <div className="space-y-4">
+                {certifications.map((cert, index) => {
+                  const IconComponent = cert.icon;
+                  return (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className={`p-2 rounded-full ${cert.highlight ? 'bg-earth-green/10' : 'bg-muted/10'}`}>
+                        <IconComponent className={`h-5 w-5 ${cert.highlight ? 'text-earth-green' : 'text-muted-foreground'}`} />
+                      </div>
+                      <span className={`${cert.highlight ? 'text-foreground font-semibold' : 'text-foreground'}`}>
+                        {cert.label}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* Test Report Image */}
+              <div className="flex justify-center">
+                <img 
+                  src="/lovable-uploads/b4e4adfe-2ab2-4e43-9911-677db41f19ec.png" 
+                  alt="A2A2 Milk Typing Test - Genetic Testing Report"
+                  className="max-w-xs h-auto rounded-lg shadow-sm"
+                />
+              </div>
             </div>
           </Card>
         </div>
