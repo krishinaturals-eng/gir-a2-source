@@ -70,14 +70,6 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Mission Statement */}
-        <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
-          <h3 className="text-xl font-semibold text-earth-green mb-4">Krishi Naturals Mission</h3>
-          <p className="text-lg text-foreground max-w-4xl mx-auto">
-            To revolutionize India's dairy industry by creating sustainable livelihoods for marginal farmers while preserving indigenous breeds and delivering premium A2 ghee to global B2B markets.
-          </p>
-        </div>
-
         {/* CTA */}
         <div className="text-center">
           <Button 
