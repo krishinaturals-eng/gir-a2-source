@@ -6,15 +6,15 @@ import { Package, Shield, Award, Truck } from "lucide-react";
 const ProductsSection = () => {
   const productRange = [
     {
-      title: "15 KG Tin (Wholesale Focus)",
+      title: "15 KG Bulk A2 Gir Cow Ghee",
       description: "Ideal for distributors & retailers",
       icon: Package,
       image: "/lovable-uploads/3e0fb42c-715a-49c1-adcd-60893d213855.png",
       color: "earth-green"
     },
     {
-      title: "500ml & 1L Jars",
-      description: "Retail-ready packaging, private label available",
+      title: "500 ml & 1 ltr Jars",
+      description: "Customizable Private Label A2 Cow Ghee – Your Brand, Our Authentic Gir Cow Ghee",
       icon: Package,
       image: "/lovable-uploads/84106b90-8bb9-4d02-a947-3940ef4c1211.png",
       color: "trust-blue"
