@@ -69,7 +69,7 @@ const HeroSection = () => {
             {/* Main Content */}
             <div className="text-center text-white space-y-4 animate-fade-in">
               {/* Logo and Brand */}
-              <div className="mb-6">
+              <div className="mb-8">
                 <div className="inline-flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
                   <img 
                     src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
@@ -77,6 +77,16 @@ const HeroSection = () => {
                     className="w-12 h-12 object-contain"
                   />
                   <span className="text-lg font-medium text-white">India's Trusted Bulk A2 Cow Ghee Supplier</span>
+                </div>
+              </div>
+
+              {/* Metrics */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/20">
+                  <span className="text-white font-medium">Network of 5000+ Gir Cow Farmers</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/20">
+                  <span className="text-white font-medium">Supplying 20+ brands</span>
                 </div>
               </div>
               
