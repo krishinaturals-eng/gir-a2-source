@@ -45,9 +45,9 @@ const ProductsSection = () => {
           {productRange.map((product, index) => {
             const IconComponent = product.icon;
             return (
-              <Card key={index} className="p-8 text-center hover:shadow-soft transition-all duration-300">
+              <Card key={index} className="p-6 text-center hover:shadow-soft transition-all duration-300 max-w-md mx-auto">
                 {product.image ? (
-                  <div className="w-40 h-40 mx-auto mb-4 rounded-lg overflow-hidden">
+                  <div className="w-60 h-60 mx-auto mb-6 rounded-lg overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.title}
