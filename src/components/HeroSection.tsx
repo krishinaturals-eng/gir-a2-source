@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { ArrowRight, Users, Leaf, Award } from "lucide-react";
+import { ArrowRight, Users, Leaf, Award, Factory, Store, Heart, ChefHat, Globe } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const heroImages = [
@@ -131,25 +131,25 @@ const HeroSection = () => {
           
           <p className="font-medium text-foreground mb-4">We serve:</p>
           
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
-            <li className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+            <li className="flex items-center space-x-3">
+              <Factory className="w-5 h-5 text-earth-green flex-shrink-0" />
               <span>Food & Beverage Manufacturers</span>
             </li>
-            <li className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+            <li className="flex items-center space-x-3">
+              <Store className="w-5 h-5 text-earth-green flex-shrink-0" />
               <span>Private Label & Retail Brands</span>
             </li>
-            <li className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+            <li className="flex items-center space-x-3">
+              <Heart className="w-5 h-5 text-earth-green flex-shrink-0" />
               <span>Ayurvedic Product Companies</span>
             </li>
-            <li className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+            <li className="flex items-center space-x-3">
+              <ChefHat className="w-5 h-5 text-earth-green flex-shrink-0" />
               <span>Bakeries & Confectionery Businesses</span>
             </li>
-            <li className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+            <li className="flex items-center space-x-3">
+              <Globe className="w-5 h-5 text-earth-green flex-shrink-0" />
               <span>Global Exporters & Importers</span>
             </li>
           </ul>
