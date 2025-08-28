@@ -111,6 +111,51 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
+
+    {/* SEO Content Section */}
+    <section className="py-16 bg-background">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          Your Reliable Bulk A2 Ghee Supply Partner
+        </h1>
+        
+        <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-8">
+          Powering India's Top Food & Wellness Brands with Consistent A2 Gir Ghee.
+        </h2>
+        
+        <div className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="mb-6">
+            When your business requires a dependable, large-scale supply of pure A2 cow ghee, Girej delivers. 
+            We've built a robust B2B supply chain to ensure seamless and on-time delivery for high-volume orders.
+          </p>
+          
+          <p className="font-medium text-foreground mb-4">We serve:</p>
+          
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left max-w-2xl mx-auto">
+            <li className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+              <span>Food & Beverage Manufacturers</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+              <span>Private Label & Retail Brands</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+              <span>Ayurvedic Product Companies</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+              <span>Bakeries & Confectionery Businesses</span>
+            </li>
+            <li className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-earth-green rounded-full"></div>
+              <span>Global Exporters & Importers</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     </>
   );
 };
