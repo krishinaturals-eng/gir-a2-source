@@ -7,7 +7,7 @@ const BSupplySection = () => {
   return (
     <section id="partnership" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <Badge variant="secondary" className="mb-4">
             B2B Supply
           </Badge>
@@ -30,43 +30,43 @@ const BSupplySection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {/* MOQ */}
-            <Card className="p-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-earth-green/10 rounded-full flex items-center justify-center">
-                <Scale className="h-8 w-8 text-earth-green" />
+            <Card className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 bg-earth-green/10 rounded-full flex items-center justify-center">
+                <Scale className="h-6 w-6 text-earth-green" />
               </div>
-              <h4 className="text-lg font-semibold text-foreground mb-2">Minimum Order</h4>
-              <p className="text-2xl font-bold text-earth-green mb-1">50 kg</p>
-              <p className="text-sm text-muted-foreground">Starting MOQ</p>
+              <h4 className="text-base font-semibold text-foreground mb-2">Minimum Order</h4>
+              <p className="text-xl font-bold text-earth-green mb-1">50 kg</p>
+              <p className="text-xs text-muted-foreground">Starting MOQ</p>
             </Card>
 
             {/* Packaging */}
-            <Card className="p-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-trust-blue/10 rounded-full flex items-center justify-center">
-                <Package2 className="h-8 w-8 text-trust-blue" />
+            <Card className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 bg-trust-blue/10 rounded-full flex items-center justify-center">
+                <Package2 className="h-6 w-6 text-trust-blue" />
               </div>
-              <h4 className="text-lg font-semibold text-foreground mb-2">Packaging</h4>
-              <p className="text-sm text-foreground mb-1">15 KG tins (16.5L)</p>
-              <p className="text-sm text-muted-foreground">500ml & 1L jars</p>
+              <h4 className="text-base font-semibold text-foreground mb-2">Packaging</h4>
+              <p className="text-xs text-foreground mb-1">15 KG tins (16.5L)</p>
+              <p className="text-xs text-muted-foreground">500ml & 1L jars</p>
             </Card>
 
             {/* Capacity */}
-            <Card className="p-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-golden-accent/10 rounded-full flex items-center justify-center">
-                <TrendingUp className="h-8 w-8 text-golden-accent" />
+            <Card className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 bg-golden-accent/10 rounded-full flex items-center justify-center">
+                <TrendingUp className="h-6 w-6 text-golden-accent" />
               </div>
-              <h4 className="text-lg font-semibold text-foreground mb-2">Monthly Supply</h4>
-              <p className="text-2xl font-bold text-golden-accent mb-1">5 tonnes</p>
-              <p className="text-sm text-muted-foreground">Capacity/month</p>
+              <h4 className="text-base font-semibold text-foreground mb-2">Monthly Supply</h4>
+              <p className="text-xl font-bold text-golden-accent mb-1">5 tonnes</p>
+              <p className="text-xs text-muted-foreground">Capacity/month</p>
             </Card>
 
             {/* Pricing */}
-            <Card className="p-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-girej-red/10 rounded-full flex items-center justify-center">
-                <IndianRupee className="h-8 w-8 text-girej-red" />
+            <Card className="p-4 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 bg-girej-red/10 rounded-full flex items-center justify-center">
+                <IndianRupee className="h-6 w-6 text-girej-red" />
               </div>
-              <h4 className="text-lg font-semibold text-foreground mb-2">Pricing</h4>
-              <p className="text-sm text-foreground mb-1">Competitive rates</p>
-              <p className="text-sm text-muted-foreground">Volume discounts</p>
+              <h4 className="text-base font-semibold text-foreground mb-2">Pricing</h4>
+              <p className="text-xs text-foreground mb-1">Competitive rates</p>
+              <p className="text-xs text-muted-foreground">Volume discounts</p>
             </Card>
           </div>
 
