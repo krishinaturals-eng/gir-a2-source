@@ -39,7 +39,7 @@ const ProductsSection = () => {
           <Badge variant="secondary" className="mb-4">
             Product Range
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Bulk A2 Gir Cow Ghee – <span className="text-earth-green">15kg Tins, Jars & Bulk Supply</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -67,7 +67,7 @@ const ProductsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Product Image/Info */}
           <Card className="p-8">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Premium A2 Gir Cow Ghee</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Premium A2 Gir Cow Ghee</h3>
             <div className="aspect-video bg-earth-green/5 rounded-lg mb-6 flex items-center justify-center">
               <Package className="h-16 w-16 text-earth-green/50" />
             </div>
@@ -88,7 +88,7 @@ const ProductsSection = () => {
 
           {/* Certifications */}
           <Card className="p-8">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Certifications & Quality</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Certifications & Quality</h3>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -113,7 +113,7 @@ const ProductsSection = () => {
 
         {/* Bulk Supply Focus */}
         <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
-          <h3 className="text-2xl font-semibold text-earth-green mb-4">Bulk Supply Specifications</h3>
+          <h3 className="text-xl font-semibold text-earth-green mb-4">Bulk Supply Specifications</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <div className="text-2xl font-bold text-foreground">50kg</div>

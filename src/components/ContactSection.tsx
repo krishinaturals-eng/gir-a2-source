@@ -14,7 +14,7 @@ const ContactSection = () => {
           <Badge variant="secondary" className="mb-4">
             Get In Touch
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Start Your <span className="text-earth-green">Partnership Journey</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -25,7 +25,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="p-8 shadow-elevated">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Request Bulk Quote</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Request Bulk Quote</h3>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>

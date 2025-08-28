@@ -115,11 +115,11 @@ const HeroSection = () => {
     {/* SEO Content Section */}
     <section className="py-16 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
           Your Reliable Bulk A2 Ghee Supply Partner
         </h1>
         
-        <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-8">
+        <h2 className="text-xl font-semibold text-muted-foreground mb-8">
           Powering India's Top Food & Wellness Brands with Consistent A2 Gir Ghee.
         </h2>
         

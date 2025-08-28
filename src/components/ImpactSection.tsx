@@ -42,7 +42,7 @@ const ImpactSection = () => {
           <Badge variant="secondary" className="mb-4">
             Social & Ecological Impact
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Farmer Empowerment & <span className="text-earth-green">Breed Preservation</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -70,7 +70,7 @@ const ImpactSection = () => {
         {/* Detailed Impact */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <Card className="p-8">
-            <h3 className="text-2xl font-semibold text-earth-green mb-6">Shared Value Creation</h3>
+            <h3 className="text-xl font-semibold text-earth-green mb-6">Shared Value Creation</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-earth-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -112,7 +112,7 @@ const ImpactSection = () => {
           </Card>
 
           <Card className="p-8 bg-earth-green/5">
-            <h3 className="text-2xl font-semibold text-earth-green mb-6">Building the Future</h3>
+            <h3 className="text-xl font-semibold text-earth-green mb-6">Building the Future</h3>
             <p className="text-muted-foreground mb-6">
               We are building a future where indigenous cows are preserved, farmers thrive, and B2B buyers get world-class, authentic A2 ghee.
             </p>
@@ -139,7 +139,7 @@ const ImpactSection = () => {
 
         {/* Call to Action */}
         <div className="bg-gradient-hero text-white rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-semibold mb-4">Partner in Our Impact</h3>
+          <h3 className="text-xl font-semibold mb-4">Partner in Our Impact</h3>
           <p className="text-xl mb-6 text-white/90">
             Join us in creating sustainable value for farmers, preserving indigenous breeds, and delivering premium A2 ghee to global markets.
           </p>

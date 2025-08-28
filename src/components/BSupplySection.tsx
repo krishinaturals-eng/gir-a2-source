@@ -38,7 +38,7 @@ const BSupplySection = () => {
           <Badge variant="secondary" className="mb-4">
             B2B Supply
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             A2 Ghee <span className="text-earth-green">B2B Supplier India</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -65,7 +65,7 @@ const BSupplySection = () => {
         {/* MOQ & Packaging */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <Card className="p-8">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">MOQ & Packaging</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">MOQ & Packaging</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-earth-green rounded-full"></div>
@@ -83,7 +83,7 @@ const BSupplySection = () => {
           </Card>
 
           <Card className="p-8 bg-earth-green/5">
-            <h3 className="text-2xl font-semibold text-earth-green mb-6">Export Ready</h3>
+            <h3 className="text-xl font-semibold text-earth-green mb-6">Export Ready</h3>
             <p className="text-muted-foreground mb-6">
               We serve international markets with complete export documentation, organic certifications, and cold-chain logistics.
             </p>

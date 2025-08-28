@@ -11,7 +11,7 @@ const AboutSection = () => {
           <Badge variant="secondary" className="mb-4">
             About Girej
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             About Girej – <span className="text-earth-green">A2 Cow Ghee Manufacturer & Social Enterprise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -68,7 +68,7 @@ const AboutSection = () => {
 
           {/* Unique Model */}
           <Card className="p-8 shadow-soft">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Our Unique Model</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Our Unique Model</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-earth-green/10 rounded-full flex items-center justify-center">
@@ -90,7 +90,7 @@ const AboutSection = () => {
 
         {/* Mission Statement */}
         <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
-          <h3 className="text-2xl font-semibold text-earth-green mb-4">Krishi Naturals Mission</h3>
+          <h3 className="text-xl font-semibold text-earth-green mb-4">Krishi Naturals Mission</h3>
           <p className="text-lg text-foreground max-w-4xl mx-auto">
             To revolutionize India's dairy industry by creating sustainable livelihoods for marginal farmers while preserving indigenous breeds and delivering premium A2 ghee to global B2B markets.
           </p>

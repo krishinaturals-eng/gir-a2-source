@@ -44,7 +44,7 @@ const SupplyChainSection = () => {
           <Badge variant="secondary" className="mb-4">
             Supply Chain
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             A2 Ghee Supply Chain - <span className="text-earth-green">Farm to Packaging Transparency</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -104,7 +104,7 @@ const SupplyChainSection = () => {
 
         {/* Facility Stats */}
         <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
-          <h3 className="text-2xl font-semibold text-earth-green mb-6">Processing Capacity</h3>
+          <h3 className="text-xl font-semibold text-earth-green mb-6">Processing Capacity</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-3xl font-bold text-foreground">5,000+</div>
