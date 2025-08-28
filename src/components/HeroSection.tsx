@@ -86,16 +86,6 @@ const HeroSection = () => {
                 <br />
                 <span className="text-golden-accent">Cow Ghee</span> Supplier
               </h1>
-              
-              {/* Sub-headline */}
-              <p className="text-lg md:text-xl font-light text-white/90 max-w-4xl mx-auto">
-                Supplying authentic Gir cow A2 ghee wholesale to food manufacturers, retail brands, Ayurvedic companies & exporters.
-              </p>
-              
-              {/* USP Points */}
-              <div className="text-base text-white/80 max-w-5xl mx-auto leading-relaxed">
-                MOQ: 50kg bulk orders (15kg tins, 1L jars, 1000L tankers) • Export-ready: UAE, USA, UK, Singapore, Canada • Private label / OEM supply available
-              </div>
             </div>
           </div>
         </div>
@@ -103,31 +93,6 @@ const HeroSection = () => {
         {/* Spacer */}
         <div className="flex-1"></div>
 
-        {/* Bottom Metrics */}
-        <div className="pb-8">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-base md:text-lg text-white/90 mb-6 max-w-4xl mx-auto font-medium text-center">
-              Looking for a reliable bulk A2 cow ghee supplier in India? At Girej, we specialize in the B2B supply of pure A2 Gir cow ghee, ethically sourced from indigenous cows in Gujarat. With state-of-the-art processing, daily lab testing, and FSSAI-certified quality.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 text-center border border-white/20">
-                <Users className="h-6 w-6 text-golden-accent mb-2 mx-auto" />
-                <div className="text-lg font-bold text-white">5,000+</div>
-                <div className="text-sm text-white/80">Farmers Empowered</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 text-center border border-white/20">
-                <Leaf className="h-6 w-6 text-golden-accent mb-2 mx-auto" />
-                <div className="text-lg font-bold text-white">FSSAI</div>
-                <div className="text-sm text-white/80">Certified Quality</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 text-center border border-white/20">
-                <Award className="h-6 w-6 text-golden-accent mb-2 mx-auto" />
-                <div className="text-lg font-bold text-white">Export Ready</div>
-                <div className="text-sm text-white/80">Global Supply</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
