@@ -18,12 +18,6 @@ const ProductsSection = () => {
       icon: Package,
       image: "/lovable-uploads/84106b90-8bb9-4d02-a947-3940ef4c1211.png",
       color: "trust-blue"
-    },
-    {
-      title: "Bulk Supply (1000L tankers)",
-      description: "For food manufacturers, export & institutional buyers",
-      icon: Truck,
-      color: "girej-red"
     }
   ];
 
@@ -50,13 +44,13 @@ const ProductsSection = () => {
         </div>
 
         {/* Product Range Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {productRange.map((product, index) => {
             const IconComponent = product.icon;
             return (
               <Card key={index} className="p-8 text-center hover:shadow-soft transition-all duration-300">
                 {product.image ? (
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden">
+                  <div className="w-48 h-48 mx-auto mb-6 rounded-lg overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.title}
