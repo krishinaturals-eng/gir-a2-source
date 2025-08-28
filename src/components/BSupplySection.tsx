@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Factory, Package, Heart, Globe, Scale, Package2, TrendingUp, DollarSign } from "lucide-react";
+import { Factory, Package, Heart, Globe, Scale, Package2, TrendingUp, IndianRupee } from "lucide-react";
 
 const BSupplySection = () => {
   return (
@@ -62,7 +62,7 @@ const BSupplySection = () => {
             {/* Pricing */}
             <Card className="p-6 text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-girej-red/10 rounded-full flex items-center justify-center">
-                <DollarSign className="h-8 w-8 text-girej-red" />
+                <IndianRupee className="h-8 w-8 text-girej-red" />
               </div>
               <h4 className="text-lg font-semibold text-foreground mb-2">Pricing</h4>
               <p className="text-sm text-foreground mb-1">Competitive rates</p>
