@@ -41,9 +41,6 @@ const BSupplySection = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             A2 Ghee <span className="text-earth-green">B2B Supplier India</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-            At Girej, we specialize in B2B partnerships. Our A2 ghee is supplied in bulk to various industries worldwide.
-          </p>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
             Girej is a trusted bulk A2 ghee supplier and manufacturer in India, delivering authentic Gir cow A2 ghee to buyers across India. Backed by our exclusive network of 5,000+ Gir cow farmers, we ensure consistent quantity with uncompromised quality.
           </p>
@@ -158,23 +155,6 @@ const BSupplySection = () => {
               </div>
             </Card>
           </div>
-        </div>
-
-        {/* Export Ready */}
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mb-16">
-          <Card className="p-8 bg-earth-green/5">
-            <h3 className="text-xl font-semibold text-earth-green mb-6">Export Ready</h3>
-            <p className="text-muted-foreground mb-6">
-              We serve international markets with complete export documentation, organic certifications, and cold-chain logistics.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {["UAE", "USA", "Canada", "UK", "Singapore"].map((country) => (
-                <Badge key={country} variant="outline" className="border-earth-green text-earth-green">
-                  {country}
-                </Badge>
-              ))}
-            </div>
-          </Card>
         </div>
 
         {/* CTA */}
