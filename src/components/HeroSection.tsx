@@ -76,7 +76,7 @@ const HeroSection = () => {
                     alt="GIREJ Logo" 
                     className="w-12 h-12 object-contain"
                   />
-                  <span className="text-lg font-medium text-white">Bulk A2 Cow Ghee Supplier</span>
+                  <span className="text-lg font-medium text-white">India's Trusted Bulk A2 Cow Ghee Supplier</span>
                 </div>
               </div>
               
