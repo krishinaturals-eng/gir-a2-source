@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Award, Users, Target, Building } from "lucide-react";
+import { Award, Users, Shield, Handshake, Target } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -14,8 +14,12 @@ const AboutSection = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             About Girej – <span className="text-earth-green">A2 Cow Ghee Manufacturer & Social Enterprise</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Girej is a brand by Krishi Naturals, a social enterprise founded in 2013 with one mission: To make indigenous cow rearing a sustainable livelihood for marginal farmers while delivering world-class A2 ghee to B2B buyers.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
+            Girej is a premium A2 cow ghee manufacturer in India, proudly built by Krishi Naturals (est. 2013).
+          </p>
+          <p className="text-lg text-foreground max-w-3xl mx-auto">
+            <strong>Our mission is simple yet powerful:</strong><br />
+            👉 To make indigenous cow rearing a sustainable livelihood for small & marginal farmers, while delivering world-class A2 Gir cow ghee to B2B buyers, wholesalers, food manufacturers, retailers, Ayurvedic brands, and exporters.
           </p>
         </div>
 
@@ -30,9 +34,9 @@ const AboutSection = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">14+ Years of Experience</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">🥇 India's Trusted A2 Gir Cow Ghee Manufacturer</h3>
                 <p className="text-muted-foreground">
-                  14+ years invested in farmer training, genetic quality improvement, and sustainable dairy practices in Gujarat.
+                  Established in 2014, Girej is among the oldest A2 ghee manufacturers in India, pioneering an ecosystem for indigenous Gir cow rearing, scientific breeding, and genetic quality improvement in Gujarat.
                 </p>
               </div>
             </div>
@@ -44,9 +48,9 @@ const AboutSection = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">5,000 Farmers Impacted</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">👨‍🌾 Network of 5,000+ Gir Cow Farmers</h3>
                 <p className="text-muted-foreground">
-                  5,000 farmers impacted with minimum monthly income goals of ₹15,000, ensuring sustainable livelihoods.
+                  We have trained and organized 5,000+ Gir cow farmers in Gujarat, ensuring consistent quality and reliable bulk supply of authentic A2 Bilona ghee for domestic and export markets.
                 </p>
               </div>
             </div>
@@ -54,35 +58,36 @@ const AboutSection = () => {
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 bg-golden-accent/20 rounded-lg flex items-center justify-center">
-                  <Building className="h-6 w-6 text-farmer-brown" />
+                  <Shield className="h-6 w-6 text-farmer-brown" />
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">State-of-Art Facility</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">✅ Ethical & Transparent Supply Chain</h3>
                 <p className="text-muted-foreground">
-                  State-of-art plant in Vadodara, Gujarat with daily capacity of 5,000+ litres for bulk B2B supply.
+                  We directly source pure A2 cow milk from our farmer network and process it in our FSSAI-certified, hygienic manufacturing facility. Every batch undergoes lab testing for purity, A2 protein verification, and compliance with export standards.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Unique Model */}
+          {/* B2B Partnership */}
           <Card className="p-8 shadow-soft">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Our Unique Model</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">🤝 Proven B2B Partner for Bulk Supply</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-earth-green/10 rounded-full flex items-center justify-center">
-                  <Target className="h-8 w-8 text-earth-green" />
+                  <Handshake className="h-8 w-8 text-earth-green" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Triple Impact Model</h4>
-                  <p className="text-sm text-muted-foreground">Farmers • Cows • B2B Buyers</p>
+                  <h4 className="font-semibold text-foreground">Trusted B2B Solutions</h4>
+                  <p className="text-sm text-muted-foreground">Decade of Excellence • 20+ Leading Brands</p>
                 </div>
               </div>
               <div className="text-sm text-muted-foreground space-y-2">
-                <div>✓ Farmers earn premium prices for their milk</div>
-                <div>✓ Indigenous Gir cows are genetically improved & preserved</div>
-                <div>✓ B2B buyers receive consistent, certified, export-quality A2 ghee</div>
+                <div>✓ Over a decade of supplying 20+ leading A2 ghee brands</div>
+                <div>✓ Competitive wholesale A2 ghee prices</div>
+                <div>✓ Private label options and export-ready packaging</div>
+                <div>✓ Tailored bulk solutions for wholesalers, food manufacturers, Ayurvedic companies, and exporters</div>
               </div>
             </div>
           </Card>
