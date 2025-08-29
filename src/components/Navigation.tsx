@@ -24,7 +24,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
               alt="GIREJ - A2 Cow Milk Products, Established 2014" 
-              className="h-16 w-auto"
+              className="h-12 sm:h-16 w-auto"
             />
           </div>
 
@@ -70,7 +70,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-earth-green block px-3 py-2 text-base font-medium transition-colors duration-200"
+                  className="text-foreground hover:text-earth-green block px-4 py-3 text-base font-medium transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

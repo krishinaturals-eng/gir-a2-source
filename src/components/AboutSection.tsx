@@ -5,7 +5,7 @@ import { Award, Users, Shield } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12 sm:py-20 bg-gradient-warm">
+    <section id="about" className="py-12 sm:py-20 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <Badge variant="secondary" className="mb-4">

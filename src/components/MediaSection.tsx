@@ -49,7 +49,7 @@ const MediaSection = () => {
   };
 
   return (
-    <section id="media" className="py-12 sm:py-20 bg-gradient-warm">
+    <section id="media" className="py-12 sm:py-20 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <Badge variant="secondary" className="mb-4">
@@ -70,11 +70,12 @@ const MediaSection = () => {
           <div className="text-center mb-8">
             <h3 className="text-lg font-semibold text-earth-green mb-6">Featured Articles</h3>
             <Card className="relative overflow-hidden max-w-2xl mx-auto">
-              <div className="relative h-80">
+              <div className="relative h-64 sm:h-80">
                 <img
                   src={articles[currentSlide].image}
                   alt={articles[currentSlide].title}
                   className="w-full h-full object-cover"
+                  loading="lazy" decoding="async" sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 

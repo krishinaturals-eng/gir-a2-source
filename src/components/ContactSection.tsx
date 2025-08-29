@@ -20,7 +20,7 @@ const ContactSection = () => {
     }
   ];
   return (
-    <section id="contact" className="py-12 sm:py-20 bg-background">
+    <section id="contact" className="py-12 sm:py-20 bg-background scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <Badge variant="secondary" className="mb-4">
@@ -166,6 +166,7 @@ const ContactSection = () => {
                       src={partner.logo}
                       alt={partner.name}
                       className="max-h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
+                      loading="lazy" decoding="async" sizes="(max-width: 768px) 120px, 160px"
                     />
                   </div>
                 ))}

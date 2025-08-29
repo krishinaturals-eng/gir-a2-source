@@ -35,7 +35,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -53,6 +53,9 @@ const HeroSection = () => {
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-girej-black/60 via-girej-black/40 to-transparent"></div>
               </div>

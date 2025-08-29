@@ -29,7 +29,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="py-12 sm:py-20 bg-background">
+    <section id="products" className="py-12 sm:py-20 bg-background scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
@@ -52,6 +52,7 @@ const ProductsSection = () => {
                       src={product.image} 
                       alt={product.title}
                       className="w-full h-full object-cover"
+                      loading="lazy" decoding="async" sizes="(max-width: 640px) 12rem, 15rem"
                     />
                   </div>
                 ) : (
@@ -74,6 +75,7 @@ const ProductsSection = () => {
               src="/lovable-uploads/cb2efa0d-f93a-496f-9912-5ad39986d624.png" 
               alt="The Art of A2 Gir Cow Ghee - Traditional Bilona Process"
               className="w-full h-auto rounded-lg"
+              loading="lazy" decoding="async" sizes="(max-width: 640px) 320px, 640px"
             />
           </div>
         </div>
@@ -106,6 +108,7 @@ const ProductsSection = () => {
                   src="/lovable-uploads/b4e4adfe-2ab2-4e43-9911-677db41f19ec.png" 
                   alt="A2A2 Milk Typing Test - Genetic Testing Report"
                   className="max-w-48 sm:max-w-xs h-auto rounded-lg shadow-sm"
+                  loading="lazy" decoding="async" sizes="(max-width: 640px) 192px, 256px"
                 />
               </div>
             </div>

@@ -60,7 +60,7 @@ const ImpactSection = () => {
   };
 
   return (
-    <section id="impact" className="py-12 sm:py-20 bg-gradient-warm">
+    <section id="impact" className="py-12 sm:py-20 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 sm:mb-8">
           <Badge variant="secondary" className="mb-4">
@@ -84,6 +84,7 @@ const ImpactSection = () => {
                   src={farmerImages[currentImageIndex]} 
                   alt="Farmer"
                   className="w-full h-full object-cover transition-opacity duration-500"
+                  decoding="async" sizes="(max-width: 640px) 12rem, 15rem"
                 />
                 <button 
                   onClick={prevImage}
