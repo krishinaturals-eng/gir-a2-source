@@ -118,13 +118,10 @@ const HeroSection = () => {
     {/* CTA Buttons Below Hero */}
     <div className="bg-gradient-warm py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex justify-center">
           <Button size="lg" className="group bg-earth-green hover:bg-earth-green/90 text-white">
             👉 Request Bulk Quote Today
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button variant="outline" size="lg" className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white">
-            Download Wholesale Price Sheet
           </Button>
         </div>
       </div>
