@@ -7,7 +7,7 @@ const BSupplySection = () => {
   return (
     <section id="partnership" className="py-8 bg-background scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-4 sm:mb-6">
           <Badge variant="secondary" className="mb-4">
             B2B Supply
           </Badge>
@@ -21,7 +21,7 @@ const BSupplySection = () => {
 
         {/* Bulk Order Specifications */}
         <div className="mb-12 sm:mb-16">
-          <div className="text-center mb-6 sm:mb-8">
+          <div className="text-center mb-4 sm:mb-6">
             <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-3 sm:mb-4">Bulk Order Specifications</h3>
             <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
               Comprehensive bulk supply solutions tailored for your business needs

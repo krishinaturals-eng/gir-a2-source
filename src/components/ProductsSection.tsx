@@ -31,7 +31,7 @@ const ProductsSection = () => {
   return (
     <section id="products" className="py-8 bg-background scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12">
+        <div className="text-center mb-4 sm:mb-6">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
             Our range of A2 Cow Ghee products
           </h2>
@@ -69,7 +69,7 @@ const ProductsSection = () => {
 
         {/* Bilona A2 Ghee Making Process */}
         <div className="text-center mb-12 sm:mb-16">
-          <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8">Bilona A2 Ghee Making</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-2 sm:mb-3">Bilona A2 Ghee Making</h3>
           <div className="max-w-sm sm:max-w-lg mx-auto">
             <img 
               src="/lovable-uploads/cb2efa0d-f93a-496f-9912-5ad39986d624.png" 
