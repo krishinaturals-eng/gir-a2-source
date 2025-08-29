@@ -35,7 +35,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24">
+    <section id="home" className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 pb-[env(safe-area-inset-bottom)]">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -93,15 +93,15 @@ const HeroSection = () => {
       </div>
 
       {/* Metrics at bottom */}
-      <div className="absolute bottom-20 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-20 px-3">
+      <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 z-20 px-3 mb-[env(safe-area-inset-bottom)]">
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/20 w-full max-w-xs sm:max-w-none">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2.5 py-1.5 sm:px-4 sm:py-3 border border-white/20 w-full max-w-xs sm:max-w-none">
             <div className="flex items-center justify-center space-x-2">
               <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
               <span className="text-white font-medium text-xs sm:text-sm text-center">Network of 5000+ Gir Cow Farmers</span>
             </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/20 w-full max-w-xs sm:max-w-none">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2.5 py-1.5 sm:px-4 sm:py-3 border border-white/20 w-full max-w-xs sm:max-w-none">
             <div className="flex items-center justify-center space-x-2">
               <Store className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
               <span className="text-white font-medium text-xs sm:text-sm text-center">Supplying to 20+ Brands</span>
@@ -111,7 +111,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce z-20">
+      <div className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
         <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-2 sm:h-3 bg-white/50 rounded-full mt-2"></div>
         </div>
