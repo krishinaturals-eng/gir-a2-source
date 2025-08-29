@@ -28,9 +28,9 @@ const ImpactSection = () => {
     },
     {
       icon: Leaf,
-      number: "Eco-Friendly",
-      label: "Processing",
-      description: "Renewable energy adoption",
+      number: "Sustainable",
+      label: "Dairy Farming",
+      description: "Promoting sustainable dairy farming practices",
       color: "golden-accent"
     }
   ];
@@ -105,7 +105,7 @@ const ImpactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">For the Planet</h4>
-                  <p className="text-sm text-muted-foreground">Eco-friendly processing with renewable energy adoption and sustainable practices.</p>
+                  <p className="text-sm text-muted-foreground">Promoting sustainable dairy farming practices and environmental stewardship.</p>
                 </div>
               </div>
             </div>
