@@ -115,8 +115,8 @@ const ImpactSection = () => {
               const IconComponent = metric.icon;
               return (
                 <Card key={index} className="p-4 text-center hover:shadow-soft transition-all duration-300">
-                  <div className={`w-8 h-8 mx-auto mb-2 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
-                    <IconComponent className={`h-4 w-4 text-${metric.color}`} />
+                  <div className={`w-[50px] h-[50px] mx-auto mb-2 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
+                    <IconComponent className={`h-6 w-6 text-${metric.color}`} />
                   </div>
                   <div className="text-lg font-bold text-foreground mb-1">{metric.number}</div>
                   <div className="text-xs font-semibold text-foreground">{metric.label}</div>
