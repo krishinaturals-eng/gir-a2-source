@@ -43,7 +43,7 @@ const ImpactSection = () => {
             Social & Ecological Impact
           </Badge>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            Farmer Empowerment & <span className="text-earth-green">Breed Preservation</span>
+            Empowering Farmers & <span className="text-earth-green">Preserving Gir Cow Breed</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Every litre of Girej A2 ghee creates shared value across our entire ecosystem.
