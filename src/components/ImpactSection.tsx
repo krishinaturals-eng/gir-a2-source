@@ -17,25 +17,29 @@ const ImpactSection = () => {
     {
       icon: Users,
       number: "5,000+",
-      label: "Farmers",
+      label: "Farmers Empowered",
+      description: "Sustainable monthly income (₹15,000+)",
       color: "earth-green"
     },
     {
       icon: Dna,
       number: "Indigenous",
-      label: "Breed",
+      label: "Cow Breed Preservation",
+      description: "Genetic quality improvement & preservation",
       color: "trust-blue"
     },
     {
       icon: Heart,
       number: "Healthy",
-      label: "A2 Ghee",
+      label: "A2 Ghee for Consumers",
+      description: "Pure, healthy, easily digestible",
       color: "girej-red"
     },
     {
       icon: Leaf,
       number: "Sustainable",
-      label: "Farming",
+      label: "Dairy Farming",
+      description: "Promoting sustainable dairy farming practices",
       color: "golden-accent"
     }
   ];
@@ -110,8 +114,8 @@ const ImpactSection = () => {
             ))}
           </div>
 
-          {/* Impact Metrics - Larger Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl">
+          {/* Impact Metrics - Restored Original Size */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
             {impactMetrics.map((metric, index) => {
               const IconComponent = metric.icon;
               return (
@@ -119,8 +123,9 @@ const ImpactSection = () => {
                   <div className={`w-[50px] h-[50px] mx-auto mb-4 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
                     <IconComponent className={`h-6 w-6 text-${metric.color}`} />
                   </div>
-                  <div className="text-xl font-bold text-foreground mb-2">{metric.number}</div>
-                  <div className="text-sm font-semibold text-foreground">{metric.label}</div>
+                  <div className="text-2xl font-bold text-foreground mb-2">{metric.number}</div>
+                  <div className="text-lg font-semibold text-foreground mb-2">{metric.label}</div>
+                  <p className="text-sm text-muted-foreground">{metric.description}</p>
                 </Card>
               );
             })}
