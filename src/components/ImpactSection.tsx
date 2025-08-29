@@ -162,14 +162,14 @@ const ImpactSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-hero text-white rounded-2xl p-8 text-center">
-          <h3 className="text-xl font-semibold mb-4">Partner in Our Impact</h3>
-          <p className="text-xl mb-6 text-white/90">
+        <div className="bg-gradient-hero text-white rounded-2xl p-6 text-center">
+          <h3 className="text-lg font-semibold mb-3">Partner in Our Impact</h3>
+          <p className="text-lg mb-4 text-white/90">
             Join us in creating sustainable value for farmers, preserving indigenous breeds, and delivering premium A2 ghee to global markets.
           </p>
           <Button 
-            size="lg" 
-            className="bg-white text-girej-red hover:bg-white/90 font-semibold py-4 px-8 text-lg"
+            size="default" 
+            className="bg-white text-girej-red hover:bg-white/90 font-semibold py-3 px-6 text-base"
           >
             👉 Become a Bulk Buyer Today
           </Button>
