@@ -71,34 +71,37 @@ const ImpactSection = () => {
         </div>
 
         {/* Impact Metrics & Slideshow */}
-        <div className="flex flex-col lg:flex-row gap-8 mb-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 mb-16 items-start">
           {/* Farmer Slideshow */}
           <div className="flex-shrink-0">
-            <div className="relative w-[50px] h-[50px] rounded-full overflow-hidden bg-earth-green/10">
-              <img 
-                src={farmerImages[currentImageIndex]} 
-                alt="Farmer"
-                className="w-full h-full object-cover transition-opacity duration-500"
-              />
-              <button 
-                onClick={prevImage}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-4 h-4 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
-              >
-                <ChevronLeft className="w-2 h-2" />
-              </button>
-              <button 
-                onClick={nextImage}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-4 h-4 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
-              >
-                <ChevronRight className="w-2 h-2" />
-              </button>
-            </div>
-            <div className="flex justify-center mt-1 gap-1">
+            <Card className="p-4 text-center hover:shadow-soft transition-all duration-300 relative overflow-hidden">
+              <div className="relative w-full h-16 rounded-lg overflow-hidden bg-earth-green/10">
+                <img 
+                  src={farmerImages[currentImageIndex]} 
+                  alt="Farmer"
+                  className="w-full h-full object-cover transition-opacity duration-500"
+                />
+                <button 
+                  onClick={prevImage}
+                  className="absolute left-1 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                >
+                  <ChevronLeft className="w-3 h-3" />
+                </button>
+                <button 
+                  onClick={nextImage}
+                  className="absolute right-1 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                >
+                  <ChevronRight className="w-3 h-3" />
+                </button>
+              </div>
+              <div className="text-xs font-semibold text-foreground mt-2">Our Farmers</div>
+            </Card>
+            <div className="flex justify-center mt-2 gap-1">
               {farmerImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
-                  className={`w-1 h-1 rounded-full transition-colors ${
+                  className={`w-2 h-2 rounded-full transition-colors ${
                     index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30'
                   }`}
                 />
