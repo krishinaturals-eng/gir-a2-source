@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, Beef, Heart, Leaf } from "lucide-react";
+import { Users, Milk, ShieldCheck, Leaf } from "lucide-react";
 
 const ImpactSection = () => {
   const impactMetrics = [
@@ -13,17 +13,17 @@ const ImpactSection = () => {
       color: "earth-green"
     },
     {
-      icon: Beef,
+      icon: ShieldCheck,
       number: "Indigenous",
-      label: "Breed Preservation",
+      label: "Cow Breed Preservation",
       description: "Genetic quality improvement & preservation",
       color: "trust-blue"
     },
     {
-      icon: Heart,
-      number: "Premium",
-      label: "A2 Gir Cow Ghee",
-      description: "Rare, healthy, easily digestible",
+      icon: Milk,
+      number: "Healthy",
+      label: "A2 Ghee for Consumers",
+      description: "Pure, healthy, easily digestible",
       color: "girej-red"
     },
     {
@@ -83,7 +83,7 @@ const ImpactSection = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-trust-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Beef className="h-3 w-3 text-white" />
+                  <ShieldCheck className="h-3 w-3 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">For Cows</h4>
@@ -92,11 +92,11 @@ const ImpactSection = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-girej-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Heart className="h-3 w-3 text-white" />
+                  <Milk className="h-3 w-3 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">For Consumers</h4>
-                  <p className="text-sm text-muted-foreground">Rare, healthy, easily digestible A2 Gir cow ghee with complete traceability.</p>
+                  <p className="text-sm text-muted-foreground">Pure, healthy, easily digestible A2 Gir cow ghee with complete traceability.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
