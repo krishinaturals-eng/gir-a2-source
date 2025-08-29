@@ -62,7 +62,7 @@ const ImpactSection = () => {
   return (
     <section id="impact" className="py-20 bg-gradient-warm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <Badge variant="secondary" className="mb-4">
             Social & Ecological Impact
           </Badge>
