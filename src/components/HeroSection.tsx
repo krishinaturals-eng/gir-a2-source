@@ -73,13 +73,13 @@ const HeroSection = () => {
             <div className="text-center text-white space-y-2 sm:space-y-4 animate-fade-in">
               {/* Logo and Brand */}
               <div className="mb-3 sm:mb-6">
-                <div className="inline-flex flex-col sm:flex-row items-center space-y-1.5 sm:space-y-0 sm:space-x-4 bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-full px-3 py-2.5 sm:px-6 sm:py-3 border border-white/20 max-w-[90vw] sm:max-w-none">
+                <div className="inline-flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-full px-2.5 py-2 sm:px-6 sm:py-3 border border-white/20 max-w-[85vw] sm:max-w-none">
                   <img 
                     src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
                     alt="GIREJ Logo" 
-                    className="w-8 h-8 sm:w-12 sm:h-12 object-contain flex-shrink-0"
+                    className="w-6 h-6 sm:w-12 sm:h-12 object-contain flex-shrink-0"
                   />
-                  <span className="text-xs sm:text-lg font-medium text-white text-center leading-tight">India's Trusted Bulk A2 Cow Ghee Supplier</span>
+                  <span className="text-[10px] sm:text-lg font-medium text-white text-center leading-tight">India's Trusted Bulk A2 Cow Ghee Supplier</span>
                 </div>
               </div>
               
@@ -93,18 +93,18 @@ const HeroSection = () => {
       </div>
 
       {/* Metrics at bottom */}
-      <div className="absolute bottom-12 md:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4 mb-[env(safe-area-inset-bottom)]">
-        <div className="flex flex-col gap-2 sm:gap-4 justify-center items-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 sm:px-4 sm:py-3 border border-white/20 w-full max-w-[280px] sm:max-w-none">
-            <div className="flex items-center justify-center space-x-1.5 sm:space-x-2">
-              <Users className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-medium text-[10px] sm:text-sm text-center leading-tight">Network of 5000+ Gir Cow Farmers</span>
+      <div className="absolute bottom-8 md:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4 mb-[env(safe-area-inset-bottom)]">
+        <div className="flex flex-col gap-1.5 sm:gap-4 justify-center items-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-md px-1.5 py-0.5 sm:px-4 sm:py-3 border border-white/20 w-full max-w-[260px] sm:max-w-none">
+            <div className="flex items-center justify-center space-x-1 sm:space-x-2">
+              <Users className="w-3 h-3 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+              <span className="text-white font-medium text-[9px] sm:text-sm text-center leading-tight">Network of 5000+ Gir Cow Farmers</span>
             </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1 sm:px-4 sm:py-3 border border-white/20 w-full max-w-[280px] sm:max-w-none">
-            <div className="flex items-center justify-center space-x-1.5 sm:space-x-2">
-              <Store className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-medium text-[10px] sm:text-sm text-center leading-tight">Supplying to 20+ Brands</span>
+          <div className="bg-white/10 backdrop-blur-sm rounded-md px-1.5 py-0.5 sm:px-4 sm:py-3 border border-white/20 w-full max-w-[260px] sm:max-w-none">
+            <div className="flex items-center justify-center space-x-1 sm:space-x-2">
+              <Store className="w-3 h-3 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+              <span className="text-white font-medium text-[9px] sm:text-sm text-center leading-tight">Supplying to 20+ Brands</span>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@ const HeroSection = () => {
     </section>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-3 sm:py-8">
+    <div className="bg-gradient-warm py-2 sm:py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center">
           <Button size="lg" className="group bg-earth-green hover:bg-earth-green/90 text-white text-sm sm:text-base px-6 sm:px-8">
