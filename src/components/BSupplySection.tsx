@@ -116,17 +116,17 @@ const BSupplySection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 max-w-2xl mx-auto">
             <Button 
               size="lg" 
-              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 text-base sm:text-lg"
+              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
             >
               👉 Request 15kg Tin Price
             </Button>
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 text-base sm:text-lg"
+              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
             >
               Get Private Label Proposal
             </Button>

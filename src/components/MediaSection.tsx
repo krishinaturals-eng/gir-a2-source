@@ -68,41 +68,57 @@ const MediaSection = () => {
         {/* Article Slideshow */}
         <div className="mb-12">
           <div className="text-center mb-8">
-            <h3 className="text-lg font-semibold text-earth-green mb-3">Featured Articles</h3>
-            <Card className="relative overflow-hidden max-w-2xl mx-auto">
-              <div className="relative h-64 sm:h-80">
-                <img
-                  src={articles[currentSlide].image}
-                  alt={articles[currentSlide].title}
-                  className="w-full h-full object-cover"
-                  loading="lazy" decoding="async" sizes="100vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <h3 className="text-lg lg:text-xl font-semibold text-earth-green mb-6">Featured Articles</h3>
+            <Card className="relative overflow-hidden max-w-3xl mx-auto group">
+              <div className="relative h-80 sm:h-96 lg:h-[32rem]">
+                <picture>
+                  <source 
+                    media="(max-width: 640px)" 
+                    srcSet={`${articles[currentSlide].image}?w=640&h=320&fit=crop&q=85 640w`}
+                    sizes="640px"
+                  />
+                  <source 
+                    media="(max-width: 1024px)" 
+                    srcSet={`${articles[currentSlide].image}?w=768&h=384&fit=crop&q=90 768w`}
+                    sizes="768px"
+                  />
+                  <img
+                    src={`${articles[currentSlide].image}?w=1024&h=512&fit=crop&q=95`}
+                    alt={articles[currentSlide].title}
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy" 
+                    decoding="async" 
+                    sizes="(max-width: 640px) 640px, (max-width: 1024px) 768px, 1024px"
+                    width="1024"
+                    height="512"
+                  />
+                </picture>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 
                 {/* Navigation buttons */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
+                  className="absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation"
                   aria-label="Previous article"
                 >
-                  <ChevronLeft className="h-6 w-6 text-white" />
+                  <ChevronLeft className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
+                  className="absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation"
                   aria-label="Next article"
                 >
-                  <ChevronRight className="h-6 w-6 text-white" />
+                  <ChevronRight className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
                 </button>
 
                 {/* Content overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <div className="mb-2">
-                    <span className="text-sm bg-earth-green/80 px-3 py-1 rounded-full">
+                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 text-white">
+                  <div className="mb-3">
+                    <span className="text-sm lg:text-base bg-earth-green/90 px-4 py-2 rounded-full font-medium">
                       {articles[currentSlide].subtitle}
                     </span>
                   </div>
-                  <h4 className="text-xl font-bold mb-4 leading-tight">
+                  <h4 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-6 leading-tight">
                     {articles[currentSlide].title}
                   </h4>
                   {articles[currentSlide].url !== "#" && (
@@ -110,25 +126,29 @@ const MediaSection = () => {
                       href={articles[currentSlide].url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-earth-green hover:bg-earth-green/90 text-white px-4 py-2 rounded-lg transition-colors"
+                      className="inline-flex items-center gap-2 bg-earth-green hover:bg-earth-green/90 text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl transition-all duration-300 font-semibold min-h-[48px] touch-manipulation shadow-elevated hover:shadow-trust"
                     >
-                      Read Article <ExternalLink className="h-4 w-4" />
+                      Read Article <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5" />
                     </a>
                   )}
                 </div>
               </div>
 
               {/* Slide indicators */}
-              <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2">
+              <div className="absolute bottom-24 lg:bottom-32 left-1/2 -translate-x-1/2 flex gap-3">
                 {articles.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    className={`w-4 h-4 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center touch-manipulation ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/50 hover:bg-white/70'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
-                  />
+                  >
+                    <span className={`w-4 h-4 rounded-full ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    }`}></span>
+                  </button>
                 ))}
               </div>
             </Card>
@@ -140,7 +160,7 @@ const MediaSection = () => {
           <Button 
             variant="outline"
             size="lg" 
-            className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-8 text-lg"
+            className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
           >
             🥛 Become a Bulk Buyer Today
           </Button>

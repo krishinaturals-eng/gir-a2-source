@@ -74,7 +74,7 @@ const AboutSection = () => {
         <div className="text-center">
           <Button 
             size="lg" 
-            className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 text-base sm:text-lg"
+            className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
           >
             Partner with Us – Build Your Brand with Girej
           </Button>

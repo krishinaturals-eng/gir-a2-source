@@ -78,40 +78,63 @@ const ImpactSection = () => {
         <div className="flex flex-col gap-6 sm:gap-8 mb-12 sm:mb-16 items-center">
           {/* Farmer Slideshow - Centered */}
           <div className="flex justify-center">
-            <Card className="p-4 sm:p-6 text-center hover:shadow-soft transition-all duration-300 relative overflow-hidden max-w-sm sm:max-w-md mx-auto">
-              <div className="relative w-48 h-48 sm:w-60 sm:h-60 mx-auto rounded-lg overflow-hidden bg-earth-green/10">
-                <img 
-                  src={farmerImages[currentImageIndex]} 
-                  alt="Farmer"
-                  className="w-full h-full object-cover transition-opacity duration-500"
-                  decoding="async" sizes="(max-width: 640px) 12rem, 15rem"
-                />
+            <Card className="p-6 lg:p-8 text-center hover:shadow-elevated transition-all duration-300 relative overflow-hidden max-w-sm sm:max-w-md lg:max-w-lg mx-auto group">
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto rounded-xl overflow-hidden bg-earth-green/10">
+                <picture>
+                  <source 
+                    media="(max-width: 640px)" 
+                    srcSet={`${farmerImages[currentImageIndex]}?w=256&h=256&fit=crop&q=85 256w`}
+                    sizes="256px"
+                  />
+                  <source 
+                    media="(max-width: 1024px)" 
+                    srcSet={`${farmerImages[currentImageIndex]}?w=288&h=288&fit=crop&q=90 288w`}
+                    sizes="288px"
+                  />
+                  <img 
+                    src={`${farmerImages[currentImageIndex]}?w=320&h=320&fit=crop&q=95`} 
+                    alt="Farmer training and outreach program"
+                    className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105"
+                    loading="lazy" 
+                    decoding="async" 
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
+                    width="320"
+                    height="320"
+                  />
+                </picture>
                 <button 
                   onClick={prevImage}
-                  className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-soft min-h-[44px] touch-manipulation"
+                  aria-label="Previous farmer image"
                 >
-                  <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
                 </button>
                 <button 
                   onClick={nextImage}
-                  className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute right-3 lg:right-4 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-soft min-h-[44px] touch-manipulation"
+                  aria-label="Next farmer image"
                 >
-                  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
                 </button>
               </div>
-              <div className="text-lg sm:text-xl font-semibold text-foreground mt-4 sm:mt-6">Farmers' training & outreach</div>
+              <div className="text-xl lg:text-2xl font-semibold text-foreground mt-6 lg:mt-8">Farmers' training & outreach</div>
             </Card>
           </div>
           
-          <div className="flex justify-center mt-2 gap-1">
+          <div className="flex justify-center mt-4 gap-2">
             {farmerImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30'
+                className={`w-3 h-3 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center touch-manipulation ${
+                  index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30 hover:bg-earth-green/50'
                 }`}
-              />
+                aria-label={`View farmer image ${index + 1}`}
+              >
+                <span className={`w-3 h-3 rounded-full ${
+                  index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30'
+                }`}></span>
+              </button>
             ))}
           </div>
 
@@ -169,8 +192,8 @@ const ImpactSection = () => {
             Join us in creating sustainable value for farmers, preserving indigenous breeds, and delivering premium A2 ghee to global markets.
           </p>
           <Button 
-            size="default" 
-            className="bg-white text-girej-red hover:bg-white/90 font-semibold py-2 px-4 sm:py-3 sm:px-6 text-sm sm:text-base"
+            size="lg" 
+            className="bg-white text-girej-red hover:bg-white/90 font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated transition-all duration-300"
           >
             👉 Become a Bulk Buyer Today
           </Button>

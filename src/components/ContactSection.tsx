@@ -34,46 +34,75 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
-          <Card className="p-8 shadow-elevated">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Request Bulk Quote</h3>
+          <Card className="p-6 lg:p-8 shadow-elevated">
+            <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Request Bulk Quote</h3>
             <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="firstName">First Name *</Label>
-                  <Input id="firstName" placeholder="Enter your first name" />
+                  <Input 
+                    id="firstName" 
+                    placeholder="Enter your first name" 
+                    className="min-h-[48px] text-base"
+                  />
                 </div>
                 <div>
                   <Label htmlFor="lastName">Last Name *</Label>
-                  <Input id="lastName" placeholder="Enter your last name" />
+                  <Input 
+                    id="lastName" 
+                    placeholder="Enter your last name" 
+                    className="min-h-[48px] text-base"
+                  />
                 </div>
               </div>
               
               <div>
                 <Label htmlFor="company">Company Name *</Label>
-                <Input id="company" placeholder="Your company name" />
+                <Input 
+                  id="company" 
+                  placeholder="Your company name" 
+                  className="min-h-[48px] text-base"
+                />
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="email">Email Address *</Label>
-                  <Input id="email" type="email" placeholder="your.email@company.com" />
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="your.email@company.com" 
+                    className="min-h-[48px] text-base"
+                  />
                 </div>
                 <div>
                   <Label htmlFor="phone">Phone Number *</Label>
-                  <Input id="phone" placeholder="+91 XXXXX XXXXX" />
+                  <Input 
+                    id="phone" 
+                    placeholder="+91 XXXXX XXXXX" 
+                    className="min-h-[48px] text-base"
+                  />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="volume">Monthly Volume Required (kg) *</Label>
-                  <Input id="volume" placeholder="e.g., 1000" />
+                  <Input 
+                    id="volume" 
+                    placeholder="e.g., 1000" 
+                    className="min-h-[48px] text-base"
+                  />
                 </div>
                 <div>
                   <Label htmlFor="location">Delivery Location</Label>
-                  <Input id="location" placeholder="City, State" />
+                  <Input 
+                    id="location" 
+                    placeholder="City, State" 
+                    className="min-h-[48px] text-base"
+                  />
                 </div>
               </div>
 
@@ -83,91 +112,115 @@ const ContactSection = () => {
                   id="requirements" 
                   placeholder="Please describe your packaging preferences, quality requirements, or any other specific needs..."
                   rows={4}
+                  className="min-h-[120px] text-base resize-none"
                 />
               </div>
 
-              <Button variant="hero" size="lg" className="w-full">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="w-full min-h-[56px] text-lg font-semibold touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
+              >
                 Submit Quote Request
               </Button>
             </form>
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6">
-            <Card className="p-6 shadow-soft">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Contact Information</h3>
+          <div className="space-y-6 lg:space-y-8">
+            <Card className="p-6 lg:p-8 shadow-soft">
+              <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-earth-green/10 rounded-full flex items-center justify-center">
+                    <Mail className="h-5 w-5 text-earth-green" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground text-base lg:text-lg">Email</div>
+                    <div className="text-muted-foreground text-base">krishi.naturals@gmail.com</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-earth-green/10 rounded-full flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-earth-green" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground text-base lg:text-lg">Phone</div>
+                    <div className="text-muted-foreground text-base">+91 9004850052</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-earth-green/10 rounded-full flex items-center justify-center">
+                    <MapPin className="h-5 w-5 text-earth-green" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground text-base lg:text-lg">Address</div>
+                    <div className="text-muted-foreground text-base">Makarpura GIDC, Vadodara, Gujarat 390010</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-earth-green/10 rounded-full flex items-center justify-center">
+                    <Clock className="h-5 w-5 text-earth-green" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground text-base lg:text-lg">Business Hours</div>
+                    <div className="text-muted-foreground text-base">Mon-Sat: 9:00 AM - 6:00 PM</div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 lg:p-8 shadow-soft">
+              <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Partnership Benefits</h3>
               <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <Mail className="h-5 w-5 text-earth-green mt-1" />
-                  <div>
-                    <div className="font-medium text-foreground">Email</div>
-                    <div className="text-muted-foreground">krishi.naturals@gmail.com</div>
-                  </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-earth-green rounded-full flex-shrink-0"></div>
+                  <span className="text-muted-foreground text-base">Competitive bulk pricing</span>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <Phone className="h-5 w-5 text-earth-green mt-1" />
-                  <div>
-                    <div className="font-medium text-foreground">Phone</div>
-                    <div className="text-muted-foreground">+91 9004850052</div>
-                  </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-earth-green rounded-full flex-shrink-0"></div>
+                  <span className="text-muted-foreground text-base">Flexible payment terms</span>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-earth-green mt-1" />
-                  <div>
-                    <div className="font-medium text-foreground">Address</div>
-                    <div className="text-muted-foreground">Makarpura GIDC, Vadodara, Gujarat 390010</div>
-                  </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-earth-green rounded-full flex-shrink-0"></div>
+                  <span className="text-muted-foreground text-base">Custom packaging options</span>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <Clock className="h-5 w-5 text-earth-green mt-1" />
-                  <div>
-                    <div className="font-medium text-foreground">Business Hours</div>
-                    <div className="text-muted-foreground">Mon-Sat: 9:00 AM - 6:00 PM</div>
-                  </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-earth-green rounded-full flex-shrink-0"></div>
+                  <span className="text-muted-foreground text-base">Dedicated account manager</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-earth-green rounded-full flex-shrink-0"></div>
+                  <span className="text-muted-foreground text-base">Quality guarantee</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-6 shadow-soft">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Partnership Benefits</h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-earth-green rounded-full"></div>
-                  <span className="text-muted-foreground">Competitive bulk pricing</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-earth-green rounded-full"></div>
-                  <span className="text-muted-foreground">Flexible payment terms</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-earth-green rounded-full"></div>
-                  <span className="text-muted-foreground">Custom packaging options</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-earth-green rounded-full"></div>
-                  <span className="text-muted-foreground">Dedicated account manager</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-earth-green rounded-full"></div>
-                  <span className="text-muted-foreground">Quality guarantee</span>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 shadow-soft">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Supported by</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <Card className="p-6 lg:p-8 shadow-soft">
+              <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Supported by</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
                 {partners.map((partner, index) => (
                   <div 
                     key={index}
-                    className="flex items-center justify-center p-2 grayscale hover:grayscale-0 transition-all duration-300"
+                    className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
                   >
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="max-h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
-                      loading="lazy" decoding="async" sizes="(max-width: 768px) 120px, 160px"
-                    />
+                    <picture>
+                      <source 
+                        media="(max-width: 640px)" 
+                        srcSet={`${partner.logo}?w=120&h=60&fit=contain&q=90 120w`}
+                        sizes="120px"
+                      />
+                      <img
+                        src={`${partner.logo}?w=160&h=80&fit=contain&q=95`}
+                        alt={partner.name}
+                        className="max-h-12 lg:max-h-16 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
+                        loading="lazy" 
+                        decoding="async" 
+                        sizes="(max-width: 640px) 120px, 160px"
+                        width="160"
+                        height="80"
+                      />
+                    </picture>
                   </div>
                 ))}
               </div>
