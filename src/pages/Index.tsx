@@ -46,8 +46,8 @@ const Index = () => {
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-white/80">
                 <div>business@girej.com</div>
-                <div>+91 98765 43210</div>
-                <div>Gujarat, India</div>
+                <div>+91 9004850052</div>
+                <div>Makarpura GIDC, Vadodara, Gujarat 390010</div>
               </div>
             </div>
           </div>

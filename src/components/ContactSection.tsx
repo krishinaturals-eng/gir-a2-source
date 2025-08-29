@@ -96,14 +96,14 @@ const ContactSection = () => {
                   <Phone className="h-5 w-5 text-earth-green mt-1" />
                   <div>
                     <div className="font-medium text-foreground">Phone</div>
-                    <div className="text-muted-foreground">+91 98765 43210</div>
+                    <div className="text-muted-foreground">+91 9004850052</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-earth-green mt-1" />
                   <div>
                     <div className="font-medium text-foreground">Address</div>
-                    <div className="text-muted-foreground">Gujarat, India</div>
+                    <div className="text-muted-foreground">Makarpura GIDC, Vadodara, Gujarat 390010</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
