@@ -1,39 +1,59 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, Heart, Dna, Leaf } from "lucide-react";
+import { Users, Heart, Dna, Leaf, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const ImpactSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const farmerImages = [
+    "/lovable-uploads/19cb4bff-cb95-4fbe-8a15-0c9b28550504.png",
+    "/lovable-uploads/df4ce672-7dae-4dd7-93c1-375d6d939de1.png", 
+    "/lovable-uploads/4bbb6c61-fc1f-42b4-b773-f66bb2151cd6.png"
+  ];
+
   const impactMetrics = [
     {
       icon: Users,
       number: "5,000+",
-      label: "Farmers Empowered",
-      description: "Sustainable monthly income (₹15,000+)",
+      label: "Farmers",
       color: "earth-green"
     },
     {
       icon: Dna,
       number: "Indigenous",
-      label: "Cow Breed Preservation",
-      description: "Genetic quality improvement & preservation",
+      label: "Breed",
       color: "trust-blue"
     },
     {
       icon: Heart,
       number: "Healthy",
-      label: "A2 Ghee for Consumers",
-      description: "Pure, healthy, easily digestible",
+      label: "A2 Ghee",
       color: "girej-red"
     },
     {
       icon: Leaf,
       number: "Sustainable",
-      label: "Dairy Farming",
-      description: "Promoting sustainable dairy farming practices",
+      label: "Farming",
       color: "golden-accent"
     }
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % farmerImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [farmerImages.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % farmerImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + farmerImages.length) % farmerImages.length);
+  };
 
   return (
     <section id="impact" className="py-20 bg-gradient-warm">
@@ -50,21 +70,57 @@ const ImpactSection = () => {
           </p>
         </div>
 
-        {/* Impact Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {impactMetrics.map((metric, index) => {
-            const IconComponent = metric.icon;
-            return (
-              <Card key={index} className="p-6 text-center hover:shadow-soft transition-all duration-300">
-                <div className={`w-16 h-16 mx-auto mb-4 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
-                  <IconComponent className={`h-8 w-8 text-${metric.color}`} />
-                </div>
-                <div className="text-2xl font-bold text-foreground mb-2">{metric.number}</div>
-                <div className="text-lg font-semibold text-foreground mb-2">{metric.label}</div>
-                <p className="text-sm text-muted-foreground">{metric.description}</p>
-              </Card>
-            );
-          })}
+        {/* Impact Metrics & Slideshow */}
+        <div className="flex flex-col lg:flex-row gap-8 mb-16 items-center">
+          {/* Farmer Slideshow */}
+          <div className="flex-shrink-0">
+            <div className="relative w-[50px] h-[50px] rounded-full overflow-hidden bg-earth-green/10">
+              <img 
+                src={farmerImages[currentImageIndex]} 
+                alt="Farmer"
+                className="w-full h-full object-cover transition-opacity duration-500"
+              />
+              <button 
+                onClick={prevImage}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-4 h-4 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+              >
+                <ChevronLeft className="w-2 h-2" />
+              </button>
+              <button 
+                onClick={nextImage}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-4 h-4 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+              >
+                <ChevronRight className="w-2 h-2" />
+              </button>
+            </div>
+            <div className="flex justify-center mt-1 gap-1">
+              {farmerImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-1 h-1 rounded-full transition-colors ${
+                    index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Impact Metrics - Minimized */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 flex-1">
+            {impactMetrics.map((metric, index) => {
+              const IconComponent = metric.icon;
+              return (
+                <Card key={index} className="p-4 text-center hover:shadow-soft transition-all duration-300">
+                  <div className={`w-8 h-8 mx-auto mb-2 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
+                    <IconComponent className={`h-4 w-4 text-${metric.color}`} />
+                  </div>
+                  <div className="text-lg font-bold text-foreground mb-1">{metric.number}</div>
+                  <div className="text-xs font-semibold text-foreground">{metric.label}</div>
+                </Card>
+              );
+            })}
+          </div>
         </div>
 
         {/* Detailed Impact */}
