@@ -26,7 +26,7 @@ const MediaSection = () => {
             size="lg" 
             className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-8 text-lg"
           >
-            📰 View Full Media Kit
+            🥛 Become a Bulk Buyer Today
           </Button>
         </div>
       </div>
