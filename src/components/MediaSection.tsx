@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
-import sustainableFarmingThumb from "@/assets/sustainable-farming-thumb.jpg";
-import startupStoryThumb from "@/assets/startup-story-thumb.jpg";
+import upayaArticleThumb from "@/assets/upaya-article-thumb.jpg";
+import yourstoryArticleThumb from "@/assets/yourstory-article-thumb.jpg";
 
 const MediaSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,14 +21,14 @@ const MediaSection = () => {
       id: 2,
       title: "Improving Dairy Farmers' Incomes with Sustainable Farming Methods",
       subtitle: "Upaya SV",
-      image: sustainableFarmingThumb,
+      image: upayaArticleThumb,
       url: "https://www.upayasv.org/blog/2019/9/11/improving-dairy-farmers-incomes-with-sustainable-farming-methods"
     },
     {
       id: 3,
       title: "Krishi Naturals Story",
       subtitle: "YourStory",
-      image: startupStoryThumb,
+      image: yourstoryArticleThumb,
       url: "https://yourstory.com/2015/01/krishi-naturals"
     }
   ];
@@ -146,7 +146,7 @@ const MediaSection = () => {
             >
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src={sustainableFarmingThumb}
+                  src={upayaArticleThumb}
                   alt="Sustainable farming methods"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -175,7 +175,7 @@ const MediaSection = () => {
             >
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src={startupStoryThumb}
+                  src={yourstoryArticleThumb}
                   alt="Krishi Naturals startup story"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
