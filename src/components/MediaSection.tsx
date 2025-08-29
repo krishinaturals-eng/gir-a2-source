@@ -67,24 +67,6 @@ const MediaSection = () => {
           })}
         </div>
 
-        {/* Press Releases */}
-        <div className="bg-earth-green/5 rounded-2xl p-8 text-center mb-8">
-          <h3 className="text-xl font-semibold text-earth-green mb-4">Press & Recognition</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-              <div className="text-2xl font-bold text-foreground">15+</div>
-              <div className="text-muted-foreground">Media Features</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-foreground">5</div>
-              <div className="text-muted-foreground">Industry Awards</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-foreground">10+</div>
-              <div className="text-muted-foreground">Speaking Engagements</div>
-            </div>
-          </div>
-        </div>
 
         {/* CTA */}
         <div className="text-center">
