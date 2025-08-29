@@ -20,16 +20,16 @@ const ContactSection = () => {
     }
   ];
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-12 sm:py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <Badge variant="secondary" className="mb-4">
             Get In Touch
           </Badge>
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
             Start Your <span className="text-earth-green">Partnership Journey</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to source premium A2 ghee for your business? Get a custom quote today.
           </p>
         </div>
