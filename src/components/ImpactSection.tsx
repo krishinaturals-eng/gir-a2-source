@@ -68,48 +68,7 @@ const ImpactSection = () => {
         </div>
 
         {/* Detailed Impact */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          <Card className="p-8">
-            <h3 className="text-xl font-semibold text-earth-green mb-6">Shared Value Creation</h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-earth-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Users className="h-3 w-3 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">For Farmers</h4>
-                  <p className="text-sm text-muted-foreground">Sustainable monthly income (₹15,000+) through premium milk pricing and direct partnerships.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-trust-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Dna className="h-3 w-3 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">For Cows</h4>
-                  <p className="text-sm text-muted-foreground">Genetic quality improvement & breed preservation of indigenous Gir cows.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-girej-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Heart className="h-3 w-3 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">For Consumers</h4>
-                  <p className="text-sm text-muted-foreground">Pure, healthy, easily digestible A2 Gir cow ghee with complete traceability.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-golden-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Leaf className="h-3 w-3 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">For the Planet</h4>
-                  <p className="text-sm text-muted-foreground">Promoting sustainable dairy farming practices and environmental stewardship.</p>
-                </div>
-              </div>
-            </div>
-          </Card>
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mb-16">
 
           <Card className="p-8 bg-earth-green/5">
             <h3 className="text-xl font-semibold text-earth-green mb-6">Building the Future</h3>
