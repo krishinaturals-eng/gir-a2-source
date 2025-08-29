@@ -71,11 +71,11 @@ const ImpactSection = () => {
         </div>
 
         {/* Impact Metrics & Slideshow */}
-        <div className="flex flex-col lg:flex-row gap-8 mb-16 items-start">
-          {/* Farmer Slideshow */}
-          <div className="flex-shrink-0">
-            <Card className="p-4 text-center hover:shadow-soft transition-all duration-300 relative overflow-hidden">
-              <div className="relative w-full h-16 rounded-lg overflow-hidden bg-earth-green/10">
+        <div className="flex flex-col gap-8 mb-16 items-center">
+          {/* Farmer Slideshow - Centered */}
+          <div className="flex justify-center">
+            <Card className="p-6 text-center hover:shadow-soft transition-all duration-300 relative overflow-hidden">
+              <div className="relative w-32 h-24 rounded-lg overflow-hidden bg-earth-green/10">
                 <img 
                   src={farmerImages[currentImageIndex]} 
                   alt="Farmer"
@@ -83,43 +83,44 @@ const ImpactSection = () => {
                 />
                 <button 
                   onClick={prevImage}
-                  className="absolute left-1 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
                 >
-                  <ChevronLeft className="w-3 h-3" />
+                  <ChevronLeft className="w-4 h-4" />
                 </button>
                 <button 
                   onClick={nextImage}
-                  className="absolute right-1 top-1/2 -translate-y-1/2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
                 >
-                  <ChevronRight className="w-3 h-3" />
+                  <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
-              <div className="text-xs font-semibold text-foreground mt-2">Our Farmers</div>
+              <div className="text-sm font-semibold text-foreground mt-3">Our Farmers</div>
             </Card>
-            <div className="flex justify-center mt-2 gap-1">
-              {farmerImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30'
-                  }`}
-                />
-              ))}
-            </div>
+          </div>
+          
+          <div className="flex justify-center mt-2 gap-1">
+            {farmerImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30'
+                }`}
+              />
+            ))}
           </div>
 
-          {/* Impact Metrics - Minimized */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 flex-1">
+          {/* Impact Metrics - Larger Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl">
             {impactMetrics.map((metric, index) => {
               const IconComponent = metric.icon;
               return (
-                <Card key={index} className="p-4 text-center hover:shadow-soft transition-all duration-300">
-                  <div className={`w-[50px] h-[50px] mx-auto mb-2 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
+                <Card key={index} className="p-6 text-center hover:shadow-soft transition-all duration-300">
+                  <div className={`w-[50px] h-[50px] mx-auto mb-4 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
                     <IconComponent className={`h-6 w-6 text-${metric.color}`} />
                   </div>
-                  <div className="text-lg font-bold text-foreground mb-1">{metric.number}</div>
-                  <div className="text-xs font-semibold text-foreground">{metric.label}</div>
+                  <div className="text-xl font-bold text-foreground mb-2">{metric.number}</div>
+                  <div className="text-sm font-semibold text-foreground">{metric.label}</div>
                 </Card>
               );
             })}
