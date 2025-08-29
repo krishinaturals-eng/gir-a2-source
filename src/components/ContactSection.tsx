@@ -18,7 +18,7 @@ const ContactSection = () => {
             Start Your <span className="text-earth-green">Partnership Journey</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to source premium A2 ghee for your business? Get a custom quote or schedule a facility visit to see our operations firsthand.
+            Ready to source premium A2 ghee for your business? Get a custom quote today.
           </p>
         </div>
 
@@ -142,15 +142,6 @@ const ContactSection = () => {
               </div>
             </Card>
 
-            <Card className="p-6 shadow-soft bg-gradient-hero text-white">
-              <h3 className="text-xl font-semibold mb-4">Schedule Facility Visit</h3>
-              <p className="text-white/90 mb-4">
-                Experience our operations firsthand. Visit our processing facility and meet our partner farmers.
-              </p>
-              <Button variant="trust" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
-                Book Facility Tour
-              </Button>
-            </Card>
           </div>
         </div>
       </div>
