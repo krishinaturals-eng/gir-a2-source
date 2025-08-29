@@ -63,10 +63,10 @@ const ImpactSection = () => {
     <section id="impact" className="py-12 sm:py-20 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 sm:mb-8">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-2">
             Social & Ecological Impact
           </Badge>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
             Empowering Farmers & <span className="text-earth-green">Preserving Gir Cow Breed</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">

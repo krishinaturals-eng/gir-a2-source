@@ -52,10 +52,10 @@ const MediaSection = () => {
     <section id="media" className="py-8 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 sm:mb-8">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-2">
             In Media
           </Badge>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
             GIREJ <span className="text-earth-green">In The Spotlight</span>
           </h2>
           <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
