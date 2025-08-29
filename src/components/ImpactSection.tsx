@@ -74,8 +74,8 @@ const ImpactSection = () => {
         <div className="flex flex-col gap-8 mb-16 items-center">
           {/* Farmer Slideshow - Centered */}
           <div className="flex justify-center">
-            <Card className="p-5 text-center hover:shadow-soft transition-all duration-300 relative overflow-hidden">
-              <div className="relative w-40 h-30 rounded-lg overflow-hidden bg-earth-green/10">
+            <Card className="p-6 text-center hover:shadow-soft transition-all duration-300 relative overflow-hidden max-w-md mx-auto">
+              <div className="relative w-60 h-60 mx-auto rounded-lg overflow-hidden bg-earth-green/10">
                 <img 
                   src={farmerImages[currentImageIndex]} 
                   alt="Farmer"
@@ -83,18 +83,18 @@ const ImpactSection = () => {
                 />
                 <button 
                   onClick={prevImage}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
                 >
-                  <ChevronLeft className="w-4 h-4" />
+                  <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button 
                   onClick={nextImage}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors"
                 >
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
-              <div className="text-sm font-semibold text-foreground mt-3">Our Farmers</div>
+              <div className="text-xl font-semibold text-foreground mt-6">Our Farmers</div>
             </Card>
           </div>
           
