@@ -12,13 +12,20 @@ const MediaSection = () => {
   const articles = [
     {
       id: 1,
+      title: "TISS grad's start-up to help preserve native cow breeds",
+      subtitle: "Times Group",
+      image: "/lovable-uploads/5b8140f7-2bb5-40d0-85e6-d8d55960abd4.png",
+      url: "#"
+    },
+    {
+      id: 2,
       title: "Improving Dairy Farmers' Incomes with Sustainable Farming Methods",
       subtitle: "Upaya SV",
       image: sustainableFarmingThumb,
       url: "https://www.upayasv.org/blog/2019/9/11/improving-dairy-farmers-incomes-with-sustainable-farming-methods"
     },
     {
-      id: 2,
+      id: 3,
       title: "Krishi Naturals Story",
       subtitle: "YourStory",
       image: startupStoryThumb,
@@ -58,52 +65,46 @@ const MediaSection = () => {
 
 
 
-        {/* Media Coverage */}
+        {/* Article Slideshow */}
         <div className="mb-12">
-          <div className="max-w-2xl mx-auto">
-            <img 
-              src="/lovable-uploads/5b8140f7-2bb5-40d0-85e6-d8d55960abd4.png" 
-              alt="TISS grad's start-up to help preserve native cow breeds - Media Coverage"
-              className="w-full rounded-lg shadow-lg mb-6"
-            />
-            {/* Article Slideshow */}
-            <div className="text-center mb-8">
-              <h3 className="text-lg font-semibold text-earth-green mb-6">Featured Articles</h3>
-              <Card className="relative overflow-hidden max-w-4xl mx-auto">
-                <div className="relative h-96">
-                  <img
-                    src={articles[currentSlide].image}
-                    alt={articles[currentSlide].title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  
-                  {/* Navigation buttons */}
-                  <button
-                    onClick={prevSlide}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
-                    aria-label="Previous article"
-                  >
-                    <ChevronLeft className="h-6 w-6 text-white" />
-                  </button>
-                  <button
-                    onClick={nextSlide}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
-                    aria-label="Next article"
-                  >
-                    <ChevronRight className="h-6 w-6 text-white" />
-                  </button>
+          <div className="text-center mb-8">
+            <h3 className="text-lg font-semibold text-earth-green mb-6">Featured Articles</h3>
+            <Card className="relative overflow-hidden max-w-2xl mx-auto">
+              <div className="relative h-80">
+                <img
+                  src={articles[currentSlide].image}
+                  alt={articles[currentSlide].title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                
+                {/* Navigation buttons */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
+                  aria-label="Previous article"
+                >
+                  <ChevronLeft className="h-6 w-6 text-white" />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
+                  aria-label="Next article"
+                >
+                  <ChevronRight className="h-6 w-6 text-white" />
+                </button>
 
-                  {/* Content overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <div className="mb-2">
-                      <span className="text-sm bg-earth-green/80 px-3 py-1 rounded-full">
-                        {articles[currentSlide].subtitle}
-                      </span>
-                    </div>
-                    <h4 className="text-xl font-bold mb-4 leading-tight">
-                      {articles[currentSlide].title}
-                    </h4>
+                {/* Content overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <div className="mb-2">
+                    <span className="text-sm bg-earth-green/80 px-3 py-1 rounded-full">
+                      {articles[currentSlide].subtitle}
+                    </span>
+                  </div>
+                  <h4 className="text-xl font-bold mb-4 leading-tight">
+                    {articles[currentSlide].title}
+                  </h4>
+                  {articles[currentSlide].url !== "#" && (
                     <a
                       href={articles[currentSlide].url}
                       target="_blank"
@@ -112,24 +113,24 @@ const MediaSection = () => {
                     >
                       Read Article <ExternalLink className="h-4 w-4" />
                     </a>
-                  </div>
+                  )}
                 </div>
+              </div>
 
-                {/* Slide indicators */}
-                <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2">
-                  {articles.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${
-                        index === currentSlide ? 'bg-white' : 'bg-white/50'
-                      }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
-              </Card>
-            </div>
+              {/* Slide indicators */}
+              <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2">
+                {articles.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/50'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </Card>
           </div>
         </div>
 
