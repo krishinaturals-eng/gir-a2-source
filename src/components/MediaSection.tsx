@@ -19,6 +19,38 @@ const MediaSection = () => {
 
 
 
+        {/* Media Coverage */}
+        <div className="mb-12">
+          <div className="max-w-2xl mx-auto">
+            <img 
+              src="/lovable-uploads/5b8140f7-2bb5-40d0-85e6-d8d55960abd4.png" 
+              alt="TISS grad's start-up to help preserve native cow breeds - Media Coverage"
+              className="w-full rounded-lg shadow-lg mb-6"
+            />
+            <div className="text-center space-y-3">
+              <h3 className="text-lg font-semibold text-earth-green mb-4">Featured Articles</h3>
+              <div className="space-y-2">
+                <a 
+                  href="https://www.upayasv.org/blog/2019/9/11/improving-dairy-farmers-incomes-with-sustainable-farming-methods"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-trust-blue hover:text-trust-blue/80 underline transition-colors"
+                >
+                  Improving Dairy Farmers' Incomes with Sustainable Farming Methods - Upaya SV
+                </a>
+                <a 
+                  href="https://yourstory.com/2015/01/krishi-naturals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-trust-blue hover:text-trust-blue/80 underline transition-colors"
+                >
+                  Krishi Naturals Story - YourStory
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="text-center">
           <Button 
