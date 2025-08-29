@@ -7,31 +7,16 @@ import { Badge } from "@/components/ui/badge";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import tissLogo from "@/assets/logos/tiss-logo.png";
 import iimLogo from "@/assets/logos/iim-ahmedabad-logo.png";
-import dbsLogo from "@/assets/logos/dbs-logo.png";
-import sapLogo from "@/assets/logos/sap-logo.png";
-import upayaLogo from "@/assets/logos/upaya-logo.png";
 
 const ContactSection = () => {
   const partners = [
-    {
-      name: "Tata Institute of Social Sciences",
-      logo: tissLogo,
-    },
     {
       name: "IIM Ahmedabad", 
       logo: iimLogo,
     },
     {
-      name: "DBS India",
-      logo: dbsLogo,
-    },
-    {
-      name: "SAP India",
-      logo: sapLogo,
-    },
-    {
-      name: "Upaya Social Ventures",
-      logo: upayaLogo,
+      name: "Tata Institute of Social Sciences",
+      logo: tissLogo,
     }
   ];
   return (
