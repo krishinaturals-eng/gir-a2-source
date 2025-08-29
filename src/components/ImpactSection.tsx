@@ -114,7 +114,7 @@ const ImpactSection = () => {
           <Card className="p-8 bg-earth-green/5">
             <h3 className="text-xl font-semibold text-earth-green mb-6">Building the Future</h3>
             <p className="text-muted-foreground mb-6">
-              We are building a future where indigenous cows are preserved, farmers thrive, and B2B buyers get world-class, authentic A2 ghee.
+              We are building a future where indigenous Gir Cows are preserved, farmers thrive, and B2B buyers get world-class, authentic A2 ghee.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center">
