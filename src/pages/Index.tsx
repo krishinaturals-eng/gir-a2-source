@@ -8,6 +8,7 @@ import SupportedBySection from "@/components/SupportedBySection";
 import MediaSection from "@/components/MediaSection";
 import ContactSection from "@/components/ContactSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -55,6 +56,7 @@ const Index = () => {
         </div>
       </footer>
       <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 };

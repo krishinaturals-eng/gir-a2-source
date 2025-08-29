@@ -1,9 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -16,7 +26,11 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-[60] shadow-soft">
+    <nav className={`fixed top-0 w-full transition-all duration-300 z-[60] ${
+      isScrolled 
+        ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-soft' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-18">
           {/* Logo */}
@@ -24,15 +38,15 @@ const Navigation = () => {
             <picture>
               <source 
                 media="(max-width: 640px)" 
-                srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=48&h=48&q=90 48w"
-                sizes="48px"
+                srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=40&h=40&q=90 40w"
+                sizes="40px"
               />
               <img 
-                src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=64&h=64&q=90" 
+                src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=56&h=56&q=90" 
                 alt="GIREJ - A2 Cow Milk Products, Established 2014" 
-                className="h-12 sm:h-14 lg:h-16 w-auto transition-transform duration-200 hover:scale-105"
-                width="64"
-                height="64"
+                className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-200 hover:scale-105"
+                width="56"
+                height="56"
               />
             </picture>
           </div>
@@ -79,7 +93,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden animate-fade-in">
+          <div className="lg:hidden animate-fade-in z-[70] relative">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/98 backdrop-blur-md border-t border-border rounded-b-xl shadow-elevated">
               {navItems.map((item) => (
                 <a

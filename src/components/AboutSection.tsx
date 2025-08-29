@@ -2,10 +2,23 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Award, Users, Shield } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { openWhatsAppForQuote } from "@/services/whatsappService";
 
 const AboutSection = () => {
+  const { ref: sectionRef, isIntersecting } = useIntersectionObserver({
+    threshold: 0.2,
+    rootMargin: '-50px',
+  });
+
   return (
-    <section id="about" className="py-8 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
+    <section 
+      ref={sectionRef}
+      id="about" 
+      className={`py-8 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 transition-all duration-1000 ${
+        isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 sm:mb-8">
           <Badge variant="secondary" className="mb-2">
@@ -72,12 +85,23 @@ const AboutSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
-          >
-            Partner with Us – Build Your Brand with Girej
-          </Button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <Button 
+              size="lg" 
+              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Partner with Us
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg" 
+              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
+              onClick={() => openWhatsAppForQuote()}
+            >
+              💬 Chat Now
+            </Button>
+          </div>
         </div>
       </div>
     </section>

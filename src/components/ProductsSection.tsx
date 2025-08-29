@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Package, Shield, Award, Truck, CheckCircle, FlaskConical, Microscope, Factory } from "lucide-react";
+import { openWhatsAppForPrivateLabel } from "@/services/whatsappService";
 
 const ProductsSection = () => {
   const productRange = [
@@ -169,6 +170,7 @@ const ProductsSection = () => {
             <Button 
               size="lg" 
               className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               👉 Request 15kg Tin Price
             </Button>
@@ -176,10 +178,14 @@ const ProductsSection = () => {
               variant="outline" 
               size="lg" 
               className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
+              onClick={() => openWhatsAppForPrivateLabel()}
             >
-              Get Private Label Proposal
+              💬 Chat About Private Label
             </Button>
           </div>
+          <p className="text-sm text-muted-foreground mt-4">
+            Get instant pricing and samples within 24 hours
+          </p>
         </div>
       </div>
     </section>

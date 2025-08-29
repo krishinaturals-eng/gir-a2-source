@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Factory, Package, Heart, Globe, Scale, Package2, TrendingUp, IndianRupee } from "lucide-react";
+import { openWhatsAppForPrivateLabel } from "@/services/whatsappService";
 
 const BSupplySection = () => {
   return (
@@ -116,10 +117,32 @@ const BSupplySection = () => {
 
         {/* CTA */}
         <div className="text-center">
+          <div className="bg-gradient-to-r from-earth-green/10 to-trust-blue/10 rounded-2xl p-6 mb-6">
+            <h4 className="text-lg font-semibold text-foreground mb-2">🚀 Limited Time Offer</h4>
+            <p className="text-sm text-muted-foreground mb-4">
+              Get 5% discount on orders above 500kg this month
+            </p>
+            <div className="flex justify-center items-center space-x-4 text-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-earth-green">24</div>
+                <div className="text-muted-foreground">Hours</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-earth-green">500kg</div>
+                <div className="text-muted-foreground">Min Order</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-earth-green">5%</div>
+                <div className="text-muted-foreground">Discount</div>
+              </div>
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 max-w-2xl mx-auto">
             <Button 
               size="lg" 
               className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               👉 Request 15kg Tin Price
             </Button>
@@ -127,10 +150,15 @@ const BSupplySection = () => {
               variant="outline" 
               size="lg" 
               className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
+              onClick={() => openWhatsAppForPrivateLabel()}
             >
-              Get Private Label Proposal
+              💬 Chat About Private Label
             </Button>
           </div>
+          
+          <p className="text-sm text-muted-foreground mt-4">
+            ⭐ Trusted by 20+ leading brands • Free samples available • 24-hour response guarantee
+          </p>
         </div>
       </div>
     </section>
