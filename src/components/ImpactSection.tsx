@@ -70,48 +70,27 @@ const ImpactSection = () => {
         {/* Detailed Impact */}
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mb-16">
 
-          <Card className="p-8 bg-earth-green/5 relative overflow-hidden">
-            {/* Background farmer images */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="flex h-full">
-                <div 
-                  className="flex-1 bg-cover bg-center bg-no-repeat blur-sm"
-                  style={{ backgroundImage: `url('/lovable-uploads/2db7c7b1-ffe6-47c6-95e7-a21e5d3a4be9.png')` }}
-                />
-                <div 
-                  className="flex-1 bg-cover bg-center bg-no-repeat blur-sm"
-                  style={{ backgroundImage: `url('/lovable-uploads/87d15d84-225e-4e02-9458-9c2efc867529.png')` }}
-                />
-                <div 
-                  className="flex-1 bg-cover bg-center bg-no-repeat blur-sm"
-                  style={{ backgroundImage: `url('/lovable-uploads/70aca71f-ca56-4c47-befe-f0fa9795cd1f.png')` }}
-                />
+          <Card className="p-8 bg-earth-green/5">
+            <h3 className="text-xl font-semibold text-earth-green mb-6">Building the Future</h3>
+            <p className="text-muted-foreground mb-6">
+              We are building a future where indigenous Gir Cows are preserved, farmers thrive, and B2B buyers get world-class, authentic A2 ghee.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">14+</div>
+                <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
-            </div>
-            
-            {/* Content overlay */}
-            <div className="relative z-10">
-              <h3 className="text-xl font-semibold text-earth-green mb-6">Building the Future</h3>
-              <p className="text-muted-foreground mb-6">
-                We are building a future where indigenous Gir Cows are preserved, farmers thrive, and B2B buyers get world-class, authentic A2 ghee.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">14+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">Gujarat</div>
-                  <div className="text-sm text-muted-foreground">Native Region</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">100%</div>
-                  <div className="text-sm text-muted-foreground">A2 Certified</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-foreground">Export</div>
-                  <div className="text-sm text-muted-foreground">Ready Quality</div>
-                </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">Gujarat</div>
+                <div className="text-sm text-muted-foreground">Native Region</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">100%</div>
+                <div className="text-sm text-muted-foreground">A2 Certified</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">Export</div>
+                <div className="text-sm text-muted-foreground">Ready Quality</div>
               </div>
             </div>
           </Card>
