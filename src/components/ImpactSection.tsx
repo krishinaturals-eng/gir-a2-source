@@ -94,7 +94,7 @@ const ImpactSection = () => {
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
-              <div className="text-xl font-semibold text-foreground mt-6">Our Farmers</div>
+              <div className="text-xl font-semibold text-foreground mt-6">Farmers' training & outreach</div>
             </Card>
           </div>
           
