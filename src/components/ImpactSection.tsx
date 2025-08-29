@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, Milk, Dna, Leaf } from "lucide-react";
+import { Users, Heart, Dna, Leaf } from "lucide-react";
 
 const ImpactSection = () => {
   const impactMetrics = [
@@ -20,7 +20,7 @@ const ImpactSection = () => {
       color: "trust-blue"
     },
     {
-      icon: Milk,
+      icon: Heart,
       number: "Healthy",
       label: "A2 Ghee for Consumers",
       description: "Pure, healthy, easily digestible",
@@ -92,7 +92,7 @@ const ImpactSection = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-girej-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Milk className="h-3 w-3 text-white" />
+                  <Heart className="h-3 w-3 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">For Consumers</h4>
