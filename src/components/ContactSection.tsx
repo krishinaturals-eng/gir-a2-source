@@ -5,8 +5,35 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import tissLogo from "@/assets/logos/tiss-logo.png";
+import iimLogo from "@/assets/logos/iim-ahmedabad-logo.png";
+import dbsLogo from "@/assets/logos/dbs-logo.png";
+import sapLogo from "@/assets/logos/sap-logo.png";
+import upayaLogo from "@/assets/logos/upaya-logo.png";
 
 const ContactSection = () => {
+  const partners = [
+    {
+      name: "Tata Institute of Social Sciences",
+      logo: tissLogo,
+    },
+    {
+      name: "IIM Ahmedabad", 
+      logo: iimLogo,
+    },
+    {
+      name: "DBS India",
+      logo: dbsLogo,
+    },
+    {
+      name: "SAP India",
+      logo: sapLogo,
+    },
+    {
+      name: "Upaya Social Ventures",
+      logo: upayaLogo,
+    }
+  ];
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,6 +166,24 @@ const ContactSection = () => {
                   <div className="w-2 h-2 bg-earth-green rounded-full"></div>
                   <span className="text-muted-foreground">Quality guarantee</span>
                 </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 shadow-soft">
+              <h3 className="text-xl font-semibold text-foreground mb-4">Supported by</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {partners.map((partner, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center justify-center p-2 grayscale hover:grayscale-0 transition-all duration-300"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
+                ))}
               </div>
             </Card>
 
