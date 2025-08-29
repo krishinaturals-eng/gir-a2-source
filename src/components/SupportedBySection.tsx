@@ -29,7 +29,7 @@ const SupportedBySection = () => {
   ];
 
   return (
-    <section className="py-16 bg-muted/30 border-y border-border/50">
+    <section className="pt-4 pb-2 bg-muted/30 border-y border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-6">
           <h3 className="text-lg font-semibold text-muted-foreground mb-4">

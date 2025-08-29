@@ -5,7 +5,7 @@ import { Factory, Package, Heart, Globe, Scale, Package2, TrendingUp, IndianRupe
 
 const BSupplySection = () => {
   return (
-    <section id="partnership" className="py-8 bg-background scroll-mt-20 md:scroll-mt-24">
+    <section id="partnership" className="pt-4 pb-4 bg-background scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-6">
           <Badge variant="secondary" className="mb-2">
