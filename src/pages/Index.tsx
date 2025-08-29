@@ -46,7 +46,7 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-white/80">
-                <div>business@girej.com</div>
+                <div>krishi.naturals@gmail.com</div>
                 <div>+91 9004850052</div>
                 <div>Makarpura GIDC, Vadodara, Gujarat 390010</div>
               </div>
