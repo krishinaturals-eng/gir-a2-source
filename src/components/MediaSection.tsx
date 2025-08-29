@@ -46,7 +46,7 @@ const MediaSection = () => {
             GIREJ <span className="text-earth-green">In The Spotlight</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our journey and impact have been recognized by leading media outlets and industry experts.
+            Our journey and impact have been recognized by leading media outlets and industry experts such as Guardian UK, Be Movement Singapore, Businessline, Business Standard, Times of India, Your Story etc.
           </p>
         </div>
 
