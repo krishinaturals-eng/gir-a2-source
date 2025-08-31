@@ -104,7 +104,7 @@ const HeroSection = () => {
             <div className="text-center text-white space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in">
               {/* Logo and Brand */}
               <div className="mb-6 sm:mb-8 md:mb-10">
-                <div className="inline-flex flex-col items-center space-y-3 sm:space-y-4 bg-white/15 backdrop-blur-md rounded-2xl px-4 py-4 sm:px-8 sm:py-6 border border-white/30 max-w-[95vw] sm:max-w-none shadow-2xl">
+                <div className="inline-flex flex-col items-center space-y-2 sm:space-y-3 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 max-w-[95vw] sm:max-w-none shadow-2xl">
                   <picture className="flex-shrink-0">
                     <source 
                       media="(max-width: 480px)" 
@@ -147,27 +147,27 @@ const HeroSection = () => {
       {/* Metrics at bottom */}
       <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 justify-center items-center">
-          <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
-              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
+              <Users className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
               <span className="text-white font-semibold text-xs text-center leading-tight">5000+ Farmers</span>
             </div>
           </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
-              <Store className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
+              <Store className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
               <span className="text-white font-semibold text-xs text-center leading-tight">20+ Brands</span>
             </div>
           </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
-              <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
+              <Award className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
               <span className="text-white font-semibold text-xs text-center leading-tight">10+ Years</span>
             </div>
           </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
-              <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
+              <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
               <span className="text-white font-semibold text-xs text-center leading-tight">FSSAI Certified</span>
             </div>
           </div>
