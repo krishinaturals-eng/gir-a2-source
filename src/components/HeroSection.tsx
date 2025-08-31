@@ -99,7 +99,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-10 flex flex-col">
         {/* Top Logo and Headline */}
         <div className="pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-3 sm:space-x-4 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-2xl animate-fade-in">
               <picture className="flex-shrink-0">
                 <source 
@@ -138,13 +138,13 @@ const HeroSection = () => {
           <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
               <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">5000+ Farmers</span>
+              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">Network of 5000+ Gir Cow Farmers</span>
             </div>
           </div>
           <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
               <Store className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">20+ Brands</span>
+              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">Supplying to 20+ Brands</span>
             </div>
           </div>
         </div>
