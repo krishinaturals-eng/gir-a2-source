@@ -97,41 +97,32 @@ const HeroSection = () => {
 
       {/* Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col">
-        {/* Top Content */}
+        {/* Top Logo and Headline */}
         <div className="pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            {/* Main Content */}
-            <div className="text-center text-white space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in">
-              {/* Logo and Brand */}
-              <div className="mb-6 sm:mb-8 md:mb-10">
-                <div className="inline-flex flex-col items-center space-y-2 sm:space-y-3 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 max-w-[95vw] sm:max-w-none shadow-2xl">
-                  <picture className="flex-shrink-0">
-                    <source 
-                      media="(max-width: 480px)" 
-                      srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=40&h=40&q=90 40w"
-                      sizes="40px"
-                    />
-                    <source 
-                      media="(max-width: 768px)" 
-                      srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=48&h=48&q=90 48w"
-                      sizes="48px"
-                    />
-                    <img 
-                      src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=56&h=56&q=90" 
-                      alt="GIREJ Logo" 
-                      className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain"
-                      width="56"
-                      height="56"
-                    />
-                  </picture>
-                  <div className="text-center">
-                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white leading-tight">
-                      India's Trusted Bulk A2 Cow Ghee Supplier
-                    </h1>
-                  </div>
-                </div>
-              </div>
-              
+          <div className="max-w-7xl mx-auto">
+            <div className="inline-flex items-center space-x-3 sm:space-x-4 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-2xl animate-fade-in">
+              <picture className="flex-shrink-0">
+                <source 
+                  media="(max-width: 480px)" 
+                  srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=40&h=40&q=90 40w"
+                  sizes="40px"
+                />
+                <source 
+                  media="(max-width: 768px)" 
+                  srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=48&h=48&q=90 48w"
+                  sizes="48px"
+                />
+                <img 
+                  src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=56&h=56&q=90" 
+                  alt="GIREJ Logo" 
+                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
+                  width="56"
+                  height="56"
+                />
+              </picture>
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white leading-tight">
+                India's Trusted Bulk A2 Cow Ghee Supplier
+              </h1>
             </div>
           </div>
         </div>
@@ -143,29 +134,17 @@ const HeroSection = () => {
 
       {/* Metrics at bottom */}
       <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 justify-center items-center">
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
-              <Users className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs text-center leading-tight">5000+ Farmers</span>
+        <div className="flex justify-center gap-4 sm:gap-6">
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
+              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">5000+ Farmers</span>
             </div>
           </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
-              <Store className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs text-center leading-tight">20+ Brands</span>
-            </div>
-          </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
-              <Award className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs text-center leading-tight">10+ Years</span>
-            </div>
-          </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-2 py-1.5 sm:px-3 sm:py-2 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-1.5">
-              <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs text-center leading-tight">FSSAI Certified</span>
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
+              <Store className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">20+ Brands</span>
             </div>
           </div>
         </div>
