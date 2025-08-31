@@ -98,7 +98,7 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col">
         {/* Top Logo and Headline */}
-        <div className="pt-16 sm:pt-20 md:pt-24 px-4 sm:px-6 lg:px-8">
+        <div className="pt-8 sm:pt-10 md:pt-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-3 sm:space-x-4 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-2xl animate-fade-in">
               <picture className="flex-shrink-0">
@@ -154,8 +154,8 @@ const HeroSection = () => {
           {heroImages.map((_, index) => (
             <button
               key={index}
-              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center touch-manipulation ${
-                currentIndex === index ? 'bg-white w-6 sm:w-8' : 'bg-white/50 hover:bg-white/70'
+              className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 min-h-[24px] min-w-[24px] flex items-center justify-center touch-manipulation ${
+                currentIndex === index ? 'bg-white w-4 sm:w-5' : 'bg-white/50 hover:bg-white/70'
               }`}
               onClick={() => api?.scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}
