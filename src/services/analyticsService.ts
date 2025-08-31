@@ -21,8 +21,8 @@ class AnalyticsService {
     this.logEvent(event);
     
     // Send to Google Analytics if available
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'form_submit', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'form_submit', {
         event_category: 'engagement',
         event_label: section,
         value: 1
@@ -43,8 +43,8 @@ class AnalyticsService {
     this.logEvent(event);
     
     // Send to Google Analytics if available
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'whatsapp_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'whatsapp_click', {
         event_category: 'engagement',
         event_label: section,
         value: 1
@@ -65,8 +65,8 @@ class AnalyticsService {
     this.logEvent(event);
     
     // Send to Google Analytics if available
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'cta_click', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'cta_click', {
         event_category: 'engagement',
         event_label: `${section}_${ctaType}`,
         value: 1
@@ -105,8 +105,8 @@ export const analyticsService = new AnalyticsService();
 
 // Track page views
 export const trackPageView = (page: string) => {
-  if (typeof gtag !== 'undefined') {
-    gtag('config', 'GA_MEASUREMENT_ID', {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: page,
       page_location: window.location.href
     });
@@ -115,8 +115,8 @@ export const trackPageView = (page: string) => {
 
 // Track scroll depth
 export const trackScrollDepth = (depth: number) => {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'scroll_depth', {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', 'scroll_depth', {
       event_category: 'engagement',
       event_label: `${depth}%`,
       value: depth

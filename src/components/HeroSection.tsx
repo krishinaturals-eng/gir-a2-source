@@ -46,7 +46,6 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 pb-[env(safe-area-inset-bottom)]">
       {/* Background Carousel */}
       <Carousel 
-        ref={carouselRef}
         setApi={setApi}
         className="absolute inset-0 w-full h-full"
         plugins={[Autoplay({ delay: 4000, stopOnInteraction: true })]}
@@ -126,10 +125,10 @@ const HeroSection = () => {
                     />
                   </picture>
                   <div className="text-center">
-                    <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight mb-1 sm:mb-2">
+                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white leading-tight mb-1 sm:mb-2">
                       India's Trusted Bulk A2 Cow Ghee Supplier
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed max-w-md sm:max-w-lg mx-auto">
+                    <p className="text-xs sm:text-sm md:text-base text-white/90 leading-relaxed max-w-md sm:max-w-lg mx-auto">
                       Premium quality A2 Gir cow ghee for B2B buyers, wholesalers & exporters
                     </p>
                   </div>
@@ -151,25 +150,25 @@ const HeroSection = () => {
           <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
               <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">5000+ Farmers</span>
+              <span className="text-white font-semibold text-xs text-center leading-tight">5000+ Farmers</span>
             </div>
           </div>
           <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
               <Store className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">20+ Brands</span>
+              <span className="text-white font-semibold text-xs text-center leading-tight">20+ Brands</span>
             </div>
           </div>
           <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
               <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">10+ Years</span>
+              <span className="text-white font-semibold text-xs text-center leading-tight">10+ Years</span>
             </div>
           </div>
           <div className="bg-white/15 backdrop-blur-md rounded-lg sm:rounded-xl px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2 md:space-x-3">
               <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">FSSAI Certified</span>
+              <span className="text-white font-semibold text-xs text-center leading-tight">FSSAI Certified</span>
             </div>
           </div>
         </div>

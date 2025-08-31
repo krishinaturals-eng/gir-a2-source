@@ -74,14 +74,11 @@ export const submitFormToGoogleSheets = async (formData: FormData): Promise<Form
     };
 
     // Use JSONP approach to avoid CORS issues
-    return await submitViaJSONP(submissionData);
+    const result = await submitViaJSONP(submissionData);
 
     if (result.success) {
       // Store submission timestamp for rate limiting
       localStorage.setItem('lastFormSubmission', now.toString());
-      
-      // Send email notification (optional - you can add this later)
-      // await sendEmailNotification(submissionData);
       
       return {
         success: true,
@@ -90,7 +87,7 @@ export const submitFormToGoogleSheets = async (formData: FormData): Promise<Form
     } else {
       return {
         success: false,
-        message: result.error || 'Failed to submit form. Please try again.'
+        message: result.message || 'Failed to submit form. Please try again.'
       };
     }
 
