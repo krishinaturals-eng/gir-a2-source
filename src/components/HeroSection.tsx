@@ -125,12 +125,9 @@ const HeroSection = () => {
                     />
                   </picture>
                   <div className="text-center">
-                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white leading-tight mb-1 sm:mb-2">
+                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white leading-tight">
                       India's Trusted Bulk A2 Cow Ghee Supplier
                     </h1>
-                    <p className="text-xs sm:text-sm md:text-base text-white/90 leading-relaxed max-w-md sm:max-w-lg mx-auto">
-                      Premium quality A2 Gir cow ghee for B2B buyers, wholesalers & exporters
-                    </p>
                   </div>
                 </div>
               </div>
