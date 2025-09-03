@@ -9,16 +9,16 @@ import { openWhatsAppForQuote } from "@/services/whatsappService";
 
 const heroImages = [
   {
-    src: "/lovable-uploads/4a80cf41-df9b-49bf-8941-d3d98b2cdbee.png", 
-    alt: "Gir cows by pristine water source"
+    src: "/lovable-uploads/f85b5514-c884-4aae-97ae-3b1138e67833.png", 
+    alt: "Two healthy Gir cows standing in lush green pasture"
   },
   {
-    src: "/lovable-uploads/d0dd1ae6-2652-4127-9ed6-414c69907e59.png",
-    alt: "Herd of Gir cows grazing in natural pastures"
+    src: "/lovable-uploads/8bb63648-1089-47d6-8dd1-38bc493e436c.png",
+    alt: "Farmer with large herd of Gir cows grazing in open grassland"
   },
   {
-    src: "/lovable-uploads/87d15d84-225e-4e02-9458-9c2efc867529.png",
-    alt: "Farmer with large herd of Gir cows in golden grassland"
+    src: "/lovable-uploads/7731ca24-8033-4d29-856d-c934004f0984.png",
+    alt: "Mixed herd of brown and white Gir cows feeding in natural pasture"
   }
 ];
 
