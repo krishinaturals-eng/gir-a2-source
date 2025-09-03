@@ -98,7 +98,7 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col">
         {/* Top Logo and Headline */}
-        <div className="pt-8 sm:pt-10 md:pt-12 px-4 sm:px-6 lg:px-8">
+        <div className="pt-8 sm:pt-10 md:pt-12 px-4 sm:px-6 lg:px-8 safe-area-top">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-3 sm:space-x-4 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-2xl animate-fade-in">
               <picture className="flex-shrink-0">
@@ -120,7 +120,7 @@ const HeroSection = () => {
                   height="56"
                 />
               </picture>
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white leading-tight">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white leading-tight mobile-center">
                 India's Trusted Bulk A2 Cow Ghee Supplier
               </h1>
             </div>
@@ -133,15 +133,15 @@ const HeroSection = () => {
       </div>
 
       {/* Metrics at bottom */}
-      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl">
-        <div className="flex justify-center gap-4 sm:gap-6">
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl safe-area-bottom">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
               <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
               <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">Network of 5000+ Gir Cow Farmers</span>
             </div>
           </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
+          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
               <Store className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
               <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">Supplying to 20+ Brands</span>
@@ -175,25 +175,25 @@ const HeroSection = () => {
     </section>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-6 sm:py-8">
+    <div className="bg-gradient-warm py-4 sm:py-6 lg:py-8 safe-area-bottom">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4 justify-center items-center">
+        <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
           <Button 
             size="lg" 
-            className="group bg-earth-green hover:bg-earth-green/90 text-white text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 touch-manipulation min-h-[56px] shadow-elevated hover:shadow-trust transition-all duration-300 font-semibold w-full sm:w-auto"
+            className="group bg-earth-green hover:bg-earth-green/90 text-white text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 touch-manipulation min-h-[48px] sm:min-h-[56px] shadow-elevated hover:shadow-trust transition-all duration-300 font-semibold w-full sm:w-auto mobile-full-width"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             👉 Request Bulk Quote Today
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button 
             variant="outline"
             size="lg" 
-            className="group border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-5 touch-manipulation min-h-[56px] shadow-soft hover:shadow-elevated transition-all duration-300 font-semibold w-full sm:w-auto"
+            className="group border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 touch-manipulation min-h-[48px] sm:min-h-[56px] shadow-soft hover:shadow-elevated transition-all duration-300 font-semibold w-full sm:w-auto mobile-full-width"
             onClick={() => openWhatsAppForQuote()}
           >
             💬 Chat on WhatsApp
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

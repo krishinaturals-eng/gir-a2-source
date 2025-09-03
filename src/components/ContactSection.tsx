@@ -120,24 +120,24 @@ const ContactSection = () => {
     }
   };
   return (
-    <section id="contact" className="py-8 bg-background scroll-mt-20 md:scroll-mt-24">
+    <section id="contact" className="py-6 sm:py-8 lg:py-12 bg-background scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing safe-area-bottom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-4 sm:mb-6 lg:mb-8">
           <Badge variant="secondary" className="mb-2">
             Get In Touch
           </Badge>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
             Start Your <span className="text-earth-green">Partnership Journey</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to source premium A2 ghee for your business? Get a custom quote today.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Form */}
-          <Card className="p-6 lg:p-8 shadow-elevated">
-            <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Request Bulk Quote</h3>
+          <Card className="p-4 sm:p-6 lg:p-8 shadow-elevated mobile-card-spacing">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-foreground mb-4 sm:mb-6">Request Bulk Quote</h3>
             
             {/* Success/Error Messages */}
             {submitStatus === 'success' && (

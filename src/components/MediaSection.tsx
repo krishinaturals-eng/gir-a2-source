@@ -49,16 +49,16 @@ const MediaSection = () => {
   };
 
   return (
-    <section id="media" className="py-8 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
+    <section id="media" className="py-6 sm:py-8 lg:py-12 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-4 sm:mb-6 lg:mb-8">
           <Badge variant="secondary" className="mb-2">
             In Media
           </Badge>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
             GIREJ <span className="text-earth-green">In The Spotlight</span>
           </h2>
-          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-xl text-muted-foreground max-w-3xl mx-auto">
             Our journey and impact have been recognized by leading media outlets and industry experts such as Guardian UK, Be Movement Singapore, Businessline, Business Standard, Times of India, Your Story etc.
           </p>
         </div>
@@ -66,11 +66,11 @@ const MediaSection = () => {
 
 
         {/* Article Slideshow */}
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-lg lg:text-xl font-semibold text-earth-green mb-6">Featured Articles</h3>
-            <Card className="relative overflow-hidden max-w-3xl mx-auto group">
-              <div className="relative h-80 sm:h-96 lg:h-[32rem]">
+        <div className="mb-8 sm:mb-12">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-earth-green mb-4 sm:mb-6">Featured Articles</h3>
+            <Card className="relative overflow-hidden max-w-3xl mx-auto group mobile-card-spacing">
+              <div className="relative h-64 sm:h-80 lg:h-96 xl:h-[32rem]">
                 <picture>
                   <source 
                     media="(max-width: 640px)" 
@@ -112,13 +112,13 @@ const MediaSection = () => {
                 </button>
 
                 {/* Content overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 text-white">
-                  <div className="mb-3">
-                    <span className="text-sm lg:text-base bg-earth-green/90 px-4 py-2 rounded-full font-medium">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-8 text-white">
+                  <div className="mb-2 sm:mb-3">
+                    <span className="text-xs sm:text-sm lg:text-base bg-earth-green/90 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium">
                       {articles[currentSlide].subtitle}
                     </span>
                   </div>
-                  <h4 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-6 leading-tight">
+                  <h4 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
                     {articles[currentSlide].title}
                   </h4>
                   {articles[currentSlide].url !== "#" && (
@@ -126,7 +126,7 @@ const MediaSection = () => {
                       href={articles[currentSlide].url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-earth-green hover:bg-earth-green/90 text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl transition-all duration-300 font-semibold min-h-[48px] touch-manipulation shadow-elevated hover:shadow-trust"
+                      className="inline-flex items-center gap-2 bg-earth-green hover:bg-earth-green/90 text-white px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-xl transition-all duration-300 font-semibold min-h-[44px] sm:min-h-[48px] touch-manipulation shadow-elevated hover:shadow-trust text-sm sm:text-base mobile-full-width justify-center sm:w-auto"
                     >
                       Read Article <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5" />
                     </a>
@@ -135,17 +135,17 @@ const MediaSection = () => {
               </div>
 
               {/* Slide indicators */}
-              <div className="absolute bottom-24 lg:bottom-32 left-1/2 -translate-x-1/2 flex gap-3">
+              <div className="absolute bottom-16 sm:bottom-20 lg:bottom-24 xl:bottom-32 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
                 {articles.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-4 h-4 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center touch-manipulation ${
+                    className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center touch-manipulation ${
                       index === currentSlide ? 'bg-white' : 'bg-white/50 hover:bg-white/70'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   >
-                    <span className={`w-4 h-4 rounded-full ${
+                    <span className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
                       index === currentSlide ? 'bg-white' : 'bg-white/50'
                     }`}></span>
                   </button>
@@ -160,7 +160,7 @@ const MediaSection = () => {
           <Button 
             variant="outline"
             size="lg" 
-            className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
+            className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 lg:py-5 lg:px-8 text-sm sm:text-base lg:text-lg min-h-[48px] sm:min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300 mobile-full-width sm:w-auto"
           >
             🥛 Become a Bulk Buyer Today
           </Button>

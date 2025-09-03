@@ -60,16 +60,16 @@ const ImpactSection = () => {
   };
 
   return (
-    <section id="impact" className="py-8 bg-gradient-warm scroll-mt-20 md:scroll-mt-24">
+    <section id="impact" className="py-6 sm:py-8 lg:py-12 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-4 sm:mb-6 lg:mb-8">
           <Badge variant="secondary" className="mb-2">
             Social & Ecological Impact
           </Badge>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
             Empowering Farmers & <span className="text-earth-green">Preserving Gir Cow Breed</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
             Every litre of Girej A2 ghee creates shared value across our entire ecosystem.
           </p>
         </div>

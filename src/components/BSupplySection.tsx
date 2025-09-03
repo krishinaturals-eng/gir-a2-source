@@ -6,16 +6,16 @@ import { openWhatsAppForPrivateLabel } from "@/services/whatsappService";
 
 const BSupplySection = () => {
   return (
-    <section id="partnership" className="py-8 bg-background scroll-mt-20 md:scroll-mt-24">
+    <section id="partnership" className="py-6 sm:py-8 lg:py-12 bg-background scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-4 sm:mb-6">
+        <div className="text-center mb-3 sm:mb-4 lg:mb-6">
           <Badge variant="secondary" className="mb-2">
             B2B Supply
           </Badge>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
             <span className="text-earth-green">Bulk A2 Ghee Supplier India</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto">
             Girej is a trusted bulk A2 ghee supplier in India, backed by 5,000+ Gir cow farmers to ensure authentic quality and reliable quantity.
           </p>
         </div>

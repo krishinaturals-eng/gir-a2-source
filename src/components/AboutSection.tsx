@@ -15,23 +15,23 @@ const AboutSection = () => {
     <section 
       ref={sectionRef}
       id="about" 
-      className={`py-8 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 transition-all duration-1000 ${
+      className={`py-6 sm:py-8 lg:py-12 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 transition-all duration-1000 mobile-tight-spacing ${
         isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-4 sm:mb-6 lg:mb-8">
           <Badge variant="secondary" className="mb-2">
             About Girej
           </Badge>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
             About Girej – <span className="text-earth-green">A2 Cow Ghee Manufacturer & Social Enterprise</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 sm:mb-6">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-3 sm:mb-4 lg:mb-6">
             Girej is a premium A2 cow ghee manufacturer in India, proudly built by Krishi Naturals (est. 2013).
           </p>
-          <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto">
-            <strong>Our mission is simple yet powerful:</strong><br />
+          <p className="text-sm sm:text-base lg:text-lg text-foreground max-w-3xl mx-auto">
+            <strong>Our mission is simple yet powerful:</strong><br className="hidden sm:block" />
             To make indigenous cow rearing a sustainable livelihood for small & marginal farmers, while delivering world-class A2 Gir cow ghee to B2B buyers, wholesalers, food manufacturers, retailers, Ayurvedic brands, and exporters.
           </p>
         </div>
@@ -85,10 +85,10 @@ const AboutSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
             <Button 
               size="lg" 
-              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
+              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 lg:py-5 lg:px-8 text-sm sm:text-base lg:text-lg min-h-[48px] sm:min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300 mobile-full-width"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Partner with Us
@@ -96,7 +96,7 @@ const AboutSection = () => {
             <Button 
               variant="outline"
               size="lg" 
-              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
+              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 lg:py-5 lg:px-8 text-sm sm:text-base lg:text-lg min-h-[48px] sm:min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300 mobile-full-width"
               onClick={() => openWhatsAppForQuote()}
             >
               💬 Chat Now
