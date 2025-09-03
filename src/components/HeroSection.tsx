@@ -150,18 +150,20 @@ const HeroSection = () => {
         </div>
         
         {/* Carousel Indicators */}
-        <div className="flex justify-center space-x-2 mt-3 sm:mt-4">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 min-h-[24px] min-w-[24px] flex items-center justify-center touch-manipulation ${
-                currentIndex === index ? 'bg-white w-4 sm:w-5' : 'bg-white/50 hover:bg-white/70'
-              }`}
-              onClick={() => api?.scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+        {heroImages.length > 0 && (
+          <div className="flex justify-center space-x-2 mt-3 sm:mt-4">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 min-h-[24px] min-w-[24px] flex items-center justify-center touch-manipulation ${
+                  currentIndex === index ? 'bg-white w-4 sm:w-5' : 'bg-white/50 hover:bg-white/70'
+                }`}
+                onClick={() => api?.scrollTo(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Scroll Indicator */}
