@@ -133,7 +133,7 @@ const HeroSection = () => {
       </div>
 
       {/* Metrics at bottom */}
-      <div className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:bottom-28 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl">
+      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl">
         <div className="flex justify-center gap-4 sm:gap-6">
           <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
@@ -155,8 +155,8 @@ const HeroSection = () => {
             {heroImages.map((_, index) => (
               <button
                 key={index}
-                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 min-h-[24px] min-w-[24px] flex items-center justify-center touch-manipulation ${
-                  currentIndex === index ? 'bg-white w-4 sm:w-5' : 'bg-white/50 hover:bg-white/70'
+              className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full transition-all duration-300 min-h-[20px] min-w-[20px] flex items-center justify-center touch-manipulation ${
+                currentIndex === index ? 'bg-white w-3 sm:w-4' : 'bg-white/50 hover:bg-white/70'
                 }`}
                 onClick={() => api?.scrollTo(index)}
                 aria-label={`Go to slide ${index + 1}`}
