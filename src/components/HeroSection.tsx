@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 pb-[env(safe-area-inset-bottom)]">
+    <section id="home" className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 pb-[env(safe-area-inset-bottom)]">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -175,7 +175,7 @@ const HeroSection = () => {
     </section>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-6 sm:py-8 safe-area-bottom">
+    <div className="bg-gradient-warm py-3 sm:py-6 md:py-8 safe-area-bottom">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
           <Button 
