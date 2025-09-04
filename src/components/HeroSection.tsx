@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 pb-[env(safe-area-inset-bottom)]">
+    <section id="home" className="relative min-h-[50vh] sm:min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 pb-[env(safe-area-inset-bottom)]">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -132,8 +132,35 @@ const HeroSection = () => {
 
       </div>
 
-      {/* Metrics at bottom */}
-      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl safe-area-bottom">
+      {/* Scroll Indicator */}
+      <div className="hidden md:block absolute bottom-4 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-white/70 transition-colors">
+          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
+        </div>
+      </div>
+
+      {/* Carousel Indicators */}
+      {heroImages.length > 0 && (
+        <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-20">
+          <div className="flex justify-center space-x-2">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full transition-all duration-300 min-h-[20px] min-w-[20px] flex items-center justify-center touch-manipulation ${
+                  currentIndex === index ? 'bg-white w-3 sm:w-4' : 'bg-white/50 hover:bg-white/70'
+                }`}
+                onClick={() => api?.scrollTo(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+    
+    {/* Metrics Section - Positioned between hero and CTA for better flow */}
+    <div className="bg-gradient-to-b from-transparent via-background/50 to-background py-4 sm:py-6 -mt-2">
+      <div className="max-w-5xl mx-auto px-4 safe-area-bottom">
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
           <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
@@ -148,34 +175,11 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        
-        {/* Carousel Indicators */}
-        {heroImages.length > 0 && (
-          <div className="flex justify-center space-x-2 mt-3 sm:mt-4">
-            {heroImages.map((_, index) => (
-              <button
-                key={index}
-              className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full transition-all duration-300 min-h-[20px] min-w-[20px] flex items-center justify-center touch-manipulation ${
-                currentIndex === index ? 'bg-white w-3 sm:w-4' : 'bg-white/50 hover:bg-white/70'
-                }`}
-                onClick={() => api?.scrollTo(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        )}
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="hidden md:block absolute bottom-4 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-white/70 transition-colors">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-        </div>
-      </div>
-    </section>
+    </div>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-3 sm:py-6 md:py-8 safe-area-bottom">
+    <div className="bg-gradient-warm py-2 sm:py-4 md:py-6 safe-area-bottom -mt-2">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
           <Button 
