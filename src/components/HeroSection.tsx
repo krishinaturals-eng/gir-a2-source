@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-[50vh] sm:min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 pb-[env(safe-area-inset-bottom)]">
+    <section id="home" className="relative min-h-[35vh] sm:min-h-[50vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -159,8 +159,8 @@ const HeroSection = () => {
     </section>
     
     {/* Metrics Section - Positioned between hero and CTA for better flow */}
-    <div className="bg-gradient-to-b from-transparent via-background/50 to-background py-4 sm:py-6 -mt-2">
-      <div className="max-w-5xl mx-auto px-4 safe-area-bottom">
+    <div className="bg-gradient-to-b from-transparent via-background/50 to-background py-2 sm:py-4 -mt-4">
+      <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
           <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
@@ -179,7 +179,7 @@ const HeroSection = () => {
     </div>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-2 sm:py-4 md:py-6 safe-area-bottom -mt-2">
+    <div className="bg-gradient-warm py-3 sm:py-4 md:py-6 safe-area-bottom -mt-4">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
           <Button 
