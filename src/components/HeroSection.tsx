@@ -98,7 +98,7 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col">
         {/* Top Logo and Headline */}
-        <div className="pt-8 sm:pt-10 md:pt-12 px-4 sm:px-6 lg:px-8 safe-area-top">
+        <div className="pt-16 sm:pt-18 md:pt-20 px-4 sm:px-6 lg:px-8 safe-area-top">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-3 sm:space-x-4 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-2xl animate-fade-in">
               <picture className="flex-shrink-0">
