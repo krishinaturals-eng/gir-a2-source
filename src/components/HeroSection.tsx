@@ -133,7 +133,7 @@ const HeroSection = () => {
       </div>
 
       {/* Metrics at bottom */}
-      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl safe-area-bottom">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 px-4 w-full max-w-5xl safe-area-bottom">
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
           <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
@@ -167,7 +167,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
+      <div className="hidden md:block absolute bottom-4 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-white/70 transition-colors">
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
         </div>
@@ -175,7 +175,7 @@ const HeroSection = () => {
     </section>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-4 sm:py-6 lg:py-8 safe-area-bottom">
+    <div className="bg-gradient-warm py-6 sm:py-8 safe-area-bottom">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
           <Button 
