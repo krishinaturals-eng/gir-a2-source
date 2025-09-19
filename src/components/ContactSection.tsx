@@ -5,8 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Phone, MapPin, Clock, CheckCircle, AlertCircle } from "lucide-react";
-import tissLogo from "@/assets/logos/tiss-logo.png";
-import iimLogo from "@/assets/logos/iim-ahmedabad-logo.png";
 import { useState } from "react";
 import { submitFormToGoogleSheets } from "@/services/formService";
 import { openWhatsAppWithFormData } from "@/services/whatsappService";
@@ -27,17 +25,6 @@ const ContactSection = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const partners = [
-    {
-      name: "IIM Ahmedabad", 
-      logo: iimLogo,
-    },
-    {
-      name: "Tata Institute of Social Sciences",
-      logo: tissLogo,
-    }
-  ];
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -362,36 +349,6 @@ const ContactSection = () => {
                   <div className="w-3 h-3 bg-earth-green rounded-full flex-shrink-0"></div>
                   <span className="text-muted-foreground text-base">Quality guarantee</span>
                 </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 lg:p-8 shadow-soft">
-              <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Supported by</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-                {partners.map((partner, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
-                  >
-                    <picture>
-                      <source 
-                        media="(max-width: 640px)" 
-                        srcSet={`${partner.logo}?w=120&h=60&fit=contain&q=90 120w`}
-                        sizes="120px"
-                      />
-                      <img
-                        src={`${partner.logo}?w=160&h=80&fit=contain&q=95`}
-                        alt={partner.name}
-                        className="max-h-12 lg:max-h-16 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
-                        loading="lazy" 
-                        decoding="async" 
-                        sizes="(max-width: 640px) 120px, 160px"
-                        width="160"
-                        height="80"
-                      />
-                    </picture>
-                  </div>
-                ))}
               </div>
             </Card>
 

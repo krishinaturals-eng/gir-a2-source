@@ -1,8 +1,8 @@
-import tissLogo from "@/assets/logos/tiss-logo.png";
+import tissLogo from "@/assets/logos/tiss-logo-new.jpeg";
 import iimLogo from "@/assets/logos/iim-ahmedabad-logo.png";
-import dbsLogo from "@/assets/logos/dbs-logo.png";
-import sapLogo from "@/assets/logos/sap-logo.png";
-import upayaLogo from "@/assets/logos/upaya-logo.png";
+import dbsLogo from "@/assets/logos/dbs-logo-new.jpeg";
+import sapLogo from "@/assets/logos/sap-logo-new.jpeg";
+import upayaLogo from "@/assets/logos/upaya-logo-new.jpeg";
 
 const SupportedBySection = () => {
   const partners = [
