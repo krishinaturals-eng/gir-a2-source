@@ -13,14 +13,24 @@ import ScrollToTop from "@/components/ScrollToTop";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      {/* Skip Navigation Link for Accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-earth-green text-white px-4 py-2 rounded-md z-[100] font-medium"
+      >
+        Skip to main content
+      </a>
       <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <ProductsSection />
-      <BSupplySection />
+      <main id="main-content">
+        <HeroSection />
+        <AboutSection />
+        <ProductsSection />
+        <BSupplySection />
+        <SupportedBySection />
         <ImpactSection />
         <MediaSection />
-      <ContactSection />
+        <ContactSection />
+      </main>
       
       {/* Footer */}
       <footer className="bg-farmer-brown text-white py-8 sm:py-10 lg:py-12 safe-area-bottom">

@@ -72,6 +72,8 @@ const Navigation = () => {
               variant="hero" 
               size="sm"
               className="min-h-[44px] px-4 xl:px-6 text-sm xl:text-base font-medium shadow-soft hover:shadow-elevated transition-all duration-300"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              aria-label="Get a quote for A2 cow ghee"
             >
               Get Quote
             </Button>
@@ -110,6 +112,11 @@ const Navigation = () => {
                   variant="hero" 
                   size="lg" 
                   className="w-full min-h-[48px] text-base font-semibold touch-manipulation shadow-soft"
+                  onClick={() => {
+                    setIsOpen(false);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  aria-label="Get a quote for A2 cow ghee"
                 >
                   Get Quote
                 </Button>

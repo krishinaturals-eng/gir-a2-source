@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-[35vh] sm:min-h-[50vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24">
+    <section id="home" className="relative min-h-[30vh] sm:min-h-[45vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -85,7 +85,10 @@ const HeroSection = () => {
                     className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                     loading={index === 0 ? "eager" : "lazy"}
                     decoding="async"
+                    fetchPriority={index === 0 ? "high" : "low"}
                     sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1440px) 1440px, 1920px"
+                    width="1920"
+                    height="1080"
                   />
                 </picture>
                 <div className="absolute inset-0 bg-gradient-to-r from-girej-black/60 via-girej-black/50 to-girej-black/40 md:from-girej-black/70 md:via-girej-black/40 md:to-girej-black/20"></div>
@@ -134,9 +137,13 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div className="hidden md:block absolute bottom-4 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-white/70 transition-colors">
+        <button 
+          className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-white/70 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+          aria-label="Scroll to next section"
+        >
           <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-        </div>
+        </button>
       </div>
 
       {/* Carousel Indicators */}
@@ -146,11 +153,12 @@ const HeroSection = () => {
             {heroImages.map((_, index) => (
               <button
                 key={index}
-                className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full transition-all duration-300 min-h-[20px] min-w-[20px] flex items-center justify-center touch-manipulation ${
-                  currentIndex === index ? 'bg-white w-3 sm:w-4' : 'bg-white/50 hover:bg-white/70'
+                className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 min-h-[20px] min-w-[20px] flex items-center justify-center touch-manipulation ${
+                  currentIndex === index ? 'bg-white w-4 sm:w-5' : 'bg-white/70 hover:bg-white/90'
                 }`}
                 onClick={() => api?.scrollTo(index)}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={`Go to slide ${index + 1} of ${heroImages.length}`}
+                aria-current={currentIndex === index ? 'true' : 'false'}
               />
             ))}
           </div>
@@ -159,7 +167,7 @@ const HeroSection = () => {
     </section>
     
     {/* Metrics Section - Positioned between hero and CTA for better flow */}
-    <div className="bg-gradient-to-b from-transparent via-background/50 to-background py-2 sm:py-4 -mt-4">
+    <div className="bg-gradient-to-b from-transparent via-background/50 to-background py-1 sm:py-2 -mt-6">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
           <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
@@ -179,7 +187,7 @@ const HeroSection = () => {
     </div>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-3 sm:py-4 md:py-6 safe-area-bottom -mt-4">
+    <div className="bg-gradient-warm py-2 sm:py-3 md:py-4 safe-area-bottom -mt-6">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
           <Button 
@@ -210,9 +218,9 @@ const HeroSection = () => {
           Your Reliable Bulk A2 Ghee Supply Partner
         </h1>
         
-        <h2 className="text-lg sm:text-xl font-semibold text-muted-foreground mb-6 sm:mb-8">
+        <p className="text-lg sm:text-xl font-semibold text-muted-foreground mb-6 sm:mb-8">
           Powering India's Top Food & Wellness Brands with Consistent A2 Gir Ghee.
-        </h2>
+        </p>
         
         <div className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto">
           <p className="mb-4 sm:mb-6">
