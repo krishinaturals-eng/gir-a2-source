@@ -235,3 +235,10 @@ All colors MUST be HSL.
     }
   }
 }
+
+@layer utilities {
+  /* Animation pause on hover utility */
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+}
