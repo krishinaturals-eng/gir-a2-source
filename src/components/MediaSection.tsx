@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useSwipeGesture } from "@/hooks/use-swipe-gesture";
 import upayaArticleThumb from "@/assets/upaya-article-thumb.jpg";
 import yourstoryArticleThumb from "@/assets/yourstory-article-thumb.jpg";
 
 const MediaSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const articles = [
     {
@@ -34,19 +36,40 @@ const MediaSection = () => {
   ];
 
   useEffect(() => {
+    if (!isAutoPlaying) return;
+    
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % articles.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [articles.length]);
+  }, [articles.length, isAutoPlaying]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % articles.length);
+    pauseAutoPlay();
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + articles.length) % articles.length);
+    pauseAutoPlay();
   };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    pauseAutoPlay();
+  };
+
+  const pauseAutoPlay = () => {
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 3000); // Resume after 3 seconds
+  };
+
+  const { ref: carouselRef } = useSwipeGesture({
+    onSwipeLeft: nextSlide,
+    onSwipeRight: prevSlide,
+    threshold: 50,
+    preventDefault: false
+  });
 
   return (
     <section id="media" className="py-6 sm:py-8 lg:py-12 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
@@ -70,7 +93,7 @@ const MediaSection = () => {
           <div className="text-center mb-6 sm:mb-8">
             <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-earth-green mb-4 sm:mb-6">Featured Articles</h3>
             <Card className="relative overflow-hidden max-w-3xl mx-auto group mobile-card-spacing">
-              <div className="relative h-64 sm:h-80 lg:h-96 xl:h-[32rem]">
+              <div ref={carouselRef as React.RefObject<HTMLDivElement>} className="relative h-64 sm:h-80 lg:h-96 xl:h-[32rem] select-none">
                 <picture>
                   <source 
                     media="(max-width: 640px)" 
@@ -95,20 +118,20 @@ const MediaSection = () => {
                 </picture>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 
-                {/* Navigation buttons */}
+                {/* Navigation buttons - positioned outside content area on mobile */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation"
+                  className="absolute -left-2 sm:left-4 lg:left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white backdrop-blur-sm rounded-full p-2 sm:p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation shadow-lg border border-white/20"
                   aria-label="Previous article"
                 >
-                  <ChevronLeft className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
+                  <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-gray-800" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation"
+                  className="absolute -right-2 sm:right-4 lg:right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white backdrop-blur-sm rounded-full p-2 sm:p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation shadow-lg border border-white/20"
                   aria-label="Next article"
                 >
-                  <ChevronRight className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
+                  <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-gray-800" />
                 </button>
 
                 {/* Content overlay */}
@@ -134,22 +157,25 @@ const MediaSection = () => {
                 </div>
               </div>
 
-              {/* Slide indicators */}
-              <div className="absolute bottom-16 sm:bottom-20 lg:bottom-24 xl:bottom-32 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
-                {articles.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center touch-manipulation ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/50 hover:bg-white/70'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  >
-                    <span className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/50'
-                    }`}></span>
-                  </button>
-                ))}
+              {/* Slide indicators - positioned above content with better touch targets */}
+              <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30">
+                <div className="flex gap-1 bg-black/30 backdrop-blur-sm rounded-full px-3 py-2">
+                  {articles.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation ${
+                        index === currentSlide ? 'bg-white/90' : 'bg-white/40 hover:bg-white/60'
+                      }`}
+                      aria-label={`Go to slide ${index + 1} of ${articles.length}`}
+                      aria-current={index === currentSlide ? 'true' : 'false'}
+                    >
+                      <div className={`rounded-full transition-all duration-300 ${
+                        index === currentSlide ? 'w-3 h-3 bg-white' : 'w-2 h-2 bg-white/80'
+                      }`} />
+                    </button>
+                  ))}
+                </div>
               </div>
             </Card>
           </div>

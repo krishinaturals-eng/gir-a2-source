@@ -148,18 +148,27 @@ const HeroSection = () => {
 
       {/* Carousel Indicators */}
       {heroImages.length > 0 && (
-        <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-20">
-          <div className="flex justify-center space-x-2">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20">
+          <div className="flex justify-center space-x-1 bg-black/20 backdrop-blur-sm rounded-full px-3 py-2">
             {heroImages.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 min-h-[20px] min-w-[20px] flex items-center justify-center touch-manipulation ${
-                  currentIndex === index ? 'bg-white w-4 sm:w-5' : 'bg-white/70 hover:bg-white/90'
+                className={`rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation ${
+                  currentIndex === index ? 'bg-white/90' : 'bg-white/40 hover:bg-white/60'
                 }`}
-                onClick={() => api?.scrollTo(index)}
+                onClick={() => {
+                  api?.scrollTo(index);
+                  // Pause autoplay briefly when user interacts
+                  api?.plugins()?.autoplay?.stop();
+                  setTimeout(() => api?.plugins()?.autoplay?.play(), 3000);
+                }}
                 aria-label={`Go to slide ${index + 1} of ${heroImages.length}`}
                 aria-current={currentIndex === index ? 'true' : 'false'}
-              />
+              >
+                <div className={`rounded-full transition-all duration-300 ${
+                  currentIndex === index ? 'w-3 h-3 bg-white' : 'w-2 h-2 bg-white/80'
+                }`} />
+              </button>
             ))}
           </div>
         </div>
