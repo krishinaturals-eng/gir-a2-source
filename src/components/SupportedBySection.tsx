@@ -37,73 +37,71 @@ const SupportedBySection = () => {
           </h3>
           
           {/* Moving Logo Strip */}
-          <div className="relative">
-            <div className="flex animate-scroll">
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll whitespace-nowrap">
               {/* First set of logos */}
-              <div className="flex items-center justify-center gap-12 lg:gap-16 xl:gap-20 px-8">
-                {partners.map((partner, index) => (
-                  <div 
-                    key={`first-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center p-4 lg:p-6 hover:scale-110 transition-transform duration-300 group"
-                  >
-                    <picture>
-                      <source 
-                        media="(max-width: 640px)" 
-                        srcSet={`${partner.logo}?w=120&h=60&fit=contain&q=90 120w`}
-                        sizes="120px"
-                      />
-                      <source 
-                        media="(max-width: 1024px)" 
-                        srcSet={`${partner.logo}?w=160&h=80&fit=contain&q=95 160w`}
-                        sizes="160px"
-                      />
-                      <img
-                        src={`${partner.logo}?w=200&h=100&fit=contain&q=95`}
-                        alt={partner.name}
-                        className="max-h-12 sm:max-h-14 lg:max-h-16 xl:max-h-20 w-auto object-contain transition-all duration-300"
-                        loading="lazy" 
-                        decoding="async" 
-                        sizes="(max-width: 640px) 120px, (max-width: 1024px) 160px, 200px"
-                        width="200"
-                        height="100"
-                      />
-                    </picture>
-                  </div>
-                ))}
-              </div>
+              {partners.map((partner, index) => (
+                <div 
+                  key={`first-${index}`}
+                  className="flex-shrink-0 flex items-center justify-center mx-8 lg:mx-12 xl:mx-16 hover:scale-110 transition-transform duration-300 group"
+                  style={{ minWidth: '120px' }}
+                >
+                  <picture>
+                    <source 
+                      media="(max-width: 640px)" 
+                      srcSet={`${partner.logo}?w=120&h=60&fit=contain&q=90 120w`}
+                      sizes="120px"
+                    />
+                    <source 
+                      media="(max-width: 1024px)" 
+                      srcSet={`${partner.logo}?w=160&h=80&fit=contain&q=95 160w`}
+                      sizes="160px"
+                    />
+                    <img
+                      src={`${partner.logo}?w=200&h=100&fit=contain&q=95`}
+                      alt={partner.name}
+                      className="max-h-12 sm:max-h-14 lg:max-h-16 xl:max-h-20 w-auto object-contain transition-all duration-300"
+                      loading="lazy" 
+                      decoding="async" 
+                      sizes="(max-width: 640px) 120px, (max-width: 1024px) 160px, 200px"
+                      width="200"
+                      height="100"
+                    />
+                  </picture>
+                </div>
+              ))}
               
               {/* Duplicate set for seamless loop */}
-              <div className="flex items-center justify-center gap-12 lg:gap-16 xl:gap-20 px-8">
-                {partners.map((partner, index) => (
-                  <div 
-                    key={`second-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center p-4 lg:p-6 hover:scale-110 transition-transform duration-300 group"
-                  >
-                    <picture>
-                      <source 
-                        media="(max-width: 640px)" 
-                        srcSet={`${partner.logo}?w=120&h=60&fit=contain&q=90 120w`}
-                        sizes="120px"
-                      />
-                      <source 
-                        media="(max-width: 1024px)" 
-                        srcSet={`${partner.logo}?w=160&h=80&fit=contain&q=95 160w`}
-                        sizes="160px"
-                      />
-                      <img
-                        src={`${partner.logo}?w=200&h=100&fit=contain&q=95`}
-                        alt={partner.name}
-                        className="max-h-12 sm:max-h-14 lg:max-h-16 xl:max-h-20 w-auto object-contain transition-all duration-300"
-                        loading="lazy" 
-                        decoding="async" 
-                        sizes="(max-width: 640px) 120px, (max-width: 1024px) 160px, 200px"
-                        width="200"
-                        height="100"
-                      />
-                    </picture>
-                  </div>
-                ))}
-              </div>
+              {partners.map((partner, index) => (
+                <div 
+                  key={`second-${index}`}
+                  className="flex-shrink-0 flex items-center justify-center mx-8 lg:mx-12 xl:mx-16 hover:scale-110 transition-transform duration-300 group"
+                  style={{ minWidth: '120px' }}
+                >
+                  <picture>
+                    <source 
+                      media="(max-width: 640px)" 
+                      srcSet={`${partner.logo}?w=120&h=60&fit=contain&q=90 120w`}
+                      sizes="120px"
+                    />
+                    <source 
+                      media="(max-width: 1024px)" 
+                      srcSet={`${partner.logo}?w=160&h=80&fit=contain&q=95 160w`}
+                      sizes="160px"
+                    />
+                    <img
+                      src={`${partner.logo}?w=200&h=100&fit=contain&q=95`}
+                      alt={partner.name}
+                      className="max-h-12 sm:max-h-14 lg:max-h-16 xl:max-h-20 w-auto object-contain transition-all duration-300"
+                      loading="lazy" 
+                      decoding="async" 
+                      sizes="(max-width: 640px) 120px, (max-width: 1024px) 160px, 200px"
+                      width="200"
+                      height="100"
+                    />
+                  </picture>
+                </div>
+              ))}
             </div>
           </div>
         </div>
