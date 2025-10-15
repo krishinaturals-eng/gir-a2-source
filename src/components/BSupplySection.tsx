@@ -36,7 +36,7 @@ const BSupplySection = () => {
                 <Scale className="h-5 w-5 sm:h-6 sm:w-6 text-earth-green" />
               </div>
               <h4 className="text-sm sm:text-base font-semibold text-foreground mb-1 sm:mb-2">Minimum Order</h4>
-              <p className="text-lg sm:text-xl font-bold text-earth-green mb-1">50 kg</p>
+              <p className="text-lg sm:text-xl font-bold text-earth-green mb-1">100 kg</p>
               <p className="text-xs text-muted-foreground">Starting MOQ</p>
             </Card>
 

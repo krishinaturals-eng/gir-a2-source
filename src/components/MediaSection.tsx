@@ -40,7 +40,7 @@ const MediaSection = () => {
     
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % articles.length);
-    }, 5000);
+    }, 6000); // Increased interval for better performance
     return () => clearInterval(interval);
   }, [articles.length, isAutoPlaying]);
 
@@ -61,7 +61,7 @@ const MediaSection = () => {
 
   const pauseAutoPlay = () => {
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 3000); // Resume after 3 seconds
+    setTimeout(() => setIsAutoPlaying(true), 4000); // Resume after 4 seconds
   };
 
   const { ref: carouselRef } = useSwipeGesture({
@@ -72,7 +72,7 @@ const MediaSection = () => {
   });
 
   return (
-    <section id="media" className="py-6 sm:py-8 lg:py-12 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
+    <section id="media" className="py-6 sm:py-8 lg:py-12 bg-gradient-to-b from-background to-earth-green/5 scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-6 lg:mb-8">
           <Badge variant="secondary" className="mb-2">
@@ -94,28 +94,15 @@ const MediaSection = () => {
             <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-earth-green mb-4 sm:mb-6">Featured Articles</h3>
             <Card className="relative overflow-hidden max-w-3xl mx-auto group mobile-card-spacing">
               <div ref={carouselRef as React.RefObject<HTMLDivElement>} className="relative h-64 sm:h-80 lg:h-96 xl:h-[32rem] select-none">
-                <picture>
-                  <source 
-                    media="(max-width: 640px)" 
-                    srcSet={`${articles[currentSlide].image}?w=640&h=320&fit=crop&q=85 640w`}
-                    sizes="640px"
-                  />
-                  <source 
-                    media="(max-width: 1024px)" 
-                    srcSet={`${articles[currentSlide].image}?w=768&h=384&fit=crop&q=90 768w`}
-                    sizes="768px"
-                  />
-                  <img
-                    src={`${articles[currentSlide].image}?w=1024&h=512&fit=crop&q=95`}
-                    alt={articles[currentSlide].title}
-                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy" 
-                    decoding="async" 
-                    sizes="(max-width: 640px) 640px, (max-width: 1024px) 768px, 1024px"
-                    width="1024"
-                    height="512"
-                  />
-                </picture>
+                <img
+                  src={articles[currentSlide].image}
+                  alt={articles[currentSlide].title}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy" 
+                  decoding="async" 
+                  width="1024"
+                  height="512"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 
                 {/* Navigation buttons - positioned outside content area on mobile */}

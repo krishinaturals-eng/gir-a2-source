@@ -44,10 +44,17 @@ const ImpactSection = () => {
     }
   ];
 
+  const colorClasses = {
+    'earth-green': 'bg-earth-green/10 text-earth-green',
+    'trust-blue': 'bg-trust-blue/10 text-trust-blue',
+    'golden-accent': 'bg-golden-accent/10 text-golden-accent',
+    'girej-red': 'bg-girej-red/10 text-girej-red'
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % farmerImages.length);
-    }, 3000);
+    }, 4000); // Increased interval for better performance
     return () => clearInterval(interval);
   }, [farmerImages.length]);
 
@@ -60,7 +67,7 @@ const ImpactSection = () => {
   };
 
   return (
-    <section id="impact" className="py-6 sm:py-8 lg:py-12 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
+    <section id="impact" className="py-6 sm:py-8 lg:py-12 bg-gradient-to-b from-background to-earth-green/5 scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-6 lg:mb-8">
           <Badge variant="secondary" className="mb-2">
@@ -80,28 +87,15 @@ const ImpactSection = () => {
           <div className="flex justify-center">
             <Card className="p-6 lg:p-8 text-center hover:shadow-elevated transition-all duration-300 relative overflow-hidden max-w-sm sm:max-w-md lg:max-w-lg mx-auto group">
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto rounded-xl overflow-hidden bg-earth-green/10">
-                <picture>
-                  <source 
-                    media="(max-width: 640px)" 
-                    srcSet={`${farmerImages[currentImageIndex]}?w=256&h=256&fit=crop&q=85 256w`}
-                    sizes="256px"
-                  />
-                  <source 
-                    media="(max-width: 1024px)" 
-                    srcSet={`${farmerImages[currentImageIndex]}?w=288&h=288&fit=crop&q=90 288w`}
-                    sizes="288px"
-                  />
-                  <img 
-                    src={`${farmerImages[currentImageIndex]}?w=320&h=320&fit=crop&q=95`} 
-                    alt="Farmer training and outreach program"
-                    className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105"
-                    loading="lazy" 
-                    decoding="async" 
-                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
-                    width="320"
-                    height="320"
-                  />
-                </picture>
+                <img 
+                  src={farmerImages[currentImageIndex]} 
+                  alt="Farmer training and outreach program"
+                  className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105"
+                  loading="lazy" 
+                  decoding="async" 
+                  width="320"
+                  height="320"
+                />
                 <button 
                   onClick={prevImage}
                   className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-soft min-h-[44px] touch-manipulation"
@@ -144,8 +138,8 @@ const ImpactSection = () => {
               const IconComponent = metric.icon;
               return (
                 <Card key={index} className="p-4 sm:p-6 text-center hover:shadow-soft transition-all duration-300">
-                  <div className={`w-12 h-12 sm:w-[50px] sm:h-[50px] mx-auto mb-3 sm:mb-4 bg-${metric.color}/10 rounded-full flex items-center justify-center`}>
-                    <IconComponent className={`h-5 w-5 sm:h-6 sm:w-6 text-${metric.color}`} />
+                  <div className={`w-12 h-12 sm:w-[50px] sm:h-[50px] mx-auto mb-3 sm:mb-4 ${colorClasses[metric.color as keyof typeof colorClasses]} rounded-full flex items-center justify-center`}>
+                    <IconComponent className={`h-5 w-5 sm:h-6 sm:w-6 ${colorClasses[metric.color as keyof typeof colorClasses]}`} />
                   </div>
                   <div className="text-xl sm:text-2xl font-bold text-foreground mb-2">{metric.number}</div>
                   <div className="text-base sm:text-lg font-semibold text-foreground mb-2">{metric.label}</div>
@@ -186,14 +180,14 @@ const ImpactSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-hero text-white rounded-2xl p-4 sm:p-6 text-center">
-          <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3">Partner in Our Impact</h3>
+        <div className="bg-gradient-to-br from-earth-green to-earth-green/80 text-white rounded-2xl p-4 sm:p-6 text-center shadow-elevated">
+          <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white">Partner in Our Impact</h3>
           <p className="text-sm sm:text-lg mb-3 sm:mb-4 text-white/90">
             Join us in creating sustainable value for farmers, preserving indigenous breeds, and delivering premium A2 ghee to global markets.
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-girej-red hover:bg-white/90 font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated transition-all duration-300"
+            className="bg-white text-earth-green hover:bg-white/90 font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated transition-all duration-300"
           >
             👉 Become a Bulk Buyer Today
           </Button>

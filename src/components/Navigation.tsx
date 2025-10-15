@@ -7,12 +7,20 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setIsScrolled(window.scrollY > 10);
+      }, 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const navItems = [
@@ -35,20 +43,15 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16 lg:h-18">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <picture>
-              <source 
-                media="(max-width: 640px)" 
-                srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=40&h=40&q=90 40w"
-                sizes="40px"
-              />
-              <img 
-                src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=56&h=56&q=90" 
-                alt="GIREJ - A2 Cow Milk Products, Established 2014" 
-                className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-200 hover:scale-105"
-                width="56"
-                height="56"
-              />
-            </picture>
+            <img 
+              src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
+              alt="GIREJ - A2 Cow Milk Products, Established 2014" 
+              className="h-10 sm:h-12 lg:h-14 w-auto transition-transform duration-200 hover:scale-105"
+              width="56"
+              height="56"
+              loading="eager"
+              decoding="async"
+            />
           </div>
 
           {/* Desktop Navigation */}

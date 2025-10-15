@@ -43,7 +43,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-[30vh] sm:min-h-[45vh] md:min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24">
+    <section id="home" className="relative min-h-[100vh] flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 hero-mobile">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -58,40 +58,17 @@ const HeroSection = () => {
           {heroImages.map((image, index) => (
             <CarouselItem key={index} className="h-full">
               <div className="relative w-full h-full overflow-hidden">
-                <picture className="w-full h-full">
-                  <source 
-                    media="(max-width: 480px)" 
-                    srcSet={`${image.src}?w=480&h=800&fit=crop&q=85 480w`}
-                    sizes="480px"
-                  />
-                  <source 
-                    media="(max-width: 768px)" 
-                    srcSet={`${image.src}?w=768&h=1024&fit=crop&q=85 768w`}
-                    sizes="768px"
-                  />
-                  <source 
-                    media="(max-width: 1024px)" 
-                    srcSet={`${image.src}?w=1024&h=768&fit=crop&q=85 1024w`}
-                    sizes="1024px"
-                  />
-                  <source 
-                    media="(max-width: 1440px)" 
-                    srcSet={`${image.src}?w=1440&h=900&fit=crop&q=90 1440w`}
-                    sizes="1440px"
-                  />
-                  <img
-                    src={`${image.src}?w=1920&h=1080&fit=crop&q=90`}
-                    alt={image.alt}
-                    className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                    loading={index === 0 ? "eager" : "lazy"}
-                    decoding="async"
-                    fetchPriority={index === 0 ? "high" : "low"}
-                    sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1440px) 1440px, 1920px"
-                    width="1920"
-                    height="1080"
-                  />
-                </picture>
-                <div className="absolute inset-0 bg-gradient-to-r from-girej-black/60 via-girej-black/50 to-girej-black/40 md:from-girej-black/70 md:via-girej-black/40 md:to-girej-black/20"></div>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  width="1920"
+                  height="1080"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-girej-black/40 via-girej-black/60 to-girej-black/80 sm:bg-gradient-to-r sm:from-girej-black/60 sm:via-girej-black/50 sm:to-girej-black/40 md:from-girej-black/70 md:via-girej-black/40 md:to-girej-black/20"></div>
               </div>
             </CarouselItem>
           ))}
@@ -99,62 +76,58 @@ const HeroSection = () => {
       </Carousel>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 z-10 flex flex-col">
-        {/* Top Logo and Headline */}
-        <div className="pt-16 sm:pt-18 md:pt-20 px-4 sm:px-6 lg:px-8 safe-area-top">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-3 sm:space-x-4 bg-white/15 backdrop-blur-md rounded-xl px-3 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-2xl animate-fade-in">
-              <picture className="flex-shrink-0">
-                <source 
-                  media="(max-width: 480px)" 
-                  srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=40&h=40&q=90 40w"
-                  sizes="40px"
-                />
-                <source 
-                  media="(max-width: 768px)" 
-                  srcSet="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=48&h=48&q=90 48w"
-                  sizes="48px"
-                />
-                <img 
-                  src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png?w=56&h=56&q=90" 
-                  alt="GIREJ Logo" 
-                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
-                  width="56"
-                  height="56"
-                />
-              </picture>
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white leading-tight mobile-center">
+      <div className="absolute inset-0 z-10 flex flex-col justify-start items-center px-4 sm:px-6 lg:px-8 safe-area-top pt-16 sm:pt-20">
+        {/* Main Hero Content - Top Centered */}
+        <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-8 px-4 hero-content">
+          {/* Logo and Brand - Side by Side */}
+          <div className="flex items-center justify-center space-x-4 sm:space-x-6">
+            
+            <div className="bg-white/15 backdrop-blur-md flex items-center justify-center rounded-2xl px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-6 border border-white/30 shadow-2xl animate-fade-in">
+            <img 
+              src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
+              alt="GIREJ Logo" 
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain drop-shadow-lg flex-shrink-0"
+              width="96"
+              height="96"
+              loading="eager"
+              decoding="async"
+            />
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
                 India's Trusted Bulk A2 Cow Ghee Supplier
               </h1>
             </div>
           </div>
+
+          {/* Key Value Proposition */}
+          <div className="space-y-4 sm:space-y-6">
+            <p className="text-white/95 text-base sm:text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+              Premium A2 Gir cow ghee for B2B buyers, wholesalers & exporters
+            </p>
+         
+          </div>
         </div>
-
-        {/* Spacer */}
-        <div className="flex-1"></div>
-
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="hidden md:block absolute bottom-4 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
+      {/* Scroll Indicator - Small */}
+      <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce z-20">
         <button 
-          className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center cursor-pointer hover:border-white/70 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+          className="w-5 h-8 border border-white/60 rounded-full flex justify-center cursor-pointer hover:border-white/80 transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-white/50 min-h-[32px] min-w-[32px] touch-manipulation"
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           aria-label="Scroll to next section"
         >
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
+          <div className="w-1 h-2 bg-white/70 rounded-full mt-2"></div>
         </button>
       </div>
 
-      {/* Carousel Indicators */}
+      {/* Carousel Indicators - Better positioned for mobile */}
       {heroImages.length > 0 && (
-        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20">
-          <div className="flex justify-center space-x-1 bg-black/20 backdrop-blur-sm rounded-full px-3 py-2">
+        <div className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 z-20">
+          <div className="flex justify-center space-x-2 bg-black/40 backdrop-blur-md rounded-full px-3 py-2 shadow-lg">
             {heroImages.map((_, index) => (
               <button
                 key={index}
-                className={`rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation ${
-                  currentIndex === index ? 'bg-white/90' : 'bg-white/40 hover:bg-white/60'
+                className={`rounded-full transition-all duration-300 min-h-[22px] min-w-[22px] flex items-center justify-center touch-manipulation ${
+                  currentIndex === index ? 'bg-white/90 shadow-lg' : 'bg-white/50 hover:bg-white/70'
                 }`}
                 onClick={() => {
                   api?.scrollTo(index);
@@ -166,7 +139,7 @@ const HeroSection = () => {
                 aria-current={currentIndex === index ? 'true' : 'false'}
               >
                 <div className={`rounded-full transition-all duration-300 ${
-                  currentIndex === index ? 'w-3 h-3 bg-white' : 'w-2 h-2 bg-white/80'
+                  currentIndex === index ? 'w-1.5 h-1.5 bg-white' : 'w-1 h-1 bg-white/90'
                 }`} />
               </button>
             ))}
@@ -175,20 +148,26 @@ const HeroSection = () => {
       )}
     </section>
     
-    {/* Metrics Section - Positioned between hero and CTA for better flow */}
-    <div className="bg-gradient-to-b from-transparent via-background/50 to-background py-1 sm:py-2 -mt-6">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
-              <Users className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">Network of 5000+ Gir Cow Farmers</span>
+    {/* Trust Indicators - Fixed for light background */}
+    <div className=" mt-12 bg-gradient-to-b from-transparent via-background/50 to-background py-4 sm:py-6 -mt-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+          <div className="bg-earth-green/10 backdrop-blur-md rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-earth-green/20 shadow-2xl transition-all duration-300 hover:bg-earth-green/15">
+            <div className="flex items-center justify-center sm:justify-start space-x-3">
+              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-earth-green flex-shrink-0" />
+              <span className="text-earth-green font-semibold text-sm sm:text-base text-center sm:text-left">5000+ Farmers Network</span>
             </div>
           </div>
-          <div className="bg-white/15 backdrop-blur-md rounded-lg px-3 py-2 sm:px-4 sm:py-3 border border-white/30 shadow-2xl transition-all duration-300 hover:bg-white/20 mobile-full-width sm:w-auto">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-2">
-              <Store className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
-              <span className="text-white font-semibold text-xs sm:text-sm text-center leading-tight">Supplying to 20+ Brands</span>
+          <div className="bg-trust-blue/10 backdrop-blur-md rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-trust-blue/20 shadow-2xl transition-all duration-300 hover:bg-trust-blue/15">
+            <div className="flex items-center justify-center sm:justify-start space-x-3">
+              <Store className="w-5 h-5 sm:w-6 sm:h-6 text-trust-blue flex-shrink-0" />
+              <span className="text-trust-blue font-semibold text-sm sm:text-base text-center sm:text-left">Supplying to 20+ Brands</span>
+            </div>
+          </div>
+          <div className="bg-golden-accent/10 backdrop-blur-md rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-golden-accent/20 shadow-2xl transition-all duration-300 hover:bg-golden-accent/15 sm:col-span-1">
+            <div className="flex items-center justify-center sm:justify-start space-x-3">
+              <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-farmer-brown flex-shrink-0" />
+              <span className="text-farmer-brown font-semibold text-sm sm:text-base text-center sm:text-left">FSSAI Certified</span>
             </div>
           </div>
         </div>
@@ -196,26 +175,36 @@ const HeroSection = () => {
     </div>
     
     {/* CTA Buttons Below Hero */}
-    <div className="bg-gradient-warm py-2 sm:py-3 md:py-4 safe-area-bottom -mt-6">
+    <div className="bg-gradient-to-b from-background to-earth-green/5 py-6 sm:py-8 md:py-10 safe-area-bottom -mt-6">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
-            className="group bg-earth-green hover:bg-earth-green/90 text-white text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 touch-manipulation min-h-[48px] sm:min-h-[56px] shadow-elevated hover:shadow-trust transition-all duration-300 font-semibold w-full sm:w-auto mobile-full-width"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            👉 Request Bulk Quote Today
-            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button 
-            variant="outline"
-            size="lg" 
-            className="group border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 touch-manipulation min-h-[48px] sm:min-h-[56px] shadow-soft hover:shadow-elevated transition-all duration-300 font-semibold w-full sm:w-auto mobile-full-width"
-            onClick={() => openWhatsAppForQuote()}
-          >
-            💬 Chat on WhatsApp
-            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+        <div className="space-y-4 sm:space-y-6">
+          <div className="text-center">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">
+              Ready to Source Premium A2 Ghee?
+            </h2>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Get instant pricing and samples within 24 hours
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <Button 
+              size="lg" 
+              className="group bg-earth-green hover:bg-earth-green/90 text-white text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 touch-manipulation min-h-[56px] shadow-elevated hover:shadow-trust transition-all duration-300 font-semibold w-full sm:w-auto"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              👉 Request Bulk Quote Today
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg" 
+              className="group border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 touch-manipulation min-h-[56px] shadow-soft hover:shadow-elevated transition-all duration-300 font-semibold w-full sm:w-auto"
+              onClick={() => openWhatsAppForQuote()}
+            >
+              💬 Chat on WhatsApp
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </div>
       </div>
     </div>

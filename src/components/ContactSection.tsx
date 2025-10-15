@@ -162,8 +162,10 @@ const ContactSection = () => {
                     onChange={(e) => handleInputChange('firstName', e.target.value)}
                     placeholder="Enter your first name" 
                     className={`min-h-[48px] text-base ${errors.firstName ? 'border-red-500 focus:border-red-500' : ''}`}
+                    aria-describedby={errors.firstName ? 'firstName-error' : undefined}
+                    aria-invalid={!!errors.firstName}
                   />
-                  {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
+                  {errors.firstName && <p id="firstName-error" className="text-red-500 text-sm mt-1" role="alert">{errors.firstName}</p>}
                 </div>
                 <div>
                   <Label htmlFor="lastName">Last Name *</Label>

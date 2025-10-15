@@ -38,7 +38,7 @@ const SupplyChainSection = () => {
   ];
 
   return (
-    <section id="supply-chain" className="py-12 sm:py-16 lg:py-20 bg-gradient-warm mobile-tight-spacing">
+    <section id="supply-chain" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-earth-green/5 mobile-tight-spacing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <Badge variant="secondary" className="mb-3 sm:mb-4">
@@ -69,7 +69,7 @@ const SupplyChainSection = () => {
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
                     <div className="w-6 h-6 bg-earth-green rounded-full flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                      <div className="w-2 h-2 bg-earth-green rounded-full"></div>
                     </div>
                   </div>
                 )}

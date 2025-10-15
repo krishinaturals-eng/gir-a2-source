@@ -16,7 +16,8 @@ const Index = () => {
       {/* Skip Navigation Link for Accessibility */}
       <a 
         href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-earth-green text-white px-4 py-2 rounded-md z-[100] font-medium"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-earth-green text-white px-4 py-2 rounded-md z-[100] font-medium transition-all duration-200"
+        aria-label="Skip to main content"
       >
         Skip to main content
       </a>

@@ -15,7 +15,7 @@ const AboutSection = () => {
     <section 
       ref={sectionRef}
       id="about" 
-      className={`py-6 sm:py-8 lg:py-12 bg-gradient-warm scroll-mt-20 md:scroll-mt-24 transition-all duration-1000 mobile-tight-spacing ${
+      className={`py-6 sm:py-8 lg:py-12 bg-gradient-to-b from-background to-earth-green/5 scroll-mt-20 md:scroll-mt-24 transition-all duration-1000 mobile-tight-spacing ${
         isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
