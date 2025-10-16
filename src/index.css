@@ -227,8 +227,8 @@ All colors MUST be HSL.
   /* Mobile hero spacing improvements */
   @media (max-width: 640px) {
     .hero-content {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
     
     .hero-badges {
@@ -239,6 +239,21 @@ All colors MUST be HSL.
     .hero-badge {
       font-size: 0.75rem;
       padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    /* Ensure mobile layout is compact */
+    .mobile-compact {
+      padding: 0.75rem 0;
+    }
+    
+    /* Mobile trust badges */
+    .mobile-trust-badges {
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      padding: 0.375rem 0.75rem;
     }
   }
   

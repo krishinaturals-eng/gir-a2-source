@@ -43,7 +43,126 @@ const HeroSection = () => {
 
   return (
     <>
-    <section id="home" className="relative min-h-[100vh] flex items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 hero-mobile">
+    {/* Mobile Layout - Separate Slider and Text */}
+    <section id="home" className="md:hidden relative overflow-hidden scroll-mt-20">
+      {/* Image Carousel - Top Section */}
+      <div className="relative h-[40vh] overflow-hidden">
+        <Carousel 
+          setApi={setApi}
+          className="w-full h-full"
+          plugins={[Autoplay({ delay: 4000, stopOnInteraction: true })]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="h-full">
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index} className="h-full">
+                <div className="relative w-full h-full overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    fetchPriority={index === 0 ? "high" : "low"}
+                    width="1920"
+                    height="1080"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
+        {/* Carousel Indicators - Over Image */}
+        {heroImages.length > 0 && (
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
+            <div className="flex justify-center space-x-2 bg-black/40 backdrop-blur-md rounded-full px-3 py-2 shadow-lg">
+              {heroImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`rounded-full transition-all duration-300 min-h-[22px] min-w-[22px] flex items-center justify-center touch-manipulation ${
+                    currentIndex === index ? 'bg-white/90 shadow-lg' : 'bg-white/50 hover:bg-white/70'
+                  }`}
+                  onClick={() => {
+                    api?.scrollTo(index);
+                    // Pause autoplay briefly when user interacts
+                    api?.plugins()?.autoplay?.stop();
+                    setTimeout(() => api?.plugins()?.autoplay?.play(), 3000);
+                  }}
+                  aria-label={`Go to slide ${index + 1} of ${heroImages.length}`}
+                  aria-current={currentIndex === index ? 'true' : 'false'}
+                >
+                  <div className={`rounded-full transition-all duration-300 ${
+                    currentIndex === index ? 'w-1.5 h-1.5 bg-white' : 'w-1 h-1 bg-white/90'
+                  }`} />
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Content Section - Below Images */}
+      <div className="bg-gradient-to-b from-background to-earth-green/5 py-6">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Logo and Brand - Vertical Stack */}
+          <div className="flex flex-col items-center justify-center space-y-3 mb-4">
+            <img 
+              src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
+              alt="GIREJ Logo" 
+              className="w-16 h-16 object-contain"
+              width="64"
+              height="64"
+              loading="eager"
+              decoding="async"
+            />
+            <div className="bg-earth-green/10 backdrop-blur-md rounded-xl px-4 py-3 border border-earth-green/20 shadow-lg text-center">
+              <h1 className="text-sm font-bold text-foreground leading-tight">
+                India's Trusted Bulk A2 Cow Ghee Supplier
+              </h1>
+            </div>
+          </div>
+
+          {/* Key Value Proposition */}
+          <div className="text-center space-y-3">
+            <p className="text-muted-foreground text-sm font-medium leading-relaxed">
+              Premium A2 Gir cow ghee for B2B buyers, wholesalers & exporters
+            </p>
+            
+            {/* Trust Badges - Horizontal */}
+            <div className="flex flex-wrap justify-center gap-2 text-xs">
+              <span className="bg-earth-green/15 text-earth-green px-3 py-1.5 rounded-full border border-earth-green/30 whitespace-nowrap font-medium">
+                ✓ 5000+ Farmers Network
+              </span>
+              <span className="bg-trust-blue/15 text-trust-blue px-3 py-1.5 rounded-full border border-trust-blue/30 whitespace-nowrap font-medium">
+                ✓ FSSAI Certified
+              </span>
+              <span className="bg-golden-accent/15 text-farmer-brown px-3 py-1.5 rounded-full border border-golden-accent/30 whitespace-nowrap font-medium">
+                ✓ Export Ready
+              </span>
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="flex justify-center mt-4">
+            <button 
+              className="w-4 h-6 border border-earth-green/60 rounded-full flex justify-center cursor-pointer hover:border-earth-green/80 transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-earth-green/50 min-h-[24px] min-w-[24px] touch-manipulation animate-bounce"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              aria-label="Scroll to next section"
+            >
+              <div className="w-0.5 h-1.5 bg-earth-green/70 rounded-full mt-1.5"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Desktop Layout - Keep Original */}
+    <section id="home" className="hidden md:flex relative min-h-[100vh] items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 hero-mobile">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
@@ -92,9 +211,9 @@ const HeroSection = () => {
               loading="eager"
               decoding="async"
             />
-              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
-                India's Trusted Bulk A2 Cow Ghee Supplier
-              </h1>
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
+              India's Trusted Bulk A2 Cow Ghee Supplier
+            </h1>
             </div>
           </div>
 
@@ -103,7 +222,7 @@ const HeroSection = () => {
             <p className="text-white/95 text-base sm:text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
               Premium A2 Gir cow ghee for B2B buyers, wholesalers & exporters
             </p>
-         
+          
           </div>
         </div>
       </div>
@@ -149,7 +268,7 @@ const HeroSection = () => {
     </section>
     
     {/* Trust Indicators - Fixed for light background */}
-    <div className=" mt-12 bg-gradient-to-b from-transparent via-background/50 to-background py-4 sm:py-6 -mt-6">
+    <div className="bg-gradient-to-b from-transparent via-background/50 to-background py-4 sm:py-6">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
           <div className="bg-earth-green/10 backdrop-blur-md rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-earth-green/20 shadow-2xl transition-all duration-300 hover:bg-earth-green/15">
