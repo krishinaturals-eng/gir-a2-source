@@ -44,7 +44,7 @@ const HeroSection = () => {
   return (
     <>
     {/* Mobile Layout - Separate Slider and Text */}
-    <section id="home" className="md:hidden relative overflow-hidden scroll-mt-20">
+    <section id="home" className="md:hidden relative overflow-hidden scroll-mt-20 pt-16">
       {/* Image Carousel - Top Section */}
       <div className="relative h-[40vh] overflow-hidden">
         <Carousel 
@@ -162,7 +162,7 @@ const HeroSection = () => {
     </section>
 
     {/* Desktop Layout - Keep Original */}
-    <section id="home" className="hidden md:flex relative min-h-[100vh] items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 hero-mobile">
+    <section id="home" className="hidden md:flex relative min-h-[100vh] items-center justify-center overflow-hidden scroll-mt-20 md:scroll-mt-24 hero-mobile pt-[4.5rem]">
       {/* Background Carousel */}
       <Carousel 
         setApi={setApi}
