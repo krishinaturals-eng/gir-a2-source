@@ -52,10 +52,12 @@ const OptimizedImage = ({
     return `${originalSrc}?format=webp`;
   };
 
-  const isWebPSupported = typeof window !== 'undefined' && 
+  // Check WebP support properly
+  const isWebPSupported = typeof window !== 'undefined' && (
     window.navigator.userAgent.includes('Chrome') || 
     window.navigator.userAgent.includes('Firefox') ||
-    window.navigator.userAgent.includes('Safari');
+    window.navigator.userAgent.includes('Safari')
+  );
 
   return (
     <div className={`relative overflow-hidden ${className}`}>

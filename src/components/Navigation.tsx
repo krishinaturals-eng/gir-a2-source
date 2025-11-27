@@ -30,6 +30,7 @@ const Navigation = () => {
     { name: "Bulk Supply", href: "#partnership" },
     { name: "Impact", href: "#impact" },
     { name: "In Media", href: "#media" },
+    { name: "FAQ", href: "#faq" },
     { name: "Contact Us", href: "#contact" }
   ];
 
@@ -61,7 +62,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-earth-green px-3 py-2 text-sm xl:text-base font-medium transition-all duration-200 hover:bg-earth-green/5 rounded-lg"
+                  className="text-foreground hover:text-earth-green px-3 py-2 text-sm sm:text-base xl:text-lg font-medium transition-all duration-200 hover:bg-earth-green/5 rounded-lg"
                 >
                   {item.name}
                 </a>
@@ -74,7 +75,7 @@ const Navigation = () => {
             <Button 
               variant="hero" 
               size="sm"
-              className="min-h-[44px] px-4 xl:px-6 text-sm xl:text-base font-medium shadow-soft hover:shadow-elevated transition-all duration-300"
+              className="min-h-[44px] sm:min-h-[48px] px-4 xl:px-6 text-sm sm:text-base xl:text-lg font-medium shadow-soft hover:shadow-elevated transition-all duration-300"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               aria-label="Get a quote for A2 cow ghee"
             >

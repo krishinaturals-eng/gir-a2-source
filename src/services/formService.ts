@@ -15,8 +15,8 @@ interface FormResponse {
   error?: string;
 }
 
-// Updated Google Apps Script URL
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxzv-2F7p8lyoQqNizCm1s-EBtL84HQgY7kX4W8GYisFhWzLeaLjO55GMgvbSw-bAto/exec';
+// Updated Google Apps Script URL - Use environment variable if available
+const GOOGLE_SHEETS_URL = import.meta.env.VITE_GOOGLE_SHEETS_URL || 'https://script.google.com/macros/s/AKfycbxzv-2F7p8lyoQqNizCm1s-EBtL84HQgY7kX4W8GYisFhWzLeaLjO55GMgvbSw-bAto/exec';
 
 export const submitFormToGoogleSheets = async (formData: FormData): Promise<FormResponse> => {
   try {
@@ -92,7 +92,9 @@ export const submitFormToGoogleSheets = async (formData: FormData): Promise<Form
     }
 
   } catch (error) {
-    console.error('Form submission error:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Form submission error:', error);
+    }
     
     // Fallback: Try alternative submission method
     try {
@@ -211,6 +213,7 @@ Submitted on: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
 // Optional: Email notification service (for future use)
 export const sendEmailNotification = async (formData: FormData) => {
   // This can be implemented later with a proper email service
-  // For now, we'll just log the data
-  console.log('Email notification would be sent for:', formData);
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Email notification would be sent for:', formData);
+  }
 };

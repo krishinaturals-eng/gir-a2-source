@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Heart, Dna, Leaf, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const ImpactSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -73,10 +74,10 @@ const ImpactSection = () => {
           <Badge variant="secondary" className="mb-2">
             Social & Ecological Impact
           </Badge>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 md:mb-6">
             Empowering Farmers & <span className="text-earth-green">Preserving Gir Cow Breed</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Every litre of Girej A2 ghee creates shared value across our entire ecosystem.
           </p>
         </div>
@@ -87,46 +88,46 @@ const ImpactSection = () => {
           <div className="flex justify-center">
             <Card className="p-6 lg:p-8 text-center hover:shadow-elevated transition-all duration-300 relative overflow-hidden max-w-sm sm:max-w-md lg:max-w-lg mx-auto group">
               <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto rounded-xl overflow-hidden bg-earth-green/10">
-                <img 
+                <OptimizedImage 
                   src={farmerImages[currentImageIndex]} 
                   alt="Farmer training and outreach program"
                   className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105"
-                  loading="lazy" 
-                  decoding="async" 
-                  width="320"
-                  height="320"
+                  width={320}
+                  height={320}
                 />
                 <button 
                   onClick={prevImage}
-                  className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-soft min-h-[44px] touch-manipulation"
+                  className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-soft min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] touch-manipulation"
                   aria-label="Previous farmer image"
                 >
-                  <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
                 </button>
                 <button 
                   onClick={nextImage}
-                  className="absolute right-3 lg:right-4 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-soft min-h-[44px] touch-manipulation"
+                  className="absolute right-3 lg:right-4 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-all duration-200 shadow-soft min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] touch-manipulation"
                   aria-label="Next farmer image"
                 >
-                  <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
                 </button>
               </div>
-              <div className="text-xl lg:text-2xl font-semibold text-foreground mt-6 lg:mt-8">Farmers' training & outreach</div>
+              <div className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mt-6 lg:mt-8">Farmers' training & outreach</div>
             </Card>
           </div>
           
-          <div className="flex justify-center mt-4 gap-2">
+          <div className="flex justify-center mt-4 gap-2 sm:gap-3">
             {farmerImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 min-h-[32px] min-w-[32px] flex items-center justify-center touch-manipulation ${
-                  index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30 hover:bg-earth-green/50'
+                className={`slider-indicator ${
+                  index === currentImageIndex 
+                    ? 'bg-earth-green scale-110' 
+                    : 'bg-earth-green/30 hover:bg-earth-green/50'
                 }`}
                 aria-label={`View farmer image ${index + 1}`}
               >
-                <span className={`w-3 h-3 rounded-full ${
-                  index === currentImageIndex ? 'bg-earth-green' : 'bg-earth-green/30'
+                <span className={`slider-indicator-dot ${
+                  index === currentImageIndex ? 'bg-white' : 'bg-white/80'
                 }`}></span>
               </button>
             ))}
@@ -141,9 +142,9 @@ const ImpactSection = () => {
                   <div className={`w-12 h-12 sm:w-[50px] sm:h-[50px] mx-auto mb-3 sm:mb-4 ${colorClasses[metric.color as keyof typeof colorClasses]} rounded-full flex items-center justify-center`}>
                     <IconComponent className={`h-5 w-5 sm:h-6 sm:w-6 ${colorClasses[metric.color as keyof typeof colorClasses]}`} />
                   </div>
-                  <div className="text-xl sm:text-2xl font-bold text-foreground mb-2">{metric.number}</div>
-                  <div className="text-base sm:text-lg font-semibold text-foreground mb-2">{metric.label}</div>
-                  <p className="text-xs sm:text-sm text-muted-foreground">{metric.description}</p>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">{metric.number}</div>
+                  <div className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">{metric.label}</div>
+                  <p className="text-sm sm:text-base text-muted-foreground">{metric.description}</p>
                 </Card>
               );
             })}
@@ -181,13 +182,14 @@ const ImpactSection = () => {
 
         {/* Call to Action */}
         <div className="bg-gradient-to-br from-earth-green to-earth-green/80 text-white rounded-2xl p-4 sm:p-6 text-center shadow-elevated">
-          <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-white">Partner in Our Impact</h3>
-          <p className="text-sm sm:text-lg mb-3 sm:mb-4 text-white/90">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-white">Partner in Our Impact</h3>
+          <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 text-white/90">
             Join us in creating sustainable value for farmers, preserving indigenous breeds, and delivering premium A2 ghee to global markets.
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-earth-green hover:bg-white/90 font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated transition-all duration-300"
+            className="bg-white text-earth-green hover:bg-white/90 font-semibold touch-manipulation shadow-elevated transition-all duration-300"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             👉 Become a Bulk Buyer Today
           </Button>

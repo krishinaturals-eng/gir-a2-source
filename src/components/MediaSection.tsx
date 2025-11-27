@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useSwipeGesture } from "@/hooks/use-swipe-gesture";
 import upayaArticleThumb from "@/assets/upaya-article-thumb.jpg";
 import yourstoryArticleThumb from "@/assets/yourstory-article-thumb.jpg";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const MediaSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -78,10 +79,10 @@ const MediaSection = () => {
           <Badge variant="secondary" className="mb-2">
             In Media
           </Badge>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 md:mb-6">
             GIREJ <span className="text-earth-green">In The Spotlight</span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Our journey and impact have been recognized by leading media outlets and industry experts such as Guardian UK, Be Movement Singapore, Businessline, Business Standard, Times of India, Your Story etc.
           </p>
         </div>
@@ -91,31 +92,29 @@ const MediaSection = () => {
         {/* Article Slideshow */}
         <div className="mb-8 sm:mb-12">
           <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-earth-green mb-4 sm:mb-6">Featured Articles</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-earth-green mb-4 sm:mb-6">Featured Articles</h3>
             <Card className="relative overflow-hidden max-w-3xl mx-auto group mobile-card-spacing">
               <div ref={carouselRef as React.RefObject<HTMLDivElement>} className="relative h-64 sm:h-80 lg:h-96 xl:h-[32rem] select-none">
-                <img
+                <OptimizedImage
                   src={articles[currentSlide].image}
                   alt={articles[currentSlide].title}
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy" 
-                  decoding="async" 
-                  width="1024"
-                  height="512"
+                  width={1024}
+                  height={512}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 
                 {/* Navigation buttons - positioned outside content area on mobile */}
                 <button
                   onClick={prevSlide}
-                  className="absolute -left-2 sm:left-4 lg:left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white backdrop-blur-sm rounded-full p-2 sm:p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation shadow-lg border border-white/20"
+                  className="absolute -left-2 sm:left-4 lg:left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white backdrop-blur-sm rounded-full p-2 sm:p-3 lg:p-4 transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] lg:min-h-[56px] lg:min-w-[56px] touch-manipulation shadow-lg border border-white/20"
                   aria-label="Previous article"
                 >
                   <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-gray-800" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute -right-2 sm:right-4 lg:right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white backdrop-blur-sm rounded-full p-2 sm:p-3 lg:p-4 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation shadow-lg border border-white/20"
+                  className="absolute -right-2 sm:right-4 lg:right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white backdrop-blur-sm rounded-full p-2 sm:p-3 lg:p-4 transition-all duration-200 min-h-[44px] min-w-[44px] sm:min-h-[48px] sm:min-w-[48px] lg:min-h-[56px] lg:min-w-[56px] touch-manipulation shadow-lg border border-white/20"
                   aria-label="Next article"
                 >
                   <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-gray-800" />
@@ -128,7 +127,7 @@ const MediaSection = () => {
                       {articles[currentSlide].subtitle}
                     </span>
                   </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
+                  <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
                     {articles[currentSlide].title}
                   </h4>
                   {articles[currentSlide].url !== "#" && (
@@ -136,9 +135,9 @@ const MediaSection = () => {
                       href={articles[currentSlide].url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-earth-green hover:bg-earth-green/90 text-white px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-xl transition-all duration-300 font-semibold min-h-[44px] sm:min-h-[48px] touch-manipulation shadow-elevated hover:shadow-trust text-sm sm:text-base mobile-full-width justify-center sm:w-auto"
+                      className="inline-flex items-center gap-2 bg-earth-green hover:bg-earth-green/90 text-white px-5 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-xl transition-all duration-300 font-semibold min-h-[48px] sm:min-h-[52px] lg:min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust text-base sm:text-lg mobile-full-width justify-center sm:w-auto"
                     >
-                      Read Article <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5" />
+                      Read Article <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6" />
                     </a>
                   )}
                 </div>
@@ -146,19 +145,21 @@ const MediaSection = () => {
 
               {/* Slide indicators - positioned above content with better touch targets */}
               <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-30">
-                <div className="flex gap-1 bg-black/30 backdrop-blur-sm rounded-full px-3 py-2">
+                <div className="flex gap-2 sm:gap-3 bg-black/30 backdrop-blur-sm rounded-full px-2 py-2 sm:px-3 sm:py-2.5">
                   {articles.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation ${
-                        index === currentSlide ? 'bg-white/90' : 'bg-white/40 hover:bg-white/60'
+                      className={`slider-indicator ${
+                        index === currentSlide 
+                          ? 'bg-white/90 scale-110' 
+                          : 'bg-white/40 hover:bg-white/60'
                       }`}
                       aria-label={`Go to slide ${index + 1} of ${articles.length}`}
                       aria-current={index === currentSlide ? 'true' : 'false'}
                     >
-                      <div className={`rounded-full transition-all duration-300 ${
-                        index === currentSlide ? 'w-3 h-3 bg-white' : 'w-2 h-2 bg-white/80'
+                      <div className={`slider-indicator-dot ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/80'
                       }`} />
                     </button>
                   ))}
@@ -173,7 +174,8 @@ const MediaSection = () => {
           <Button 
             variant="outline"
             size="lg" 
-            className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 lg:py-5 lg:px-8 text-sm sm:text-base lg:text-lg min-h-[48px] sm:min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300 mobile-full-width sm:w-auto"
+            className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold border-2 shadow-soft hover:shadow-elevated transition-all duration-300 mobile-full-width sm:w-auto"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             🥛 Become a Bulk Buyer Today
           </Button>

@@ -24,13 +24,13 @@ const AboutSection = () => {
           <Badge variant="secondary" className="mb-2">
             About Girej
           </Badge>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 md:mb-6">
             About Girej – <span className="text-earth-green">A2 Cow Ghee Manufacturer & Social Enterprise</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-3 sm:mb-4 lg:mb-6">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-4 sm:mb-5 lg:mb-6">
             Girej is a premium A2 cow ghee manufacturer in India, proudly built by Krishi Naturals (est. 2013).
           </p>
-          <p className="text-sm sm:text-base lg:text-lg text-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-foreground max-w-3xl mx-auto">
             <strong>Our mission is simple yet powerful:</strong><br className="hidden sm:block" />
             To make indigenous cow rearing a sustainable livelihood for small & marginal farmers, while delivering world-class A2 Gir cow ghee to B2B buyers, wholesalers, food manufacturers, retailers, Ayurvedic brands, and exporters.
           </p>
@@ -46,8 +46,8 @@ const AboutSection = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">India's Trusted A2 Gir Cow Ghee Manufacturer</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-2 sm:mb-3">India's Trusted A2 Gir Cow Ghee Manufacturer</h3>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                   Established in 2014, Girej is among the oldest A2 ghee manufacturers in India, pioneering an ecosystem for indigenous Gir cow rearing, scientific breeding, and genetic quality improvement in Gujarat.
                 </p>
               </div>
@@ -60,8 +60,8 @@ const AboutSection = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">Network of 5,000+ Gir Cow Farmers</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-2 sm:mb-3">Network of 5,000+ Gir Cow Farmers</h3>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                   We have trained and organized 5,000+ Gir cow farmers in Gujarat, ensuring consistent quality and reliable bulk supply of authentic A2 Bilona ghee for domestic and export markets.
                 </p>
               </div>
@@ -74,8 +74,8 @@ const AboutSection = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">Ethical & Transparent Supply Chain</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-2 sm:mb-3">Ethical & Transparent Supply Chain</h3>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                   We directly source pure A2 cow milk from our farmer network and process it in our FSSAI-certified, hygienic manufacturing facility. Every batch undergoes lab testing for purity, A2 protein verification, and compliance with export standards.
                 </p>
               </div>
@@ -88,7 +88,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
             <Button 
               size="lg" 
-              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 lg:py-5 lg:px-8 text-sm sm:text-base lg:text-lg min-h-[48px] sm:min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300 mobile-full-width"
+              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300 mobile-full-width"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Partner with Us
@@ -96,7 +96,7 @@ const AboutSection = () => {
             <Button 
               variant="outline"
               size="lg" 
-              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 lg:py-5 lg:px-8 text-sm sm:text-base lg:text-lg min-h-[48px] sm:min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300 mobile-full-width"
+              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold border-2 touch-manipulation shadow-soft hover:shadow-elevated transition-all duration-300 mobile-full-width"
               onClick={() => openWhatsAppForQuote()}
             >
               💬 Chat Now

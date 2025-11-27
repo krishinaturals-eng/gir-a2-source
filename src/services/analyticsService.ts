@@ -76,12 +76,14 @@ class AnalyticsService {
 
   // Log event to console (for debugging)
   private logEvent(event: FormSubmissionEvent) {
-    console.log('Analytics Event:', {
-      type: event.type,
-      section: event.section,
-      timestamp: new Date(event.timestamp).toISOString(),
-      data: event.data
-    });
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Analytics Event:', {
+        type: event.type,
+        section: event.section,
+        timestamp: new Date(event.timestamp).toISOString(),
+        data: event.data
+      });
+    }
   }
 
   // Get all events (for debugging)
@@ -105,8 +107,9 @@ export const analyticsService = new AnalyticsService();
 
 // Track page views
 export const trackPageView = (page: string) => {
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+  const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  if (typeof window !== 'undefined' && 'gtag' in window && gaId) {
+    (window as any).gtag('config', gaId, {
       page_title: page,
       page_location: window.location.href
     });

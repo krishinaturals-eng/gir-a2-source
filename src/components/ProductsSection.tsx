@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Package, Shield, Award, Truck, CheckCircle, FlaskConical, Microscope, Factory } from "lucide-react";
 import { openWhatsAppForPrivateLabel } from "@/services/whatsappService";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const ProductsSection = () => {
   const productRange = [
@@ -40,10 +41,10 @@ const ProductsSection = () => {
     <section id="products" className="py-6 sm:py-8 lg:py-12 bg-background scroll-mt-20 md:scroll-mt-24 mobile-tight-spacing">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4 sm:mb-6 lg:mb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 md:mb-6">
             Our range of A2 Cow Ghee products
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Ethically sourced, FSSAI-certified, and trusted by 20+ leading brands for wholesale and export.
           </p>
         </div>
@@ -56,14 +57,12 @@ const ProductsSection = () => {
               <Card key={index} className="p-6 lg:p-8 text-center hover:shadow-elevated transition-all duration-300 max-w-lg mx-auto group">
                 {product.image ? (
                   <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 mx-auto mb-6 lg:mb-8 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                    <img 
+                    <OptimizedImage 
                       src={product.image} 
                       alt={product.title}
                       className="w-full h-full object-cover object-center"
-                      loading="lazy" 
-                      decoding="async" 
-                      width="320"
-                      height="320"
+                      width={320}
+                      height={320}
                     />
                   </div>
                 ) : (
@@ -71,8 +70,8 @@ const ProductsSection = () => {
                     <IconComponent className={`h-8 w-8 lg:h-10 lg:w-10 ${colorClasses[product.color as keyof typeof colorClasses]}`} />
                   </div>
                 )}
-                <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-4 lg:mb-6">{product.title}</h3>
-                <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">{product.description}</p>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-4 lg:mb-6">{product.title}</h3>
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">{product.description}</p>
               </Card>
             );
           })}
@@ -80,16 +79,14 @@ const ProductsSection = () => {
 
         {/* Bilona A2 Ghee Making Process */}
         <div className="text-center mb-12 sm:mb-16">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground mb-4 sm:mb-6">Bilona A2 Ghee Making</h3>
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-4 sm:mb-6">Bilona A2 Ghee Making</h3>
           <div className="max-w-sm sm:max-w-md lg:max-w-2xl mx-auto">
-            <img 
+            <OptimizedImage 
               src="/lovable-uploads/cb2efa0d-f93a-496f-9912-5ad39986d624.png" 
               alt="The Art of A2 Gir Cow Ghee - Traditional Bilona Process"
               className="w-full h-auto rounded-xl shadow-soft hover:shadow-elevated transition-all duration-300"
-              loading="lazy" 
-              decoding="async" 
-              width="768"
-              height="576"
+              width={768}
+              height={576}
             />
           </div>
         </div>
@@ -97,7 +94,7 @@ const ProductsSection = () => {
         {/* Certifications & Quality */}
         <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
           <Card className="p-4 sm:p-8">
-            <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6">Certifications & Quality</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-4 sm:mb-6">Certifications & Quality</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               {/* Certifications List */}
               <div className="space-y-3 sm:space-y-4">
@@ -118,14 +115,12 @@ const ProductsSection = () => {
               
               {/* Test Report Image */}
               <div className="flex justify-center mt-6 lg:mt-0">
-                <img 
+                <OptimizedImage 
                   src="/lovable-uploads/b4e4adfe-2ab2-4e43-9911-677db41f19ec.png" 
                   alt="A2A2 Milk Typing Test - Genetic Testing Report"
                   className="max-w-48 sm:max-w-64 lg:max-w-80 h-auto rounded-xl shadow-soft hover:scale-105 transition-all duration-300"
-                  loading="lazy" 
-                  decoding="async" 
-                  width="320"
-                  height="427"
+                  width={320}
+                  height={427}
                 />
               </div>
             </div>
@@ -137,7 +132,7 @@ const ProductsSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 max-w-2xl mx-auto">
             <Button 
               size="lg" 
-              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
+              className="bg-earth-green hover:bg-earth-green/90 text-white font-semibold touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               👉 Request 15kg Tin Price
@@ -145,7 +140,7 @@ const ProductsSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold py-4 px-6 lg:py-5 lg:px-8 text-base lg:text-lg min-h-[56px] touch-manipulation border-2 shadow-soft hover:shadow-elevated transition-all duration-300"
+              className="border-earth-green text-earth-green hover:bg-earth-green hover:text-white font-semibold border-2 touch-manipulation shadow-soft hover:shadow-elevated transition-all duration-300"
               onClick={() => openWhatsAppForPrivateLabel()}
             >
               💬 Chat About Private Label

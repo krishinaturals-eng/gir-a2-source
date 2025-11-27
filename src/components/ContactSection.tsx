@@ -113,10 +113,10 @@ const ContactSection = () => {
           <Badge variant="secondary" className="mb-2">
             Get In Touch
           </Badge>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 md:mb-6">
             Start Your <span className="text-earth-green">Partnership Journey</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto">
             Ready to source premium A2 ghee for your business? Get a custom quote today.
           </p>
         </div>
@@ -124,7 +124,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Form */}
           <Card className="p-4 sm:p-6 lg:p-8 shadow-elevated mobile-card-spacing">
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-foreground mb-4 sm:mb-6">Request Bulk Quote</h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-4 sm:mb-6">Request Bulk Quote</h3>
             
             {/* Success/Error Messages */}
             {submitStatus === 'success' && (
@@ -260,7 +260,7 @@ const ContactSection = () => {
                   variant="hero" 
                   size="lg" 
                   disabled={isSubmitting}
-                  className="w-full min-h-[56px] text-lg font-semibold touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full font-semibold touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
                 </Button>
@@ -274,7 +274,7 @@ const ContactSection = () => {
                       hasFormData: Object.values(formData).some(val => val.trim() !== '')
                     });
                   }}
-                  className="w-full min-h-[56px] text-lg font-semibold touch-manipulation border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white transition-all duration-300"
+                  className="w-full font-semibold touch-manipulation border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white transition-all duration-300"
                 >
                   💬 Chat on WhatsApp
                 </Button>
@@ -287,7 +287,7 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="space-y-6 lg:space-y-8">
             <Card className="p-6 lg:p-8 shadow-soft">
-              <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-earth-green/10 rounded-full flex items-center justify-center">
@@ -329,7 +329,7 @@ const ContactSection = () => {
             </Card>
 
             <Card className="p-6 lg:p-8 shadow-soft">
-              <h3 className="text-xl lg:text-2xl font-semibold text-foreground mb-6">Partnership Benefits</h3>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-6">Partnership Benefits</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-earth-green rounded-full flex-shrink-0"></div>

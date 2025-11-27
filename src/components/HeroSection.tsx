@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { useSwipeGesture } from "@/hooks/use-swipe-gesture";
 import { openWhatsAppForQuote } from "@/services/whatsappService";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const heroImages = [
   {
@@ -60,15 +61,13 @@ const HeroSection = () => {
             {heroImages.map((image, index) => (
               <CarouselItem key={index} className="h-full">
                 <div className="relative w-full h-full overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                    loading={index === 0 ? "eager" : "lazy"}
-                    decoding="async"
-                    fetchPriority={index === 0 ? "high" : "low"}
-                    width="1920"
-                    height="1080"
+                    priority={index === 0}
+                    width={1920}
+                    height={1080}
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
                 </div>
@@ -80,12 +79,14 @@ const HeroSection = () => {
         {/* Carousel Indicators - Over Image */}
         {heroImages.length > 0 && (
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
-            <div className="flex justify-center space-x-2 bg-black/40 backdrop-blur-md rounded-full px-3 py-2 shadow-lg">
+            <div className="flex justify-center space-x-1.5 sm:space-x-2 bg-black/40 backdrop-blur-md rounded-full px-1.5 py-1 sm:px-2 sm:py-1.5 shadow-lg">
               {heroImages.map((_, index) => (
                 <button
                   key={index}
-                  className={`rounded-full transition-all duration-300 min-h-[22px] min-w-[22px] flex items-center justify-center touch-manipulation ${
-                    currentIndex === index ? 'bg-white/90 shadow-lg' : 'bg-white/50 hover:bg-white/70'
+                  className={`slider-indicator ${
+                    currentIndex === index 
+                      ? 'bg-white/90 shadow-lg scale-110' 
+                      : 'bg-white/50 hover:bg-white/70'
                   }`}
                   onClick={() => {
                     api?.scrollTo(index);
@@ -96,8 +97,8 @@ const HeroSection = () => {
                   aria-label={`Go to slide ${index + 1} of ${heroImages.length}`}
                   aria-current={currentIndex === index ? 'true' : 'false'}
                 >
-                  <div className={`rounded-full transition-all duration-300 ${
-                    currentIndex === index ? 'w-1.5 h-1.5 bg-white' : 'w-1 h-1 bg-white/90'
+                  <div className={`slider-indicator-dot ${
+                    currentIndex === index ? 'bg-white' : 'bg-white/90'
                   }`} />
                 </button>
               ))}
@@ -110,7 +111,7 @@ const HeroSection = () => {
       <div className="bg-gradient-to-b from-background to-earth-green/5 py-6">
         <div className="max-w-6xl mx-auto px-4">
           {/* Logo and Brand - Vertical Stack */}
-          <div className="flex flex-col items-center justify-center space-y-3 mb-4">
+          <div className="flex flex-col items-center justify-center space-y-3 ">
             <img 
               src="/lovable-uploads/261dc2c9-3f90-4de4-955b-daf93b4c18f4.png" 
               alt="GIREJ Logo" 
@@ -120,28 +121,28 @@ const HeroSection = () => {
               loading="eager"
               decoding="async"
             />
-            <div className="bg-earth-green/10 backdrop-blur-md rounded-xl px-4 py-3 border border-earth-green/20 shadow-lg text-center">
-              <h1 className="text-sm font-bold text-foreground leading-tight">
+            <div className="bg-earth-green/10 backdrop-blur-md rounded-xl px-4 py-3 sm:px-6 sm:py-4 border border-earth-green/20 shadow-lg text-center">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground leading-tight">
                 India's Trusted Bulk A2 Cow Ghee Supplier
               </h1>
             </div>
           </div>
 
           {/* Key Value Proposition */}
-          <div className="text-center space-y-3">
-            <p className="text-muted-foreground text-sm font-medium leading-relaxed">
+          <div className="text-center ">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed ">
               Premium A2 Gir cow ghee for B2B buyers, wholesalers & exporters
             </p>
             
             {/* Trust Badges - Horizontal */}
-            <div className="flex flex-wrap justify-center gap-2 text-xs">
-              <span className="bg-earth-green/15 text-earth-green px-3 py-1.5 rounded-full border border-earth-green/30 whitespace-nowrap font-medium">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs sm:text-sm lg:text-base xl:text-lg">
+              <span className="bg-earth-green/15 text-earth-green px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-earth-green/30 whitespace-nowrap font-medium">
                 ✓ 5000+ Farmers Network
               </span>
-              <span className="bg-trust-blue/15 text-trust-blue px-3 py-1.5 rounded-full border border-trust-blue/30 whitespace-nowrap font-medium">
+              <span className="bg-trust-blue/15 text-trust-blue px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-trust-blue/30 whitespace-nowrap font-medium">
                 ✓ FSSAI Certified
               </span>
-              <span className="bg-golden-accent/15 text-farmer-brown px-3 py-1.5 rounded-full border border-golden-accent/30 whitespace-nowrap font-medium">
+              <span className="bg-golden-accent/15 text-farmer-brown px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-golden-accent/30 whitespace-nowrap font-medium">
                 ✓ Export Ready
               </span>
             </div>
@@ -177,15 +178,13 @@ const HeroSection = () => {
           {heroImages.map((image, index) => (
             <CarouselItem key={index} className="h-full">
               <div className="relative w-full h-full overflow-hidden">
-                <img
+                <OptimizedImage
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                  loading={index === 0 ? "eager" : "lazy"}
-                  decoding="async"
-                  fetchPriority={index === 0 ? "high" : "low"}
-                  width="1920"
-                  height="1080"
+                  priority={index === 0}
+                  width={1920}
+                  height={1080}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-girej-black/40 via-girej-black/60 to-girej-black/80 sm:bg-gradient-to-r sm:from-girej-black/60 sm:via-girej-black/50 sm:to-girej-black/40 md:from-girej-black/70 md:via-girej-black/40 md:to-girej-black/20"></div>
               </div>
@@ -211,15 +210,15 @@ const HeroSection = () => {
               loading="eager"
               decoding="async"
             />
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">
               India's Trusted Bulk A2 Cow Ghee Supplier
             </h1>
             </div>
           </div>
 
           {/* Key Value Proposition */}
-          <div className="space-y-4 sm:space-y-6">
-            <p className="text-white/95 text-base sm:text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+          <div className="mt-2 sm:mt-3 md:mt-4">
+            <p className="text-white/95 text-base sm:text-lg md:text-xl lg:text-2xl font-medium max-w-3xl mx-auto leading-relaxed px-4">
               Premium A2 Gir cow ghee for B2B buyers, wholesalers & exporters
             </p>
           
@@ -241,12 +240,14 @@ const HeroSection = () => {
       {/* Carousel Indicators - Better positioned for mobile */}
       {heroImages.length > 0 && (
         <div className="absolute bottom-20 sm:bottom-24 left-1/2 -translate-x-1/2 z-20">
-          <div className="flex justify-center space-x-2 bg-black/40 backdrop-blur-md rounded-full px-3 py-2 shadow-lg">
+          <div className="flex justify-center space-x-1.5 sm:space-x-2 bg-black/40 backdrop-blur-md rounded-full px-1.5 py-1 sm:px-2 sm:py-1.5 shadow-lg">
             {heroImages.map((_, index) => (
               <button
                 key={index}
-                className={`rounded-full transition-all duration-300 min-h-[22px] min-w-[22px] flex items-center justify-center touch-manipulation ${
-                  currentIndex === index ? 'bg-white/90 shadow-lg' : 'bg-white/50 hover:bg-white/70'
+                className={`slider-indicator ${
+                  currentIndex === index 
+                    ? 'bg-white/90 shadow-lg scale-110' 
+                    : 'bg-white/50 hover:bg-white/70'
                 }`}
                 onClick={() => {
                   api?.scrollTo(index);
@@ -257,8 +258,8 @@ const HeroSection = () => {
                 aria-label={`Go to slide ${index + 1} of ${heroImages.length}`}
                 aria-current={currentIndex === index ? 'true' : 'false'}
               >
-                <div className={`rounded-full transition-all duration-300 ${
-                  currentIndex === index ? 'w-1.5 h-1.5 bg-white' : 'w-1 h-1 bg-white/90'
+                <div className={`slider-indicator-dot ${
+                  currentIndex === index ? 'bg-white' : 'bg-white/90'
                 }`} />
               </button>
             ))}
@@ -298,30 +299,30 @@ const HeroSection = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 sm:space-y-6">
           <div className="text-center">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 sm:mb-4">
               Ready to Source Premium A2 Ghee?
             </h2>
-            <p className="text-sm sm:text-base text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
               Get instant pricing and samples within 24 hours
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <Button 
               size="lg" 
-              className="group bg-earth-green hover:bg-earth-green/90 text-white text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 touch-manipulation min-h-[56px] shadow-elevated hover:shadow-trust transition-all duration-300 font-semibold w-full sm:w-auto"
+              className="group bg-earth-green hover:bg-earth-green/90 text-white px-6 sm:px-8 md:px-10 touch-manipulation shadow-elevated hover:shadow-trust transition-all duration-300 w-full sm:w-auto"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               👉 Request Bulk Quote Today
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               variant="outline"
               size="lg" 
-              className="group border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 touch-manipulation min-h-[56px] shadow-soft hover:shadow-elevated transition-all duration-300 font-semibold w-full sm:w-auto"
+              className="group border-2 border-earth-green text-earth-green hover:bg-earth-green hover:text-white px-6 sm:px-8 md:px-10 touch-manipulation shadow-soft hover:shadow-elevated transition-all duration-300 w-full sm:w-auto"
               onClick={() => openWhatsAppForQuote()}
             >
               💬 Chat on WhatsApp
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
@@ -331,15 +332,15 @@ const HeroSection = () => {
     {/* SEO Content Section */}
     <section className="py-12 sm:py-16 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
           Your Reliable Bulk A2 Ghee Supply Partner
         </h1>
         
-        <p className="text-lg sm:text-xl font-semibold text-muted-foreground mb-6 sm:mb-8">
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold text-muted-foreground mb-6 sm:mb-8">
           Powering India's Top Food & Wellness Brands with Consistent A2 Gir Ghee.
         </p>
         
-        <div className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto">
+        <div className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto">
           <p className="mb-4 sm:mb-6">
             When your business requires a dependable, large-scale supply of pure A2 cow ghee, Girej delivers. 
             We've built a robust B2B supply chain to ensure seamless and on-time delivery for high-volume orders.
